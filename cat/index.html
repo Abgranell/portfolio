@@ -15,6 +15,29 @@
             padding-top: 4rem; /* Deixa un marge superior perquè res quedi enganxat a dalt */
             padding-bottom: 3rem;
         }
+
+        /* Botó de LinkedIn a dalt a l'esquerra (mida controlada) */
+        .linkedin-top {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+        }
+        .linkedin-btn {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .linkedin-btn:hover {
+            opacity: 0.7;
+        }
+        .linkedin-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #0a66c2; /* Força el color blanc o blau de la icona sobre el fons */
+        }
         
         /* Selector d'idioma a dalt a la dreta */
         .lang-selector {
