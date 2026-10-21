@@ -13,6 +13,7 @@
             text-align: left; 
             position: relative; 
             padding-top: 4rem; /* Deixa un marge superior perquè res quedi enganxat a dalt */
+            padding-bottom: 3rem;
         }
         
         /* Selector d'idioma a dalt a la dreta */
@@ -36,7 +37,7 @@
             background: var(--hover-bg);
         }
 
-        .container { text-align: center; }
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
         header { margin-bottom: 3rem; }
         
         /* Foto de perfil rodona */
@@ -47,14 +48,16 @@
         
         .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
         
-        /* Targeta "About me" */
+        /* Targetes de contingut */
         .about-card { background: var(--card); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: left; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid var(--border); }
         .about-card h2 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
-
+        
+        .about-card ul { padding-left: 1.2rem; color: var(--text); }
+        .about-card li { margin-bottom: 0.5rem; }
     </style>
 </head>
 <body>
-    <!-- Botó per canviar a la versió en anglès (pujant a l'arrel i entrant a eng/) -->
+    <!-- Botó per canviar a la versió en anglès -->
     <div class="lang-selector">
         <a href="../eng/index.html" class="lang-btn">ENG</a>
     </div>
@@ -64,18 +67,42 @@
             <img src="../imatges/ArnauBoix.jpeg" alt="Arnau Boix Granell" class="profile-img">
             
             <h1>Arnau Boix Granell</h1>
-            <p>Benvingut al meu espai personal. Aquí comparteixo la meva trajectòria i els projectes que vaig desenvolupant.</p>
+            <p>Investigador en Manipulació i Col·laboració Robòtica</p>
             
             <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="btn btn-linkedin">LinkedIn</a>
         </header>
 
+        <!-- SOBRE MI / PERFIL -->
         <div class="about-card">
             <h2>Sobre mi</h2>
-            <p>Hola! Sóc l'Arnau...</p>
-            
+            <p>Investigador en robòtica centrat en el desenvolupament de sistemes de manipulació basats en aprenentatge per a aplicacions del món real. Amb experiència en aprenentatge per imitació (imitation learning), aprenentatge per reforç (reinforcement learning) i enfocaments basats en VLA, amb èmfasi en la integració d'aquests mètodes en plataformes robòtiques físiques i entorns centrats en les persones[cite: 1].</p>
+        </div>
+
+        <!-- EXPERIÈNCIA -->
+        <div class="about-card">
+            <h2>Experiència Professional</h2>
+            <p><strong>Eurecat, Centre Tecnològic de Catalunya</strong> — Investigador en Robòtica (Setembre 2024 - Present)[cite: 1]<br>
+            <span style="color: var(--muted); font-size: 0.95rem;">Treball en aprenentatge de robòtica per a manipulació, integrant aprenentatge per imitació, reforç i models VLA en sistemes robòtics reals[cite: 1].</span></p>
+            <hr style="border: none; border-top: 1px solid var(--border); margin: 1rem 0;">
+            <p><strong>Institut de Robòtica i Informàtica Industrial (IRI)</strong> — Becari INIREC (Octubre 2021 - Novembre 2022)[cite: 1]<br>
+            <span style="color: var(--muted); font-size: 0.95rem;">Projecte de recerca relacionat amb la realitat virtual utilitzant HTC Vive, càmeres ZED, Leap Motion i Unity[cite: 1].</span></p>
+        </div>
+
+        <!-- ESTUDIS -->
+        <div class="about-card">
+            <h2>Estudis</h2>
+            <p><strong>UPC, ETSEIB, Barcelona (2018 - 2024)</strong>[cite: 1]<br>
+            • Màster Doble en Enginyeria de Robòtica i Automàtica i Enginyeria Industrial (Nota mitjana: 9,02 amb matrícula d'honor en 12 assignatures)[cite: 1].<br>
+            • Grau en Enginyeria en Tecnologies Industrials (Nota mitjana: 8,88 amb matrícula d'honor en 23 assignatures)[cite: 1].</p>
+        </div>
+
+        <!-- ENLLAÇOS A PROJECTES I ARTICLES -->
+        <div class="about-card">
+            <h2>Projectes i Recerca</h2>
+            <p>Pots consultar el detall dels treballs acadèmics i publicacions científiques a les seccions següents:</p>
             <div class="btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
-                <a href="projectes-codi.html" class="btn">Projectes acadèmics (grau i màster)</a>
-                <a href="projectes-visuals.html" class="btn">Articles</a>
+                <a href="projectes-codi.html" class="btn btn-primary">Projectes acadèmics (grau i màster)</a>
+                <a href="projectes-visuals.html" class="btn">Articles i Publicacions</a>
             </div>
         </div>
     </div>
