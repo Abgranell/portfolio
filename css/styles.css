@@ -1,0 +1,66 @@
+/* ==========================================
+   PALETA DE COLORS I ESTILS GLOBALS
+   ========================================== */
+:root { 
+    --bg: #fdfbf7;         /* Fons crema suau */
+    --card: #ffffff;       /* Targeta blanca */
+    --text: #1e293b;       /* Text gris molt fosc */
+    --accent: #0284c7;     /* Blau intens per a elements destacats */
+    --muted: #64748b;      /* Gris per a subtítols */
+    --border: #e2e8f0;     /* Color per a vores suaus */
+    --hover-bg: #e2e8f0;   /* Color de fons al passar el ratolí */
+    --linkedin: #0a66c2;   /* Color corporatiu de LinkedIn */
+    --linkedin-hover: #084e96;
+}
+
+body { 
+    font-family: system-ui, -apple-system, sans-serif; 
+    background: var(--bg); 
+    color: var(--text); 
+    margin: 0; 
+    padding: 2rem 1rem; 
+    line-height: 1.6; 
+}
+
+.container { 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+/* ==========================================
+   BOTONS GLOBALS (Utilitzen variables)
+   ========================================== */
+.btn { 
+    display: inline-block; 
+    background: var(--card); 
+    color: var(--text); 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 8px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    border: 1px solid var(--border); 
+    transition: background 0.2s; 
+}
+.btn:hover { 
+    background: var(--hover-bg); 
+}
+
+.btn-primary { 
+    background: var(--accent); 
+    color: #ffffff; 
+    border: none; 
+}
+.btn-primary:hover { 
+    opacity: 0.9; 
+    background: #0369a1; 
+}
+
+.btn-linkedin { 
+    background: var(--linkedin); 
+    color: #ffffff; 
+    border: none; 
+}
+.btn-linkedin:hover { 
+    opacity: 0.9; 
+    background: var(--linkedin-hover); 
+}
