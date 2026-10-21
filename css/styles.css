@@ -18,8 +18,13 @@ body {
     background: var(--bg); 
     color: var(--text); 
     margin: 0; 
-    padding: 2rem 1rem; 
-    line-height: 1.6; 
+    
+    /* Aquestes línies són les que centren tot el contingut */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    text-align: center; 
 }
 
 .container { 
