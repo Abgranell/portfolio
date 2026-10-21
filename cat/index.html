@@ -8,7 +8,34 @@
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         /* Estils estructurals exclusius d'aquesta pàgina */
-        body { display: block; text-align: left; }
+        body { 
+            display: block; 
+            text-align: left; 
+            position: relative; 
+            padding-top: 4rem; /* Deixa un marge superior perquè res quedi enganxat a dalt */
+        }
+        
+        /* Selector d'idioma a dalt a la dreta */
+        .lang-selector {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+        }
+        .lang-btn {
+            background: var(--card);
+            color: var(--text);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background: var(--hover-bg);
+        }
+
         .container { text-align: center; }
         header { margin-bottom: 3rem; }
         
@@ -22,10 +49,16 @@
         
         /* Targeta "About me" */
         .about-card { background: var(--card); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: left; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid var(--border); }
+        .about-card h2 { margin-top: 0; color: var(--accent); border-bottom: 2px solid var(--border); padding-bottom: 0.5rem; }
 
     </style>
 </head>
 <body>
+    <!-- Botó per canviar a la versió en anglès (pujant a l'arrel i entrant a eng/) -->
+    <div class="lang-selector">
+        <a href="../eng/index.html" class="lang-btn">ENG</a>
+    </div>
+
     <div class="container">
         <header>
             <img src="../imatges/ArnauBoix.jpeg" alt="Arnau Boix Granell" class="profile-img">
@@ -33,7 +66,7 @@
             <h1>Arnau Boix Granell</h1>
             <p>Benvingut al meu espai personal. Aquí comparteixo la meva trajectòria i els projectes que vaig desenvolupant.</p>
             
-            <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="btn btn-linkedin">Conèixer a LinkedIn</a>
+            <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="btn btn-linkedin">LinkedIn</a>
         </header>
 
         <div class="about-card">
@@ -41,8 +74,8 @@
             <p>Hola! Sóc l'Arnau...</p>
             
             <div class="btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
-                <a href="projectes-codi.html" class="btn"> Projectes academics (grau i màster)</a>
-                <a href="projectes-visuals.html" class="btn"> Articles</a>
+                <a href="projectes-codi.html" class="btn btn-primary">Projectes acadèmics (grau i màster)</a>
+                <a href="projectes-visuals.html" class="btn">Articles</a>
             </div>
         </div>
     </div>
