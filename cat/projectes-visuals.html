@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projectes Visuals - Arnau Boix</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #38bdf8; --muted: #94a3b8; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem 1rem; line-height: 1.5; }
+        .container { max-width: 800px; margin: 0 auto; }
+        .nav-back { display: inline-block; color: var(--accent); text-decoration: none; margin-bottom: 2rem; font-weight: bold; }
+        .nav-back:hover { text-decoration: underline; }
+        h1 { color: var(--accent); margin-bottom: 0.5rem; }
+        .project { background: var(--card); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .project h3 { margin-top: 0; color: var(--accent); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; }
+        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #334155; }
+        .badge { display: inline-block; background: #334155; color: var(--muted); font-size: 0.85rem; padding: 0.2rem 0.6rem; border-radius: 4px; margin-right: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="nav-back">← Tornar a l'Inici (About me)</a>
+        
+        <h1>Projectes Visuals i Explicatius</h1>
+        <p style="color: var(--muted); margin-bottom: 2rem;">Projectes d'àmbit privat, de recerca o conceptuals on es mostra el procés mitjançant imatges i documentació.</p>
+
+        <!-- Projecte Visual 1 -->
+        <div class="project">
+            <h3>Títol del Projecte Visual 1</h3>
+            <span class="badge">Disseny / Conceptual</span>
+            <p>Descripció detallada del projecte, l'enfocament i els resultats obtinguts a nivell visual o estratègic.</p>
+            
+            <div class="gallery">
+                <img src="https://via.placeholder.com/400x250" alt="Esquema o imatge 1">
+                <img src="https://via.placeholder.com/400x250" alt="Esquema o imatge 2">
+            </div>
+
+            <p style="color: var(--muted); font-size: 0.9rem; margin-top: 1rem;"><em>* Mostra de projecte amb contingut privat/demostratiu.</em></p>
+        </div>
+    </div>
+</body>
+</html>

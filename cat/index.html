@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arnau Boix Granell - Portfolio</title>
+    <style>
+        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #38bdf8; --muted: #94a3b8; --linkedin: #0a66c2; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem 1rem; line-height: 1.6; }
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        header { margin-bottom: 3rem; }
+        
+        /* Estil per a la foto de perfil rodona a les subpàgines */
+        .profile-img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent); }
+        header p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; }
+        
+        .btn-group { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+        .btn { display: inline-block; background: var(--accent); color: #0f172a; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; transition: opacity 0.2s; }
+        .btn:hover { opacity: 0.9; }
+        .btn-linkedin { background: var(--linkedin); color: #ffffff; }
+        
+        .about-card { background: var(--card); border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: left; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .about-card h2 { margin-top: 0; color: var(--accent); border-bottom: 2px solid #334155; padding-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <!-- FOTO DE PERFIL (Amb ../ pugem de la carpeta cat/ a l'arrel) -->
+            <img src="../imatges/ArnauBoix.jpeg" alt="Arnau Boix Granell" class="profile-img">
+            
+            <h1>Arnau Boix Granell</h1>
+            <p>Benvingut al meu espai personal. Aquí comparteixo la meva trajectòria i els projectes que vaig desenvolupant.</p>
+            
+            <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="btn btn-linkedin">Conèixer a LinkedIn</a>
+        </header>
+
+        <div class="about-card">
+            <h2>Sobre mi</h2>
+            <p>Hola! Sóc l'Arnau...</p>
+            
+            <div class="btn-group" style="justify-content: flex-start; margin-top: 1.5rem;">
+                <a href="projectes-codi.html" class="btn">📂 Projectes amb Codi</a>
+                <a href="projectes-visuals.html" class="btn">🖼️ Projectes Visuals i Explicatius</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
