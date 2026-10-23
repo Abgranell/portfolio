@@ -3,41 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projectes amb Codi - Arnau Boix</title>
+    <title>Projectes Academics</title>
+    <!-- Enllaç al full d'estils general -->
+    <link rel="stylesheet" href="../css/styles.css">
     <style>
-        :root { --bg: #0f172a; --card: #1e293b; --text: #f8fafc; --accent: #38bdf8; --muted: #94a3b8; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 2rem 1rem; line-height: 1.5; }
-        .container { max-width: 800px; margin: 0 auto; }
-        .nav-back { display: inline-block; color: var(--accent); text-decoration: none; margin-bottom: 2rem; font-weight: bold; }
-        .nav-back:hover { text-decoration: underline; }
-        h1 { color: var(--accent); margin-bottom: 0.5rem; }
-        .project { background: var(--card); border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
-        .project h3 { margin-top: 0; color: var(--accent); }
-        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0; }
-        .gallery img { width: 100%; height: 150px; object-fit: cover; border-radius: 8px; border: 1px solid #334155; }
-        .btn { display: inline-block; background: var(--accent); color: #0f172a; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; margin-top: 0.5rem; }
-        .badge { display: inline-block; background: #334155; color: var(--muted); font-size: 0.85rem; padding: 0.2rem 0.6rem; border-radius: 4px; margin-right: 0.5rem; }
+        /* Estils estructurals exclusius d'aquesta pàgina */
+        body { 
+            display: block; 
+            text-align: left; 
+            position: relative; 
+            padding-top: 4rem; 
+            padding-bottom: 3rem;
+        }
+
+        /* Botó de LinkedIn a dalt a l'esquerra */
+        .linkedin-top {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+        }
+        .linkedin-btn {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .linkedin-btn:hover {
+            opacity: 0.7;
+        }
+        .linkedin-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: #0a66c2;
+        }
+        
+        /* Selector d'idioma a dalt a la dreta */
+        .lang-selector {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+        }
+        .lang-btn {
+            background: var(--card);
+            color: var(--text);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background: var(--hover-bg);
+        }
+
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        header { margin-bottom: 3rem; }
+        
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text); }
+        header p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; }
+        
+        .btn-back { 
+            display: inline-block; 
+            background: var(--card); 
+            color: var(--text); 
+            padding: 0.6rem 1.2rem; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border: 1px solid var(--border); 
+            margin-bottom: 2rem;
+            transition: background 0.2s; 
+        }
+        .btn-back:hover { background: var(--hover-bg); }
+
+        /* Targetes d'articles */
+        .article-card { 
+            background: var(--card); 
+            border-radius: 12px; 
+            padding: 2rem; 
+            margin-bottom: 2rem; 
+            text-align: left; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
+            border: 1px solid var(--border); 
+        }
+        
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .article-card h2 { 
+            margin-top: 0; 
+            margin-bottom: 0.2rem;
+            color: var(--accent); 
+            font-size: 1.3rem;
+        }
+
+        .article-badge {
+            background: var(--hover-bg);
+            color: var(--text);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            white-space: nowrap;
+            border: 1px solid var(--border);
+        }
+
+        .article-authors {
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Multimèdia a amplada completa (Full Width) */
+        .article-media-full {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: transparent;
+            margin-bottom: 1.2rem;
+            display: flex;
+            justify-content: center; /* Centra horitzontalment */
+            align-items: center;     /* Centra verticalment si cal */
+            padding: 1rem 0;         /* Un petit respir superior i inferior */
+        }
+
+        .article-img-full {
+            max-height: 100%;       /* Alçada màxima controlada */
+            width: auto;             /* Amplada adaptativa proporcional */
+            max-width: 100%;         /* Evita desbordaments */
+            object-fit: contain;     /* Mostra tota la imatge sencera sense retallar */
+            display: block;
+            background: transparent; /* Assegura transparència en la imatge */
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporció 16:9 */
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Secció de Topics */
+        .article-topics {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: var(--hover-bg);
+            color: var(--text);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.3rem;
+            border: 1px solid var(--border);
+        }
+
+        .article-details p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            text-align: justify;     /* Aquesta línia justifica tot el text del paràgraf */
+            hyphens: auto;           /* Opcional: ajuda a partir les paraules correctament en català */
+        }
+
+        .btn-article {
+            display: inline-block;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .btn-article:hover {
+            opacity: 0.9;
+        }
+        /* Estils del carrusel d'imatges */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel-slide {
+            display: none; /* Amaga totes les imatges per defecte */
+            width: 100%;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            display: block; /* Només mostra la imatge activa */
+        }
+
+        .carousel-slide img {
+            max-height: 280px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: inline-block;
+        }
+
+        /* Botons de les fletxes */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="index.html" class="nav-back">← Tornar a l'Inici (About me)</a>
-        
-        <h1>Projectes amb Codi Font</h1>
-        <p style="color: var(--muted); margin-bottom: 2rem;">Aquesta secció recull aquells projectes on el codi és obert o es pot consultar directament a GitHub.</p>
+    <!-- Logo de LinkedIn a dalt a l'esquerra -->
+    <div class="linkedin-top">
+        <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="linkedin-btn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
 
-        <!-- Projecte 1 -->
-        <div class="project">
-            <h3>Títol del Projecte de Codi 1</h3>
-            <span class="badge">Python</span> <span class="badge">Git</span>
-            <p>Explicació del projecte, quina problemàtica resol i com està implementat tècnicament.</p>
+    <!-- Botó per canviar a la versió en anglès -->
+    <div class="lang-selector">
+        <a href="wip.html" class="lang-btn">ENG</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Projectes Acadèmics</h1>
+            <p>Principals projectes acadèmics realitzats durant els estudis i fites relacionades.</p>
+            <a href="main-cat.html" class="btn-back">← Tornar a l'inici</a>
+        </header>
+
+        <!-- Summer School -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>AIxHRI Summer School</h2>
+                <span class="article-badge">Nancy, França</span>
+            </div>
             
-            <div class="gallery">
-                <img src="https://via.placeholder.com/400x250" alt="Captura 1">
+            <!-- Imateg -->
+            <div class="article-media-full">
+                <img src="../imatges/TODO" alt="TODO: NOM FOTO" class="article-img-full">
             </div>
 
-            <a href="https://github.com/el-teu-usuari/el-teu-repositori" target="_blank" class="btn">Veure Codi a GitHub</a>
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">AI</span>
+                <span class="topic-tag">HRI</span>
+                <span class="topic-tag">IL</span>
+                <span class="topic-tag">RL</span>
+                <span class="topic-tag">LLM</span>
+                <span class="topic-tag">VLM</span>
+                <span class="topic-tag">VLA</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Escola d'estiu per a estudiants de doctorat relacionada amb intel·ligència artificial i interacció entre humans i robots. Formació intensiva en models fundacionals, models de llenguatge i visió-llenguatge (LLM/VLM), aprenentatge per imitació i per reforç, aprenentatge a partir de retroalimentació humana i models Visió-Llenguatge-Acció (VLA), combinant sessions teòriques amb pràctiques d’aplicació en robots reals.</p>
+            </div>
         </div>
+
+        <!-- TFM -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>Aprenentatge per reforç per a tasques de manipulació complexes i dinàmiques</h2>
+                <span class="article-badge">Gener 2025</span>
+            </div>
+            <div class="article-authors">Treball de fi de màster del doble màster d'enginyeria en tecnologies industrials i automàtica i robòtica</div>
+            
+            <!-- Vídeo de YouTube a amplada completa -->
+            <div class="article-media-full">
+                <img src="../imatges/TODO" alt="TODO: NOM FOTO" class="article-img-full">
+            </div>
+
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">RL</span>
+                <span class="topic-tag">IsaacSim</span>
+                <span class="topic-tag">IsaacLab</span>
+                <span class="topic-tag">ROS2</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Ensenyar habilitats complexes, com ara obrir un rentaplats, a robots manipuladors és una tasca molt difícil que sovint s’aborda mitjançant programació directa. Aquesta tècnica és adequada per a entorns controlats, on variables com les posicions relatives o les propietats físiques són conegudes i constants, però el seu rendiment disminueix en entorns menys controlats, reduint la repetibilitat i la taxa d’èxit. A més, en alguns casos, la programació directa no és viable. En aquest treball de fi de grau, s’utilitzen les eines avançades de simulació NVIDIA Isaac Sim i Isaac Lab per desenvolupar un nou entorn que permet entrenar agents d’aprenentatge per reforç (RL) per dur a terme tasques complexes de manipulació dinàmica. Inicialment, s’exploren tasques bàsiques per familiaritzar-se amb les eines i ajustar progressivament els paràmetres de simulació, establint els fonaments de l’aprenentatge per reforç per desenvolupar entorns més avançats. També s’estudien tècniques per reduir la bretxa entre la simulació i la realitat (Sim2Real), un obstacle clau per desplegar models entrenats en simulació en entorns reals. Posteriorment, s’incorporen aquestes tècniques al sistema desenvolupat i s’entrena un robot manipulador Franka Emika Panda per obrir la porta d’un rentaplats en un entorn simulat. Finalment, s’estableix una connexió entre la simulació i el món real mitjançant ROS 2, que permet provar la reproducció d’una de les tasques més senzilles en un robot real.</p>
+                <a href="https://upcommons.upc.edu/entities/publication/579551cc-36d6-441e-a54d-ec78524d9299" target="_blank" class="btn-article">Llegir treball →</a>
+            </div>
+        </div>
+
+        <!-- Engihack -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>Engihack (Hackató)</h2>
+                <span class="article-badge">Octubre 2024</span>
+            </div>
+            <div class="article-authors">Equip guanyador en un hackató d'enginyers</div>
+            
+            <!-- Imatge -->
+            <div class="article-media-full">
+                <div class="carousel-container" id="articleCarousel">
+                    <!-- Imatge 1 (Activa per defecte) -->
+                    <div class="carousel-slide active">
+                        <img src="../imatges/imatge1.png" alt="Esquema 1" class="article-img-full">
+                    </div>
+                    <!-- Imatge 2 -->
+                    <div class="carousel-slide">
+                        <img src="../imatges/imatge2.svg" alt="Esquema 2" class="article-img-full">
+                    </div>
+                    <!-- Imatge 3 -->
+                    <div class="carousel-slide">
+                        <img src="../imatges/imatge3.png" alt="Resultats" class="article-img-full">
+                    </div>
+
+                    <!-- Fletxes de navegació -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">Treball en equip</span>
+                <span class="topic-tag">Oratòria</span>
+                <span class="topic-tag">Pensament crític</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Participació en una hackató d’enginyeria de 12 hores organitzada pel Col·legi d’Enginyers Industrials de Catalunya, amb un equip multidisciplinari d'enginyers. Desenvolupament téoric de l’EcoShower, una solució per recollir i reutilitzar l’aigua que es consumeix mentre s’espera que surti calenta de la dutxa, amb l’objectiu de reduir el malbaratament d’aigua. El projecte va obtenir el primer premi, dotat amb 3.000 € i, posteriorment, va ser presentat a TV3.</p>
+                <a href="https://engihack160.eic.cat/engihack2024" target="_blank" class="btn-article">Veure més →</a>
+            </div>
+        </div>
+
+        <!-- TFG -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>Desenvolupament d’un entorn d’aprenentatge per demostració mitjançant una ZED 2i i un HTC Vive Pro</h2>
+                <span class="article-badge">Juliol 2022</span>
+            </div>
+            <div class="article-authors">Treball de fi de grau del grau d'enginyeria en tecnologies industrials</div>
+            
+            <!-- Vídeo de YouTube a amplada completa -->
+            <div class="article-media-full">
+                <img src="../imatges/TODO" alt="TODO: NOM FOTO" class="article-img-full">
+            </div>
+
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">IL</span>
+                <span class="topic-tag">Unity</span>
+                <span class="topic-tag">ROS2</span>
+                <span class="topic-tag">VR</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Desenvolupament d’un entorn de realitat virtual basat en Unity, HTC Vive Pro, càmeres ZED Mini i ZED 2i i el sistema de seguiment de mans Leap Motion per facilitar l’aprenentatge robòtic per demostració. L’entorn permet detectar i seguir objectes, animals i cossos humans en 3D, així com simular peces de roba realistes i interactuar-hi en temps real mitjançant controladors o les mans de l’usuari. El sistema simplifica la captura de dades i permet obtenir demostracions més realistes per a l’aprenentatge de tasques de manipulació robòtica. Finalment, s’utilitza per crear un nou conjunt de dades de manipulació de roba amb mostres i vídeos de 19 tipus diferents de manipulació.</p>
+                <a href="https://digital.csic.es/handle/10261/304847" target="_blank" class="btn-article">Llegir Treball →</a>
+            </div>
+        </div>
+
+
+
+
+
     </div>
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function moveSlide(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("carousel-slide");
+            if (n >= slides.length) { slideIndex = 0; }
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
 </body>
 </html>
