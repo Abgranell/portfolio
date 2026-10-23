@@ -96,7 +96,7 @@
             justify-content: space-between;
             align-items: flex-start;
             gap: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .article-card h2 { 
@@ -117,7 +117,14 @@
             border: 1px solid var(--border);
         }
 
-        /* Contingut de l'article (Imatge + Text) */
+        .article-authors {
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Contingut de l'article (Imatge / Vídeo + Text) */
         .article-content {
             display: flex;
             gap: 1.5rem;
@@ -131,25 +138,27 @@
             }
         }
 
-        .article-img-container {
+        .article-media-container {
             flex-shrink: 0;
-            width: 200px;
-            height: 130px;
+            width: 220px;
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border);
             background: var(--hover-bg);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--muted);
-            font-size: 0.8rem;
         }
 
         .article-img {
             width: 100%;
-            height: 100%;
+            height: 140px;
             object-fit: cover;
+            display: block;
+        }
+
+        .article-video {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
         }
 
         .article-details {
@@ -199,20 +208,24 @@
             <a href="index.html" class="btn-back">← Tornar a l'inici</a>
         </header>
 
-        <!-- ARTICLE 1: 2026 (Més recent) -->
+        <!-- ARTICLE 1: 2026 (Més recent amb Vídeo) -->
         <div class="article-card">
             <div class="article-header">
                 <h2>PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions</h2>
                 <span class="article-badge">ERF - 2026</span>
             </div>
+            <div class="article-authors">Arnau Boix-Granell, et al.</div>
             <div class="article-content">
-                <div class="article-img-container">
-                    <!-- Canvia 'ruta-imatge-1.jpg' per la teva imatge real -->
-                    <img src="../imatges/wip.png" alt="PRISM Article" class="article-img">
+                <div class="article-media-container">
+                    <!-- Pots canviar la ruta del video o usar un <iframe de YouTube -->
+                    <video autoplay muted loop class="article-video">
+                        <source src="../imatges/prism-video.mp4" type="video/mp4">
+                        El teu navegador no suporta vídeos.
+                    </video>
                 </div>
                 <div class="article-details">
-                    <p><strong>Abstract:</strong> Aquest article presenta PRISM, un enfocament innovador per al refinament personalitzat d'habilitats d'imitació orientades a la manipulació robòtica mitjançant instruccions humanes directes.</p>
-                    <a href="#" target="_blank" class="btn-article">Llegir article →</a>
+                    <p><strong>Abstract:</strong> Aquest article presenta PRISM, un enfocament d'afinat condicionat per instruccions per a polítiques d'imitació en manipulació robòtica, combinant l'aprenentatge per imitació i per reforç a partir de retroalimentació humana.</p>
+                    <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Llegir article →</a>
                 </div>
             </div>
         </div>
@@ -223,14 +236,14 @@
                 <h2>A Virtual Reality Framework For Fast Dataset Creation Applied to Cloth Manipulation with Automatic Semantic Labelling</h2>
                 <span class="article-badge">ICRA - 2023</span>
             </div>
+            <div class="article-authors">Júlia Borràs, Arnau Boix-Granell, Sergi Foix, Carme Torras</div>
             <div class="article-content">
-                <div class="article-img-container">
-                    <!-- Canvia 'ruta-imatge-2.jpg' per la teva imatge real -->
-                    <img src="../imatges/wip.png" alt="VR Framework Article" class="article-img">
+                <div class="article-media-container">
+                    <img src="../imatges/wip.png" alt="VR Framework" class="article-img">
                 </div>
                 <div class="article-details">
-                    <p><strong>Abstract:</strong> Desenvolupament d'un marc de realitat virtual dissenyat per accelerar la creació de conjunts de dades aplicats a la manipulació de peces de roba (cloth manipulation), incorporant etiquetatge semàntic automàtic.</p>
-                    <a href="#" target="_blank" class="btn-article">Llegir article →</a>
+                    <p><strong>Abstract:</strong> Desenvolupament d'un marc de realitat virtual per accelerar la creació de datasets aplicats a la manipulació de teixits amb etiquetatge semàntic automàtic.</p>
+                    <a href="https://digital.csic.es/handle/10261/354962" target="_blank" class="btn-article">Llegir article →</a>
                 </div>
             </div>
         </div>
@@ -241,14 +254,14 @@
                 <h2>Garment manipulation dataset for robot learning by demonstration through a virtual reality framework</h2>
                 <span class="article-badge">CCIA - 2022</span>
             </div>
+            <div class="article-authors">Arnau Boix-Granell, Sergi Foix, Carme Torras</div>
             <div class="article-content">
-                <div class="article-img-container">
-                    <!-- Canvia 'ruta-imatge-3.jpg' per la teva imatge real -->
-                    <img src="../imatges/wip.png" alt="Garment Dataset Article" class="article-img">
+                <div class="article-media-container">
+                    <img src="../imatges/wip.png" alt="Garment Dataset" class="article-img">
                 </div>
                 <div class="article-details">
-                    <p><strong>Abstract:</strong> Presentació d'un dataset especialitzat en la manipulació de peces de roba per a l'aprenentatge de robots per demostració, recolzat en una infraestructura basada en realitat virtual.</p>
-                    <a href="#" target="_blank" class="btn-article">Llegir article →</a>
+                    <p><strong>Abstract:</strong> Presentació d'un conjunt de dades especialitzat en la manipulació de peces de roba per a l'aprenentatge de robots per demostració mitjançant realitat virtual.</p>
+                    <a href="https://www.semanticscholar.org/paper/Garment-Manipulation-Dataset-for-Robot-Learning-by-Boix-Granell-Foix/4d5ac90f4e64b22db90b0e5c75c31e4c907ef8f4" target="_blank" class="btn-article">Llegir article →</a>
                 </div>
             </div>
         </div>
