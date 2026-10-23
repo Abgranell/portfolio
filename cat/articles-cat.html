@@ -226,7 +226,7 @@
         <!-- ARTICLE 1: 2026 (Més recent amb Vídeo) -->
         <div class="article-card">
             <div class="article-header">
-                <h2>PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions</h2>
+                <h2>PRISM: Refinament personalitzat d’habilitats d’imitació per a la manipulació mitjançant instruccions humanes</h2>
                 <span class="article-badge">ERF - 2026</span>
             </div>
             <div class="article-authors">Arnau Boix-Granell, Alberto San-Miguel, Magí Dalmau-Moreno i Néstor García</div>
@@ -238,14 +238,18 @@
 
             <div class="article-topics">
                 <strong>Topics:</strong> 
-                <span class="topic-tag">Imitation Learning</span>
-                <span class="topic-tag">Reinforcement Learning</span>
-                <span class="topic-tag">Robot Manipulation</span>
-                <span class="topic-tag">Human Guidance</span>
+                <span class="topic-tag">IL</span>
+                <span class="topic-tag">RL</span>
+                <span class="topic-tag">LLM</span>
+                <span class="topic-tag">HRI</span>
+                <span class="topic-tag">IsaacSim</span>
+                <span class="topic-tag">IsaacLab</span>
+                <span class="topic-tag">Python</span>
+                <span class="topic-tag">VR</span>
             </div>
 
             <div class="article-details">
-                <p><strong>Abstract:</strong> Aquest article presenta PRISM: un mètode de refinament de polítiques d’imitació condicionat per instruccions per a la manipulació robòtica. Aquest enfocament integra l’aprenentatge per imitació (IL) i l’aprenentatge per reforç (RL) en un flux de treball unificat, de manera que una política d’imitació per a una tasca genèrica, generada a partir de demostracions guiades per l’usuari, es pugui refinar mitjançant reforç per generar nous comportaments detallats no observats prèviament. El procés de refinament segueix el paradigma <a href="https://eureka-research.github.io/" target="_blank">Eureka</a>, en què les funcions de recompensa per al RL es generen iterativament a partir d’una descripció inicial de la tasca en llenguatge natural. El mètode proposat amplia aquest mecanisme per adaptar una política d’imitació refinada a noves configuracions d’objectius i incorporar restriccions, mitjançant correccions basades en la retroalimentació humana durant les execucions intermèdies. Això permet reutilitzar les polítiques i millorar l’eficiència en l’ús de les dades. Els resultats d’una tasca de recollida i col·locació d’objectes en un entorn simulat mostren que el mètode proposat supera les polítiques sense retroalimentació humana, millorant-ne la robustesa durant el desplegament i reduint la càrrega computacional.</p>
+                <p><strong>Resum:</strong> Aquest article presenta PRISM: un mètode de refinament de polítiques d’imitació condicionat per instruccions per a la manipulació robòtica. Aquest enfocament integra l’aprenentatge per imitació (IL) i l’aprenentatge per reforç (RL) en un flux de treball unificat, de manera que una política d’imitació per a una tasca genèrica, generada a partir de demostracions guiades per l’usuari, es pugui refinar mitjançant reforç per generar nous comportaments detallats no observats prèviament. El procés de refinament segueix el paradigma <a href="https://eureka-research.github.io/" target="_blank">Eureka</a>, en què les funcions de recompensa per al RL es generen iterativament a partir d’una descripció inicial de la tasca en llenguatge natural. El mètode proposat amplia aquest mecanisme per adaptar una política d’imitació refinada a noves configuracions d’objectius i incorporar restriccions, mitjançant correccions basades en la retroalimentació humana durant les execucions intermèdies. Això permet reutilitzar les polítiques i millorar l’eficiència en l’ús de les dades. Els resultats d’una tasca de recollida i col·locació d’objectes en un entorn simulat mostren que el mètode proposat supera les polítiques sense retroalimentació humana, millorant-ne la robustesa durant el desplegament i reduint la càrrega computacional.</p>
                 <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article">Vídeo article →</a>
                 <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Llegir article →</a>
             </div>
@@ -254,7 +258,7 @@
         <!-- ARTICLE 2: 2023 -->
         <div class="article-card">
             <div class="article-header">
-                <h2>A Virtual Reality Framework For Fast Dataset Creation Applied to Cloth Manipulation with Automatic Semantic Labelling</h2>
+                <h2>Un entorn de realitat virtual per a la creació ràpida de conjunts de dades aplicats a la manipulació de roba amb etiquetatge semàntic automàtic</h2>
                 <span class="article-badge">ICRA - 2023</span>
             </div>
             <div class="article-authors">Júlia Borràs, Arnau Boix-Granell, Sergi Foix i Carme Torras</div>
@@ -266,14 +270,15 @@
 
             <div class="article-topics">
                 <strong>Topics:</strong> 
-                <span class="topic-tag">Virtual Reality (VR)</span>
+                <span class="topic-tag">VR</span>
                 <span class="topic-tag">Cloth Manipulation</span>
-                <span class="topic-tag">Dataset Creation</span>
                 <span class="topic-tag">Unity</span>
+                <span class="topic-tag">Matlab</span>
+                <span class="topic-tag">C++</span>
             </div>
 
             <div class="article-details">
-                <p><strong>Abstract:</strong> Ensenyar habilitats complexes de manipulació, com ara plegar peces de roba, a un robot bimanual és una tasca molt difícil que sovint s’aborda mitjançant l’aprenentatge per demostració. Els pocs conjunts de dades de demostracions de plegament de roba disponibles actualment per a la comunitat investigadora en robòtica s’han obtingut a partir de demostracions humanes o s’han generat mitjançant simulació. El primer enfocament presenta grans dificultats per percebre tant l’estat de la roba com les accions humanes i transferir-les al control dinàmic del robot, mentre que el segon requereix programar els moviments humans al simulador en llaç obert, sense incorporar la retroalimentació visual que les persones utilitzen de manera natural, fet que dona lloc a moviments poc realistes. En aquest article, presentem un conjunt de dades precís de demostracions humanes de plegament de roba. Les dades es recullen mitjançant el nostre nou entorn de realitat virtual (VR), basat en la plataforma 3D Unity i el sistema HTC Vive Pro. Aquest entorn permet simular peces de roba de manera realista i interactuar-hi en temps real mitjançant controladors de mà. Gràcies a l’experiència immersiva, el sistema permet aprofitar la retroalimentació visual humana durant les demostracions i, alhora, evitar les dificultats de capturar l’estat de la roba, simplificant així la recollida de dades i obtenint demostracions més realistes. Finalment, creem i fem públic un conjunt de dades de seqüències de manipulació de roba, els estats de les quals s’etiqueten semànticament de manera automàtica mitjançant una nova representació de baixa dimensionalitat que permet distingir clarament diferents configuracions de la roba.</p>
+                <p><strong>Resum:</strong> Ensenyar habilitats complexes de manipulació, com ara plegar peces de roba, a un robot bimanual és una tasca molt difícil que sovint s’aborda mitjançant l’aprenentatge per demostració. Els pocs conjunts de dades de demostracions de plegament de roba disponibles actualment per a la comunitat investigadora en robòtica s’han obtingut a partir de demostracions humanes o s’han generat mitjançant simulació. El primer enfocament presenta grans dificultats per percebre tant l’estat de la roba com les accions humanes i transferir-les al control dinàmic del robot, mentre que el segon requereix programar els moviments humans al simulador en llaç obert, sense incorporar la retroalimentació visual que les persones utilitzen de manera natural, fet que dona lloc a moviments poc realistes. En aquest article, presentem un conjunt de dades precís de demostracions humanes de plegament de roba. Les dades es recullen mitjançant el nostre nou entorn de realitat virtual (VR), basat en la plataforma 3D Unity i el sistema HTC Vive Pro. Aquest entorn permet simular peces de roba de manera realista i interactuar-hi en temps real mitjançant controladors de mà. Gràcies a l’experiència immersiva, el sistema permet aprofitar la retroalimentació visual humana durant les demostracions i, alhora, evitar les dificultats de capturar l’estat de la roba, simplificant així la recollida de dades i obtenint demostracions més realistes. Finalment, creem i fem públic un conjunt de dades de seqüències de manipulació de roba, els estats de les quals s’etiqueten semànticament de manera automàtica mitjançant una nova representació de baixa dimensionalitat que permet distingir clarament diferents configuracions de la roba.</p>
                 <a href="https://digital.csic.es/handle/10261/354962" target="_blank" class="btn-article">Llegir article →</a>
             </div>
         </div>
@@ -281,7 +286,7 @@
         <!-- ARTICLE 3: 2022 (Més antic) -->
         <div class="article-card">
             <div class="article-header">
-                <h2>Garment manipulation dataset for robot learning by demonstration through a virtual reality framework</h2>
+                <h2>Conjunt de dades de manipulació de peces de roba per a l’aprenentatge robòtic per demostració mitjançant un entorn de realitat virtual</h2>
                 <span class="article-badge">CCIA - 2022</span>
             </div>
             <div class="article-authors">Arnau Boix-Granell, Sergi Foix i Carme Torras</div>
@@ -293,14 +298,15 @@
 
             <div class="article-topics">
                 <strong>Topics:</strong> 
-                <span class="topic-tag">Robot Learning</span>
-                <span class="topic-tag">Virtual Reality</span>
-                <span class="topic-tag">Garment Manipulation</span>
-                <span class="topic-tag">HTC Vive</span>
+                <span class="topic-tag">VR</span>
+                <span class="topic-tag">Cloth Manipulation</span>
+                <span class="topic-tag">Unity</span>
+                <span class="topic-tag">Matlab</span>
+                <span class="topic-tag">C++</span>
             </div>
 
             <div class="article-details">
-                <p><strong>Abstract:</strong> Ensenyar habilitats complexes, com ara plegar peces de roba, a un robot bimanual és una tasca molt difícil que sovint s’aborda mitjançant conjunts de dades d’aprenentatge per demostració. Els pocs conjunts de dades de plegament de roba disponibles actualment per a la comunitat investigadora en robòtica s’han obtingut a partir de demostracions humanes o s’han generat mitjançant simulació. El primer enfocament presenta grans dificultats per percebre les accions humanes i transferir-les al control dinàmic del robot, mentre que el segon requereix programar els moviments humans al simulador en llaç obert, fet que dona lloc a moviments poc realistes. En aquest article, presentem un conjunt de dades reduït però molt precís de demostracions humanes de plegament de roba. Les dades es recullen mitjançant un nou entorn de realitat virtual (VR) que proposem, basat en la plataforma 3D Unity i el sistema HTC Vive Pro. Aquest entorn permet simular peces de roba de manera molt realista i interactuar-hi en temps real mitjançant controladors de mà. Gràcies a l’experiència immersiva, el nostre entorn elimina la bretxa entre el bucle de percepció i acció humà i robòtic, alhora que simplifica la captura de dades i permet obtenir mostres més realistes.</p>
+                <p><strong>Resum:</strong> Ensenyar habilitats complexes, com ara plegar peces de roba, a un robot bimanual és una tasca molt difícil que sovint s’aborda mitjançant conjunts de dades d’aprenentatge per demostració. Els pocs conjunts de dades de plegament de roba disponibles actualment per a la comunitat investigadora en robòtica s’han obtingut a partir de demostracions humanes o s’han generat mitjançant simulació. El primer enfocament presenta grans dificultats per percebre les accions humanes i transferir-les al control dinàmic del robot, mentre que el segon requereix programar els moviments humans al simulador en llaç obert, fet que dona lloc a moviments poc realistes. En aquest article, presentem un conjunt de dades reduït però molt precís de demostracions humanes de plegament de roba. Les dades es recullen mitjançant un nou entorn de realitat virtual (VR) que proposem, basat en la plataforma 3D Unity i el sistema HTC Vive Pro. Aquest entorn permet simular peces de roba de manera molt realista i interactuar-hi en temps real mitjançant controladors de mà. Gràcies a l’experiència immersiva, el nostre entorn elimina la bretxa entre el bucle de percepció i acció humà i robòtic, alhora que simplifica la captura de dades i permet obtenir mostres més realistes.</p>
                 <a href="https://ieeexplore.ieee.org/abstract/document/10161122" target="_blank" class="btn-article">Llegir article →</a>
             </div>
         </div>
