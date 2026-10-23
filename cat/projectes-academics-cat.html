@@ -427,21 +427,36 @@
 
     </div>
     <script>
-        let slideIndex = 0;
-        showSlides(slideIndex);
+        // Guardem l'índex actual de cada carrusel en un objecte
+        const slideIndexes = {};
 
-        function moveSlide(n) {
-            showSlides(slideIndex += n);
-        }
+        function moveSlide(carouselId, n) {
+            const container = document.getElementById(carouselId);
+            if (!container) return;
 
-        function showSlides(n) {
-            let slides = document.getElementsByClassName("carousel-slide");
-            if (n >= slides.length) { slideIndex = 0; }
-            if (n < 0) { slideIndex = slides.length - 1; }
+            const slides = container.getElementsByClassName("carousel-slide");
+            
+            // Inicialitzem l'índex si no existeix
+            if (slideIndexes[carouselId] === undefined) {
+                slideIndexes[carouselId] = 0;
+            }
+
+            // Actualitzem l'índex
+            slideIndexes[carouselId] += n;
+
+            // Control de límits (bucle infinit)
+            if (slideIndexes[carouselId] >= slides.length) {
+                slideIndexes[carouselId] = 0;
+            }
+            if (slideIndexes[carouselId] < 0) {
+                slideIndexes[carouselId] = slides.length - 1;
+            }
+
+            // Amaguem totes les diapositives d'aquest carrusel i mostrem l'activa
             for (let i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
-            slides[slideIndex].classList.add("active");
+            slides[slideIndexes[carouselId]].classList.add("active");
         }
     </script>
 </body>
