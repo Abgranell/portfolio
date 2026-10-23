@@ -130,14 +130,21 @@
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid var(--border);
-            background: var(--hover-bg);
+            background: transparent;
             margin-bottom: 1.2rem;
+            display: flex;
+            justify-content: center; /* Centra horitzontalment */
+            align-items: center;     /* Centra verticalment si cal */
+            padding: 1rem 0;         /* Un petit respir superior i inferior */
         }
 
         .article-img-full {
-            height: 100%;
-            object-fit: cover;
+            max-height: 100%;       /* Alçada màxima controlada */
+            width: auto;             /* Amplada adaptativa proporcional */
+            max-width: 100%;         /* Evita desbordaments */
+            object-fit: contain;     /* Mostra tota la imatge sencera sense retallar */
             display: block;
+            background: transparent; /* Assegura transparència en la imatge */
         }
 
         .video-container {
@@ -239,7 +246,8 @@
             </div>
 
             <div class="article-details">
-                <p><strong>Abstract:</strong> Aquest article presenta PRISM: un mètode de refinament de polítiques d’imitació condicionat per instruccions per a la manipulació robòtica. Aquest enfocament integra l’aprenentatge per imitació (IL) i l’aprenentatge per reforç (RL) en un flux de treball unificat, de manera que una política d’imitació per a una tasca genèrica, generada a partir de demostracions guiades per l’usuari, es pugui refinar mitjançant reforç per generar nous comportaments detallats no observats prèviament. El procés de refinament segueix el paradigma <a href="https://eureka-research.github.io/" target="_blank">Eureka</a>, en què les funcions de recompensa per al RL es generen iterativament a partir d’una descripció inicial de la tasca en llenguatge natural. El mètode proposat amplia aquest mecanisme per adaptar una política d’imitació refinada a noves configuracions d’objectius i incorporar restriccions, mitjançant correccions basades en la retroalimentació humana durant les execucions intermèdies. Això permet reutilitzar les polítiques i millorar l’eficiència en l’ús de les dades. Els resultats d’una tasca de recollida i col·locació d’objectes en un entorn simulat mostren que el mètode proposat supera les polítiques sense retroalimentació humana, millorant-ne la robustesa durant el desplegament i reduint la càrrega computacional. <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank">[VIDEO]]</a></p>
+                <p><strong>Abstract:</strong> Aquest article presenta PRISM: un mètode de refinament de polítiques d’imitació condicionat per instruccions per a la manipulació robòtica. Aquest enfocament integra l’aprenentatge per imitació (IL) i l’aprenentatge per reforç (RL) en un flux de treball unificat, de manera que una política d’imitació per a una tasca genèrica, generada a partir de demostracions guiades per l’usuari, es pugui refinar mitjançant reforç per generar nous comportaments detallats no observats prèviament. El procés de refinament segueix el paradigma <a href="https://eureka-research.github.io/" target="_blank">Eureka</a>, en què les funcions de recompensa per al RL es generen iterativament a partir d’una descripció inicial de la tasca en llenguatge natural. El mètode proposat amplia aquest mecanisme per adaptar una política d’imitació refinada a noves configuracions d’objectius i incorporar restriccions, mitjançant correccions basades en la retroalimentació humana durant les execucions intermèdies. Això permet reutilitzar les polítiques i millorar l’eficiència en l’ús de les dades. Els resultats d’una tasca de recollida i col·locació d’objectes en un entorn simulat mostren que el mètode proposat supera les polítiques sense retroalimentació humana, millorant-ne la robustesa durant el desplegament i reduint la càrrega computacional.</p>
+                <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article">Vídeo article →</a>
                 <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Llegir article →</a>
             </div>
         </div>
