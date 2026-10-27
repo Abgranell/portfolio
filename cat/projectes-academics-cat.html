@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projectes Academics</title>
+    <title>Projectes Acadèmics</title>
     <!-- Enllaç al full d'estils general -->
     <link rel="stylesheet" href="../css/styles.css">
     <style>
@@ -132,34 +132,18 @@
             background: transparent;
             margin-bottom: 1.2rem;
             display: flex;
-            justify-content: center; /* Centra horitzontalment */
-            align-items: center;     /* Centra verticalment si cal */
-            padding: 1rem 0;         /* Un petit respir superior i inferior */
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 0;
         }
 
         .article-img-full {
-            max-height: 100%;       /* Alçada màxima controlada */
-            width: auto;             /* Amplada adaptativa proporcional */
-            max-width: 100%;         /* Evita desbordaments */
-            object-fit: contain;     /* Mostra tota la imatge sencera sense retallar */
+            max-height: 100%;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
             display: block;
-            background: transparent; /* Assegura transparència en la imatge */
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Proporció 16:9 */
-            height: 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+            background: transparent;
         }
 
         /* Secció de Topics */
@@ -185,8 +169,8 @@
             font-size: 0.95rem;
             line-height: 1.5;
             margin-bottom: 1.2rem;
-            text-align: justify;     /* Aquesta línia justifica tot el text del paràgraf */
-            hyphens: auto;           /* Opcional: ajuda a partir les paraules correctament en català */
+            text-align: justify;
+            hyphens: auto;
         }
 
         .btn-article {
@@ -203,6 +187,7 @@
         .btn-article:hover {
             opacity: 0.9;
         }
+
         /* Estils del carrusel d'imatges */
         .carousel-container {
             position: relative;
@@ -217,13 +202,13 @@
         }
 
         .carousel-slide {
-            display: none; /* Amaga totes les imatges per defecte */
+            display: none;
             width: 100%;
             text-align: center;
         }
 
         .carousel-slide.active {
-            display: block; /* Només mostra la imatge activa */
+            display: block;
         }
 
         .carousel-slide img {
@@ -285,25 +270,21 @@
                 <span class="article-badge">Juliol 2026</span>
             </div>
             
-            <!-- Imateg -->
             <div class="article-media-full">
                 <div class="carousel-container" id="articleCarousel1">
-                    <!-- Imatge 1 (Activa per defecte) -->
                     <div class="carousel-slide active">
                         <img src="../imatges/TODO" alt="TODO" class="article-img-full">
                     </div>
-                    <!-- Imatge 2 -->
                     <div class="carousel-slide">
                         <img src="../imatges/TODO" alt="TODO" class="article-img-full">
                     </div>
-                    <!-- Imatge 3 -->
                     <div class="carousel-slide">
-                        <img src="../imatges/SummerSchoolFinal.JPG" alt="Engihack 3" class="article-img-full">
+                        <img src="../imatges/SummerSchoolFinal.JPG" alt="Summer School Final" class="article-img-full">
                     </div>
 
-                    <!-- Fletxes de navegació -->
-                    <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+                    <!-- Fletxes amb el paràmetre 'articleCarousel1' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel1', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel1', 1)">&#10095;</button>
                 </div>
             </div>
 
@@ -331,7 +312,6 @@
             </div>
             <div class="article-authors">Treball de fi de màster del doble màster d'enginyeria en tecnologies industrials i automàtica i robòtica</div>
             
-            <!-- Vídeo de YouTube a amplada completa -->
             <div class="article-media-full">
                 <img src="../imatges/TODO" alt="TODO: NOM FOTO" class="article-img-full">
             </div>
@@ -358,25 +338,21 @@
             </div>
             <div class="article-authors">Equip guanyador en un hackató d'enginyers</div>
             
-            <!-- Imatge -->
             <div class="article-media-full">
                 <div class="carousel-container" id="articleCarousel2">
-                    <!-- Imatge 1 (Activa per defecte) -->
                     <div class="carousel-slide active">
                         <img src="../imatges/Engihack1.JPG" alt="Engihack 1" class="article-img-full">
                     </div>
-                    <!-- Imatge 2 -->
                     <div class="carousel-slide">
                         <img src="../imatges/Engihack2.JPG" alt="Engihack 2" class="article-img-full">
                     </div>
-                    <!-- Imatge 3 -->
                     <div class="carousel-slide">
                         <img src="../imatges/Engihack3.jpeg" alt="Engihack 3" class="article-img-full">
                     </div>
 
-                    <!-- Fletxes de navegació -->
-                    <button class="carousel-btn prev-btn" onclick="moveSlide(-1)">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide(1)">&#10095;</button>
+                    <!-- Fletxes amb el paràmetre 'articleCarousel2' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel2', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel2', 1)">&#10095;</button>
                 </div>
             </div>
 
@@ -388,7 +364,7 @@
             </div>
 
             <div class="article-details">
-                <p><strong>Resum:</strong> Participació en una hackató d’enginyeria de 12 hores organitzada pel Col·legi d’Enginyers Industrials de Catalunya, amb un equip multidisciplinari d'enginyers. Desenvolupament téoric de l’EcoShower, una solució per recollir i reutilitzar l’aigua que es consumeix mentre s’espera que surti calenta de la dutxa, amb l’objectiu de reduir el malbaratament d’aigua. El projecte va obtenir el primer premi, dotat amb 3.000 € i, posteriorment, va ser presentat a TV3.</p>
+                <p><strong>Resum:</strong> Participació en una hackató d’enginyeria de 12 hores organitzada pel Col·legi d’Enginyers Industrials de Catalunya, amb un equip multidisciplinari d'enginyers. Desenvolupament teòric de l’EcoShower, una solució per recollir i reutilitzar l’aigua que es consumeix mentre s’espera que surti calenta de la dutxa, amb l’objectiu de reduir el malbaratament d’aigua. El projecte va obtenir el primer premi, dotat amb 3.000 € i, posteriorment, va ser presentat a TV3.</p>
                 <a href="https://engihack160.eic.cat/engihack2024" target="_blank" class="btn-article">Veure més →</a>
             </div>
         </div>
@@ -401,7 +377,6 @@
             </div>
             <div class="article-authors">Treball de fi de grau del grau d'enginyeria en tecnologies industrials</div>
             
-            <!-- Vídeo de YouTube a amplada completa -->
             <div class="article-media-full">
                 <img src="../imatges/TODO" alt="TODO: NOM FOTO" class="article-img-full">
             </div>
@@ -421,13 +396,9 @@
             </div>
         </div>
 
-
-
-
-
     </div>
+
     <script>
-        // Guardem l'índex actual de cada carrusel en un objecte
         const slideIndexes = {};
 
         function moveSlide(carouselId, n) {
@@ -436,15 +407,12 @@
 
             const slides = container.getElementsByClassName("carousel-slide");
             
-            // Inicialitzem l'índex si no existeix
             if (slideIndexes[carouselId] === undefined) {
                 slideIndexes[carouselId] = 0;
             }
 
-            // Actualitzem l'índex
             slideIndexes[carouselId] += n;
 
-            // Control de límits (bucle infinit)
             if (slideIndexes[carouselId] >= slides.length) {
                 slideIndexes[carouselId] = 0;
             }
@@ -452,7 +420,6 @@
                 slideIndexes[carouselId] = slides.length - 1;
             }
 
-            // Amaguem totes les diapositives d'aquest carrusel i mostrem l'activa
             for (let i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
