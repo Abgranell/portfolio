@@ -203,6 +203,60 @@
         .btn-article:hover {
             opacity: 0.9;
         }
+
+        /* Estils del carrusel d'imatges */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            max-height: 280px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: inline-block;
+        }
+
+        /* Botons de les fletxes */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
     </style>
 </head>
 <body>
@@ -235,7 +289,15 @@
             
             <!-- Media -->
             <div class="article-media-full">
-                <img src="../imatges/GRAIL_Logo.png" alt="Logo Grail" class="article-img-full">
+                <div class="carousel-container" id="articleCarousel1">
+                    <div class="carousel-slide active">
+                        <img src="../imatges/GRAIL_Logo.png" alt="Logo Grail" class="article-img-full">
+                    </div>
+
+                    <!-- Fletxes amb el paràmetre 'articleCarousel1' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel1', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel1', 1)">&#10095;</button>
+                </div>
             </div>
 
             <div class="article-topics">
@@ -267,7 +329,18 @@
             
             <!-- Media -->
             <div class="article-media-full">
-                <img src="../imatges/Cobnitium_Logo.webp" alt="COGNITIUM Eurecat" class="article-img-full">
+                <div class="carousel-container" id="articleCarousel1">
+                    <div class="carousel-slide active">
+                        <img src="../imatges/Cobnitium_Logo.webp" alt="COGNITIUM Eurecat" class="article-img-full">
+                    </div>
+                    <div class="carousel-slide active">
+                        <img src="../imatges/cognitium_MWC_1.jfif" alt="COGNITIUM MWC" class="article-img-full">
+                    </div>
+
+                    <!-- Fletxes amb el paràmetre 'articleCarousel1' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel2', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel2', 1)">&#10095;</button>
+                </div>
             </div>
 
             <div class="article-topics">
@@ -283,7 +356,8 @@
                 <p><strong>Aportacions:</strong><br> 
                 • Avaluació comparativa de models de Visió-Llenguatge-Acció (VLA) per a seleccionar el més òptim pel projecte.<br>
                 • Entrenament i posada en marxa d'un VLA en un manipulador robòtic mòbil (TIAGo).<br>
-                • Coordinació i control d'accions del robot mitjançant un agent d'IA (VLM).</p>
+                • Coordinació i control d'accions del robot mitjançant un agent d'IA (VLM).<br>
+                • Presentació del projecte en el Mobile World Congress Barcelona 2026.</p>
 
                 <p><strong>Resum:</strong> COGNITIUM és un projecte tecnològic orientat al desenvolupament de capacitats cognitives avançades per a sistemes autònoms, facilitant una adaptació més natural i intel·ligent dels robots en escenaris industrials i de serveis.</p>
                 
@@ -301,7 +375,15 @@
             
             <!-- Media -->
             <div class="article-media-full">
-                <img src="../imatges/Intelliman_logo.svg" alt="INTELLIMAN Project" class="article-img-full">
+                <div class="carousel-container" id="articleCarousel1">
+                    <div class="carousel-slide active">
+                        <img src="../imatges/Intelliman_logo.svg" alt="Intelliman Eurecat" class="article-img-full">
+                    </div>
+
+                    <!-- Fletxes amb el paràmetre 'articleCarousel1' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel3', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel3', 1)">&#10095;</button>
+                </div>
             </div>
 
             <div class="article-topics">
@@ -329,5 +411,34 @@
 
 
     </div>
+
+    <script>
+        const slideIndexes = {};
+
+        function moveSlide(carouselId, n) {
+            const container = document.getElementById(carouselId);
+            if (!container) return;
+
+            const slides = container.getElementsByClassName("carousel-slide");
+            
+            if (slideIndexes[carouselId] === undefined) {
+                slideIndexes[carouselId] = 0;
+            }
+
+            slideIndexes[carouselId] += n;
+
+            if (slideIndexes[carouselId] >= slides.length) {
+                slideIndexes[carouselId] = 0;
+            }
+            if (slideIndexes[carouselId] < 0) {
+                slideIndexes[carouselId] = slides.length - 1;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndexes[carouselId]].classList.add("active");
+        }
+    </script>
 </body>
 </html>
