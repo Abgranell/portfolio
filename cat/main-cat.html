@@ -16,12 +16,16 @@
             padding-bottom: 3rem;
         }
 
-        /* Botó de LinkedIn a dalt a l'esquerra (mida controlada) */
+       /* Contenidor per alinear el de LinkedIn i el secret horitzontalment */
         .linkedin-top {
             position: absolute;
             top: 1.5rem;
             left: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Espai petit entre el botó de LinkedIn i el secret */
         }
+        
         .linkedin-btn {
             background: transparent;
             display: flex;
@@ -36,7 +40,17 @@
         .linkedin-btn svg {
             width: 35px;
             height: 35px;
-            fill: #0a66c2; /* Força el color blanc o blau de la icona sobre el fons */
+            fill: #0a66c2;
+        }
+
+        /* Estil del botó secret (invisible però funcional) */
+        .secret-btn {
+            width: 15px;
+            height: 35px;
+            background: transparent;
+            display: inline-block;
+            text-decoration: none;
+            cursor: default; /* Perquè no mostri la maneta de link i sigui completament discret */
         }
         
         /* Selector d'idioma a dalt a la dreta */
