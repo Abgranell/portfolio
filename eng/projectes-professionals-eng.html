@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Projects</title>
+    <!-- Enllaç al full d'estils general -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        /* Estils estructurals exclusius d'aquesta pàgina */
+        body { 
+            display: block; 
+            text-align: left; 
+            position: relative; 
+            padding-top: 4rem; 
+            padding-bottom: 3rem;
+        }
+
+        /* Botó de LinkedIn a dalt a l'esquerra */
+        .linkedin-top {
+            position: absolute;
+            top: 1.5rem;
+            left: 2rem;
+        }
+        .linkedin-btn {
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .linkedin-btn:hover {
+            opacity: 0.7;
+        }
+        .linkedin-btn svg {
+            width: 35px;
+            height: 35px;
+            fill: #0a66c2;
+        }
+        
+        /* Selector d'idioma a dalt a la dreta */
+        .lang-selector {
+            position: absolute;
+            top: 1.5rem;
+            right: 2rem;
+        }
+        .lang-btn {
+            background: var(--card);
+            color: var(--text);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .lang-btn:hover {
+            background: var(--hover-bg);
+        }
+
+        .container { max-width: 800px; margin: 0 auto; text-align: center; }
+        header { margin-bottom: 3rem; }
+        
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text); }
+        header p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; }
+        
+        .btn-back { 
+            display: inline-block; 
+            background: var(--card); 
+            color: var(--text); 
+            padding: 0.6rem 1.2rem; 
+            border-radius: 8px; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border: 1px solid var(--border); 
+            margin-bottom: 2rem;
+            transition: background 0.2s; 
+        }
+        .btn-back:hover { background: var(--hover-bg); }
+
+        /* Targetes d'articles */
+        .article-card { 
+            background: var(--card); 
+            border-radius: 12px; 
+            padding: 2rem; 
+            margin-bottom: 2rem; 
+            text-align: left; 
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
+            border: 1px solid var(--border); 
+        }
+        
+        .article-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .article-card h2 { 
+            margin-top: 0; 
+            margin-bottom: 0.2rem;
+            color: var(--accent); 
+            font-size: 1.3rem;
+        }
+
+        .article-badge {
+            background: var(--hover-bg);
+            color: var(--text);
+            padding: 0.3rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            white-space: nowrap;
+            border: 1px solid var(--border);
+        }
+
+        .article-authors {
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-style: italic;
+            margin-bottom: 1.2rem;
+        }
+
+        /* Multimèdia a amplada completa (Full Width) */
+        .article-media-full {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            background: transparent;
+            margin-bottom: 1.2rem;
+            display: flex;
+            justify-content: center; /* Centra horitzontalment */
+            align-items: center;    /* Centra verticalment si cal */
+            padding: 1rem 0;        /* Un petit respir superior i inferior */
+        }
+
+        .article-img-full {
+            max-height: 100%;      /* Alçada màxima controlada */
+            width: auto;            /* Amplada adaptativa proporcional */
+            max-width: 100%;        /* Evita desbordaments */
+            object-fit: contain;    /* Mostra tota la imatge sencera sense retallar */
+            display: block;
+            background: transparent; /* Assegura transparència en la imatge */
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* Proporció 16:9 */
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Secció de Topics */
+        .article-topics {
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .topic-tag {
+            display: inline-block;
+            background: var(--hover-bg);
+            color: var(--text);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            margin-right: 0.4rem;
+            margin-bottom: 0.3rem;
+            border: 1px solid var(--border);
+        }
+
+        .article-details p {
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+            text-align: justify;    /* Aquesta línia justifica tot el text del paràgraf */
+            hyphens: auto;          /* Opcional: ajuda a partir les paraules correctament */
+        }
+
+        .btn-article {
+            display: inline-block;
+            background: var(--accent);
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .btn-article:hover {
+            opacity: 0.9;
+        }
+
+        /* Estils del carrusel d'imatges */
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: transparent;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel-slide {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .carousel-slide img {
+            max-height: 280px;
+            width: auto;
+            max-width: 100%;
+            object-fit: contain;
+            display: inline-block;
+        }
+
+        /* Botons de les fletxes */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.5rem 0.8rem;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            transition: background 0.2s;
+            z-index: 10;
+        }
+
+        .carousel-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev-btn { left: 10px; }
+        .next-btn { right: 10px; }
+    </style>
+</head>
+<body>
+    <!-- Logo de LinkedIn a dalt a l'esquerra -->
+    <div class="linkedin-top">
+        <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="linkedin-btn" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+    </div>
+
+    <!-- Botó per canviar a la versió en català -->
+    <div class="lang-selector">
+        <a href="../cat/projectes-professionals-cat.html" class="lang-btn">CAT</a>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Professional Projects</h1>
+            <p>Main public professional projects in which I have participated.</p>
+            <a href="main-eng.html" class="btn-back">← Back to home</a>
+        </header>
+
+        <!-- GRAIL (AI Summit) -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>GRAIL: General Robot Architecture for Intelligent Learning</h2>
+                <span class="article-badge">Eurecat [2026 - Present]</span>
+            </div>
+            <div class="article-authors">Development of learning-based robotic manipulation systems</div>
+            
+            <!-- Media -->
+            <div class="article-media-full">
+                <div class="carousel-container" id="articleCarousel1">
+                    <div class="carousel-slide active">
+                        <img src="../imatges/GRAIL_Logo.png" alt="Logo Grail" class="article-img-full">
+                    </div>
+
+                    <!-- Fletxes amb el paràmetre 'articleCarousel1' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel1', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel1', 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">VLM</span>
+                <span class="topic-tag">VLA</span>
+                <span class="topic-tag">Agentic AI</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Contributions:</strong><br> 
+                • Integration of reasoning models based on Vision-Language Models (VLM) to interpret and coordinate natural language instructions.<br>
+                • Integration of Vision-Language-Action (VLA) models into physical robotic platforms for instruction-based autonomous control.<br>
+                • Implementation of teleoperation systems for robotic demonstrations to train AI models.</p>
+
+                <p><strong>Summary:</strong> GRAIL is an initiative focused on advancing architectures for robotic intelligence, combining state-of-the-art learning methods to enable robots to generalize complex manipulation tasks autonomously and collaboratively in real environments.</p>
+                
+                <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Project Website →</a>
+            </div>
+        </div>
+
+        <!-- Cognitium (MWC) -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>COGNITIUM: Generalized and Integrated Cognition for Robots in Unpredictable and Multimodal Environments</h2>
+                <span class="article-badge">Eurecat - [2025-2026]</span>
+            </div>
+            <div class="article-authors">Development of advanced cognitive and robotic systems</div>
+            
+            <!-- Media -->
+            <div class="article-media-full">
+                <div class="carousel-container" id="articleCarousel2">
+                    <div class="carousel-slide active">
+                        <img src="../imatges/Cobnitium_Logo.webp" alt="COGNITIUM Eurecat" class="article-img-full">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../imatges/cognitium_MWC_1.jfif" alt="COGNITIUM MWC" class="article-img-full">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../imatges/cogntitium_mwc.gif" alt="COGNITIUM MWC gif" class="article-img-full">
+                    </div>
+                    
+                    <!-- Fletxes amb el paràmetre 'articleCarousel2' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel2', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel2', 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">VLM</span>
+                <span class="topic-tag">VLA</span>
+                <span class="topic-tag">Agentic AI</span>
+                <span class="topic-tag">TIAGo</span>
+                <span class="topic-tag">LeRobot</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Contributions:</strong><br> 
+                • Benchmarking Vision-Language-Action (VLA) models to select the most optimal one for the project.<br>
+                • Training and deployment of a VLA on a mobile robotic manipulator (TIAGo).<br>
+                • Coordination and control of robot actions using an AI agent (VLM).<br>
+                • Presentation of the project at the Mobile World Congress Barcelona 2026.</p>
+
+                <p><strong>Summary:</strong> COGNITIUM is a technological project aimed at developing advanced cognitive capabilities for autonomous systems, facilitating a more natural and intelligent adaptation of robots in industrial and service scenarios.</p>
+                
+                <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Project Video →</a>
+                <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article">Project Website →</a>
+            </div>
+        </div>
+
+        <!-- Intelliman -->
+        <div class="article-card">
+            <div class="article-header">
+                <h2>INTELLIMAN: AI-Powered Manipulation System for Advanced Robotic Service, Manufacturing and Prosthetics</h2>
+                <span class="article-badge">Eurecat - [2022-2026]</span>
+            </div>
+            <div class="article-authors">Development of intelligent manipulation for industrial and domestic processes</div>
+            
+            <!-- Media -->
+            <div class="article-media-full">
+                <div class="carousel-container" id="articleCarousel3">
+                    <div class="carousel-slide active">
+                        <img src="../imatges/Intelliman_logo.svg" alt="Intelliman Eurecat" class="article-img-full">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="../imatges/intelliman.gif" alt="Intelliman Gif" class="article-img-full">
+                    </div>
+
+                    <!-- Fletxes amb el paràmetre 'articleCarousel3' -->
+                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel3', -1)">&#10094;</button>
+                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel3', 1)">&#10095;</button>
+                </div>
+            </div>
+
+            <div class="article-topics">
+                <strong>Topics:</strong> 
+                <span class="topic-tag">RL</span>
+                <span class="topic-tag">IL</span>
+                <span class="topic-tag">Sim2Real</span>
+                <span class="topic-tag">IsaacLab</span>
+                <span class="topic-tag">IsaacSim</span>
+                <span class="topic-tag">ROS2</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Contributions:</strong><br> 
+                • Training reinforcement learning (RL) models to perform complex manipulation tasks related to the domestic domain.<br>
+                • Study of Sim2Real techniques to successfully transfer simulation-trained models to real robotic platforms.<br>
+                • Use of imitation learning models to pre-train reinforcement learning models and accelerate convergence.<br>
+                • Adaptation of 3D object tracking models and their integration to work alongside RL models.</p>
+
+                <p><strong>Summary:</strong> INTELLIMAN is a European research project focused on equipping robots with intelligent, agile, and adaptive manipulation capabilities based on artificial intelligence, aiming to solve complex manipulation tasks both in circular economy-oriented industrial environments and domestic scenarios.</p>
+                
+                <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Project Website →</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+        const slideIndexes = {};
+
+        function moveSlide(carouselId, n) {
+            const container = document.getElementById(carouselId);
+            if (!container) return;
+
+            const slides = container.getElementsByClassName("carousel-slide");
+            
+            if (slideIndexes[carouselId] === undefined) {
+                slideIndexes[carouselId] = 0;
+            }
+
+            slideIndexes[carouselId] += n;
+
+            if (slideIndexes[carouselId] >= slides.length) {
+                slideIndexes[carouselId] = 0;
+            }
+            if (slideIndexes[carouselId] < 0) {
+                slideIndexes[carouselId] = slides.length - 1;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndexes[carouselId]].classList.add("active");
+        }
+    </script>
+</body>
+</html>
