@@ -7,19 +7,14 @@
     <meta name="description" content="Peer-reviewed scientific publications, conference proceedings, and robotics research by Arnau Boix Granell across robot learning, imitation learning, and reinforcement learning.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
-<body>
+<body class="subpage-layout">
     <!-- Global Sticky Navigation Bar -->
     <header class="site-header">
         <div class="nav-container">
-            <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" rel="noopener noreferrer" class="nav-linkedin" aria-label="Arnau Boix Granell on LinkedIn">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                </svg>
-            </a>
+            <a href="main-eng.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
             
             <nav class="nav-links" aria-label="Main Navigation">
-                <a href="main-eng.html#about">About</a>
-                <a href="main-eng.html#experience">Experience</a>
+                <a href="main-eng.html">Home</a>
                 <a href="projectes-professionals-eng.html">Professional Projects</a>
                 <a href="projectes-academics-eng.html">Academic Projects</a>
                 <a href="articles-eng.html" class="active">Publications</a>
@@ -27,7 +22,8 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="../cat/articles-cat.html" class="lang-switch-btn" aria-label="Canvia al Català">CAT</a>
+                <a href="wip.html" class="btn-secret" title="Under construction" aria-label="Work in Progress Easter Egg">🐶</a>
+                <a href="../cat/articles-cat.html" class="lang-btn" aria-label="Canvia al Català">CAT</a>
             </div>
         </div>
     </header>
@@ -54,7 +50,7 @@
                 <div>
                     <span class="project-date">ERF 2026 · arXiv:2603.05574 · 1st Author</span>
                     <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        PRISM: Prompt-Conditioned Imitation Skill Refinement for Manipulation
+                        PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions
                     </h2>
                 </div>
                 <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
@@ -72,21 +68,21 @@
 
             <!-- Key Results Metrics Strip -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                <div class="metric-card" style="background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-md); text-align: center;">
+                <div class="metric-card">
                     <span style="font-size: 1.6rem; font-weight: 800; color: var(--muted);">21.2%</span>
                     <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">Baseline Imitation Success</p>
                 </div>
-                <div class="metric-card" style="background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-md); text-align: center;">
+                <div class="metric-card">
                     <span style="font-size: 1.6rem; font-weight: 800; color: var(--accent);">98.0%</span>
                     <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">Isaac Lab RL Convergence</p>
                 </div>
-                <div class="metric-card" style="background: var(--surface); border: 1px solid var(--border); padding: 1rem; border-radius: var(--radius-md); text-align: center;">
+                <div class="metric-card">
                     <span style="font-size: 1.6rem; font-weight: 800; color: #16a34a;">96.8%</span>
                     <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">GPT-5 Eureka + Human Feedback</p>
                 </div>
             </div>
 
-            <div class="tech-tag-group" style="margin-bottom: 1.25rem;">
+            <div class="tech-tag-group">
                 <span class="tech-tag">Imitation Learning</span>
                 <span class="tech-tag">Reinforcement Learning</span>
                 <span class="tech-tag">LLM Prompting</span>
@@ -131,7 +127,7 @@
                 <img src="../imatges/Article2.jpg" alt="VR Framework and cloth manipulation testbed for dataset collection" style="max-height: 340px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm);">
             </div>
 
-            <div class="tech-tag-group" style="margin-bottom: 1.25rem;">
+            <div class="tech-tag-group">
                 <span class="tech-tag">Virtual Reality (VR)</span>
                 <span class="tech-tag">Deformable Object Manipulation</span>
                 <span class="tech-tag">HTC Vive Pro</span>
@@ -176,7 +172,7 @@
                 <img src="../imatges/Article1.svg" alt="Garment Dataset pipeline and topological state progression" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain;">
             </div>
 
-            <div class="tech-tag-group" style="margin-bottom: 1.25rem;">
+            <div class="tech-tag-group">
                 <span class="tech-tag">Robot Learning from Demonstration</span>
                 <span class="tech-tag">Cloth Manipulation</span>
                 <span class="tech-tag">Virtual Reality (VR)</span>
