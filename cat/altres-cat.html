@@ -3,254 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Altres</title>
-    <!-- Enllaç al full d'estils general -->
+    <title>Comunitat i Iniciatives Professionals — Arnau Boix Granell</title>
+    <meta name="description" content="Lideratge comunitari, grups de treball en robòtica ètica i iniciatives professionals d'Arnau Boix Granell, inclosa la Iniciativa de Diversitat i Inclusió d'euRobotics.">
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        /* Estils estructurals exclusius d'aquesta pàgina */
-        body { 
-            display: block; 
-            text-align: left; 
-            position: relative; 
-            padding-top: 4rem; 
-            padding-bottom: 3rem;
-        }
-
-        /* Botó de LinkedIn a dalt a l'esquerra */
-        .linkedin-top {
-            position: absolute;
-            top: 1.5rem;
-            left: 2rem;
-        }
-        .linkedin-btn {
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .linkedin-btn:hover {
-            opacity: 0.7;
-        }
-        .linkedin-btn svg {
-            width: 35px;
-            height: 35px;
-            fill: #0a66c2;
-        }
-        
-        /* Selector d'idioma a dalt a la dreta */
-        .lang-selector {
-            position: absolute;
-            top: 1.5rem;
-            right: 2rem;
-        }
-        .lang-btn {
-            background: var(--card);
-            color: var(--text);
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            border: 1px solid var(--border);
-            transition: background 0.2s;
-        }
-        .lang-btn:hover {
-            background: var(--hover-bg);
-        }
-
-        .container { max-width: 800px; margin: 0 auto; text-align: center; }
-        header { margin-bottom: 3rem; }
-        
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text); }
-        header p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; }
-        
-        .btn-back { 
-            display: inline-block; 
-            background: var(--card); 
-            color: var(--text); 
-            padding: 0.6rem 1.2rem; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border: 1px solid var(--border); 
-            margin-bottom: 2rem;
-            transition: background 0.2s; 
-        }
-        .btn-back:hover { background: var(--hover-bg); }
-
-        /* Targetes d'articles */
-        .article-card { 
-            background: var(--card); 
-            border-radius: 12px; 
-            padding: 2rem; 
-            margin-bottom: 2rem; 
-            text-align: left; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
-            border: 1px solid var(--border); 
-        }
-        
-        .article-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .article-card h2 { 
-            margin-top: 0; 
-            margin-bottom: 0.2rem;
-            color: var(--accent); 
-            font-size: 1.3rem;
-        }
-
-        .article-badge {
-            background: var(--hover-bg);
-            color: var(--text);
-            padding: 0.3rem 0.6rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            white-space: nowrap;
-            border: 1px solid var(--border);
-        }
-
-        .article-authors {
-            color: var(--muted);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-bottom: 1.2rem;
-        }
-
-        /* Multimèdia a amplada completa (Full Width) */
-        .article-media-full {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            background: transparent;
-            margin-bottom: 1.2rem;
-            display: flex;
-            justify-content: center; /* Centra horitzontalment */
-            align-items: center;     /* Centra verticalment si cal */
-            padding: 1rem 0;         /* Un petit respir superior i inferior */
-        }
-
-        .article-img-full {
-            max-height: 100%;       /* Alçada màxima controlada */
-            width: auto;             /* Amplada adaptativa proporcional */
-            max-width: 100%;         /* Evita desbordaments */
-            object-fit: contain;     /* Mostra tota la imatge sencera sense retallar */
-            display: block;
-            background: transparent; /* Assegura transparència en la imatge */
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Proporció 16:9 */
-            height: 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Secció de Topics */
-        .article-topics {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .topic-tag {
-            display: inline-block;
-            background: var(--hover-bg);
-            color: var(--text);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.4rem;
-            margin-bottom: 0.3rem;
-            border: 1px solid var(--border);
-        }
-
-        .article-details p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 1.2rem;
-            text-align: justify;     /* Aquesta línia justifica tot el text del paràgraf */
-            hyphens: auto;           /* Opcional: ajuda a partir les paraules correctament en català */
-        }
-
-        .btn-article {
-            display: inline-block;
-            background: var(--accent);
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: opacity 0.2s;
-        }
-        .btn-article:hover {
-            opacity: 0.9;
-        }
-    </style>
 </head>
 <body>
-    <!-- Logo de LinkedIn a dalt a l'esquerra -->
-    <div class="linkedin-top">
-        <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="linkedin-btn" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-    </div>
-
-    <!-- Botó per canviar a la versió en anglès -->
-    <div class="lang-selector">
-        <a href="../eng/altres-eng.html" class="lang-btn">ENG</a>
-    </div>
-
-    <div class="container">
-        <header>
-            <h1>Altres</h1>
-            <p>Popurri d'altres coses que faig en el meu temps lliure.</p>
-            <a href="main-cat.html" class="btn-back">← Tornar a l'inici</a>
-        </header>
-
-        <!-- Feminisme -->
-        <div class="article-card">
-            <div class="article-header">
-                <h2>Iniciativa de Diversitat i Inclusió d'euRobotics</h2>
-                <span class="article-badge">2026 - Present</span>
-            </div>
-            <div class="article-authors">Membre de la iniciativa de diversitat i inclusió d'euRobotics.</div>
+    <!-- Global Sticky Navigation Bar -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" rel="noopener noreferrer" class="nav-linkedin" aria-label="Arnau Boix Granell a LinkedIn">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+            </a>
             
-            <!-- Media -->
-            <div class="article-media-full">
-                <img src="../imatges/euRobotics_logo.png" alt="TODO: NOM FOTO" class="article-img-full">
+            <nav class="nav-links" aria-label="Navegació Principal">
+                <a href="main-cat.html#about">Sobre mi</a>
+                <a href="main-cat.html#experience">Experiència</a>
+                <a href="projectes-professionals-cat.html">Projectes Professionals</a>
+                <a href="projectes-academics-cat.html">Projectes Acadèmics</a>
+                <a href="articles-cat.html">Publicacions</a>
+                <a href="altres-cat.html" class="active">Comunitat</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="../eng/altres-eng.html" class="lang-switch-btn" aria-label="Switch to English">ENG</a>
             </div>
+        </div>
+    </header>
 
-            <div class="article-details">
-                <p><strong>Aportacions:</strong> <br>
-                • Participació activa en la creació, impuls i desenvolupament d'activitats orientades a promoure la diversitat i la inclusió en la comunitat robòtica europea.<br>
-                • Col·laboració en l'organització de tallers i seminaris (com els vinculats al Fòrum Europeu de Robòtica - ERF) per debatre sobre reptes d'inclusió, retenció i accessibilitat en el sector.<br>
-                • Contribució en l'elaboració de guies i bones pràctiques per garantir que es desenvolupin tecnologies robòtiques ètiques i beneficioses per a tota la societat.</p>
-
-                <p><strong>Resum:</strong> La Iniciativa de Diversitat i Inclusió (DII) d'euRobotics té com a missió principal promoure un entorn obert i inclusiu dins de la comunitat tecnològica i de recerca en robòtica a Europa. La iniciativa s'encarrega d'organitzar tallers i accions col·laboratives per assegurar que el desenvolupament de la robòtica sigui accessible i beneficiós per a tothom, independentment del gènere, procedència o estil de vida, garantint així una major acceptació social de la tecnologia.</p>
-                
-                <a href="https://eu-robotics.net/dii" target="_blank" class="btn-article">Web de la iniciativa →</a>
+    <main class="page-container" style="max-width: 900px;">
+        <!-- Capçalera de pàgina -->
+        <div class="page-header" style="text-align: center; margin-bottom: 2.5rem;">
+            <div class="project-eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">
+                <span class="category-tag">Lideratge & Compromís</span>
+                <span class="category-tag">Robòtica Europea</span>
+            </div>
+            <h1 class="page-title" style="font-size: 2.3rem; margin-bottom: 0.75rem;">Comunitat i Iniciatives Professionals</h1>
+            <p class="page-subtitle" style="max-width: 680px; margin: 0 auto 1.5rem auto;">
+                Compromís actiu amb la governança ètica de la robòtica, grups de treball europeus i la promoció d'un ecosistema tecnològic accessible, divers i responsable.
+            </p>
+            <div>
+                <a href="main-cat.html" class="btn btn-secondary">← Tornar a l'inici</a>
             </div>
         </div>
 
+        <!-- INICIATIVA: euRobotics DII -->
+        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
+            <div class="project-card-header">
+                <div>
+                    <span class="project-date">2026 – Actualitat · euRobotics AISBL · Grup de Treball Actiu</span>
+                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
+                        Iniciativa de Diversitat i Inclusió d'euRobotics (euRobotics DII)
+                    </h2>
+                </div>
+                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
+                    Grup de Treball Europeu
+                </span>
+            </div>
 
-    </div>
+            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
+                <strong>Organització:</strong> euRobotics AISBL (Associació Europea per a la IA, Dades i Robòtica) · Grup de Treball del Fòrum Europeu de Robòtica (ERF)
+            </p>
+
+            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; display: flex; justify-content: center; align-items: center;">
+                <img src="../imatges/euRobotics_logo.png" alt="Logotip oficial de la Iniciativa de Diversitat i Inclusió d'euRobotics" style="max-height: 160px; width: auto; max-width: 100%; object-fit: contain;">
+            </div>
+
+            <div class="tech-tag-group" style="margin-bottom: 1.25rem;">
+                <span class="tech-tag">Lideratge Comunitari</span>
+                <span class="tech-tag">European Robotics Forum (ERF)</span>
+                <span class="tech-tag">Ètica en IA & Robòtica</span>
+                <span class="tech-tag">Diversitat & Inclusió</span>
+                <span class="tech-tag">Accessibilitat Laboral</span>
+                <span class="tech-tag">Promoció de Vocacions STEM</span>
+            </div>
+
+            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
+                <p>
+                    <strong>Context i Missió:</strong> La Iniciativa de Diversitat i Inclusió (DII) d'euRobotics té per objectiu construir una comunitat europea de robòtica més justa, oberta i representativa tant en l'àmbit acadèmic com en l'industrial. A mesura que els sistemes autònoms s'introdueixen a hospitals, fàbriques i llars particulars, garantir que els equips d'enginyeria reflecteixin la pluralitat de la societat és indispensable per evitar biaixos algorítmics, assegurar la seguretat física de tots els perfils d'usuaris i accelerar la confiança social en la tecnologia.
+                </p>
+                <p style="margin-top: 0.75rem;">
+                    <strong>Aportacions Directes d'Arnau:</strong>
+                </p>
+                <ul style="margin: 0.5rem 0 1rem 1.25rem; padding: 0;">
+                    <li><strong>Participació al Fòrum Europeu de Robòtica (ERF):</strong> Col·laboració activa en l'organització i dinamització de tallers, taules rodones i seminaris de l'ERF per debatre estratègies d'inclusió, retenció de talent i accessibilitat a l'ecosistema robòtic europeu.</li>
+                    <li><strong>Elaboració de Guies Ètiques:</strong> Treball conjunt amb investigadors i representants de la indústria per redactar recomanacions comunitàries que integrin criteris d'ètica, seguretat i equitat en el cicle de vida del desenvolupament robòtic.</li>
+                    <li><strong>Promoció de Vocacions i Inclusió:</strong> Impuls d'iniciatives pont entre centres universitaris, centres tecnològics i empreses per obrir camins professionals a col·lectius tradicionalment infrarepresentats en disciplines STEM.</li>
+                </ul>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="https://eu-robotics.net/dii" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Lloc Web d'euRobotics DII →</a>
+                <a href="https://eu-robotics.net/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Sobre euRobotics AISBL ↗</a>
+            </div>
+        </article>
+
+        <!-- Navegació inferior -->
+        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
+            <a href="main-cat.html" class="btn btn-secondary">← Tornar a l'inici</a>
+            <a href="projectes-professionals-cat.html" class="btn btn-primary" style="margin-left: 0.75rem;">Explorar Projectes Professionals →</a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© 2026 Arnau Boix Granell · Enginyer Industrial & Robòtica</p>
+        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted);">
+            2n de 298 Enginyers a UPC ETSEIB · 35 Matrícules d'Honor · Manipulació Bimanual & Robot Learning
+        </p>
+    </footer>
 </body>
 </html>
