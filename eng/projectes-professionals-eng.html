@@ -3,449 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Projects</title>
-    <!-- Enllaç al full d'estils general -->
+    <title>Professional Projects — Arnau Boix Granell</title>
+    <meta name="description" content="Flagship professional robotics and embodied AI projects by Arnau Boix Granell, including COGNITIUM, PRISM, GRAIL, and INTELLIMAN.">
     <link rel="stylesheet" href="../css/styles.css">
-    <style>
-        /* Estils estructurals exclusius d'aquesta pàgina */
-        body { 
-            display: block; 
-            text-align: left; 
-            position: relative; 
-            padding-top: 4rem; 
-            padding-bottom: 3rem;
-        }
-
-        /* Botó de LinkedIn a dalt a l'esquerra */
-        .linkedin-top {
-            position: absolute;
-            top: 1.5rem;
-            left: 2rem;
-        }
-        .linkedin-btn {
-            background: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: opacity 0.2s;
-        }
-        .linkedin-btn:hover {
-            opacity: 0.7;
-        }
-        .linkedin-btn svg {
-            width: 35px;
-            height: 35px;
-            fill: #0a66c2;
-        }
-        
-        /* Selector d'idioma a dalt a la dreta */
-        .lang-selector {
-            position: absolute;
-            top: 1.5rem;
-            right: 2rem;
-        }
-        .lang-btn {
-            background: var(--card);
-            color: var(--text);
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.85rem;
-            border: 1px solid var(--border);
-            transition: background 0.2s;
-        }
-        .lang-btn:hover {
-            background: var(--hover-bg);
-        }
-
-        .container { max-width: 800px; margin: 0 auto; text-align: center; }
-        header { margin-bottom: 3rem; }
-        
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--text); }
-        header p { color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 1.5rem auto; }
-        
-        .btn-back { 
-            display: inline-block; 
-            background: var(--card); 
-            color: var(--text); 
-            padding: 0.6rem 1.2rem; 
-            border-radius: 8px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            border: 1px solid var(--border); 
-            margin-bottom: 2rem;
-            transition: background 0.2s; 
-        }
-        .btn-back:hover { background: var(--hover-bg); }
-
-        /* Targetes d'articles */
-        .article-card { 
-            background: var(--card); 
-            border-radius: 12px; 
-            padding: 2rem; 
-            margin-bottom: 2rem; 
-            text-align: left; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); 
-            border: 1px solid var(--border); 
-        }
-        
-        .article-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 0.3rem;
-        }
-
-        .article-card h2 { 
-            margin-top: 0; 
-            margin-bottom: 0.2rem;
-            color: var(--accent); 
-            font-size: 1.3rem;
-        }
-
-        .article-badge {
-            background: var(--hover-bg);
-            color: var(--text);
-            padding: 0.3rem 0.6rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            white-space: nowrap;
-            border: 1px solid var(--border);
-        }
-
-        .article-authors {
-            color: var(--muted);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-bottom: 1.2rem;
-        }
-
-        /* Multimèdia a amplada completa (Full Width) */
-        .article-media-full {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            background: transparent;
-            margin-bottom: 1.2rem;
-            display: flex;
-            justify-content: center; /* Centra horitzontalment */
-            align-items: center;    /* Centra verticalment si cal */
-            padding: 1rem 0;        /* Un petit respir superior i inferior */
-        }
-
-        .article-img-full {
-            max-height: 100%;      /* Alçada màxima controlada */
-            width: auto;            /* Amplada adaptativa proporcional */
-            max-width: 100%;        /* Evita desbordaments */
-            object-fit: contain;    /* Mostra tota la imatge sencera sense retallar */
-            display: block;
-            background: transparent; /* Assegura transparència en la imatge */
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%; /* Proporció 16:9 */
-            height: 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Secció de Topics */
-        .article-topics {
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .topic-tag {
-            display: inline-block;
-            background: var(--hover-bg);
-            color: var(--text);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin-right: 0.4rem;
-            margin-bottom: 0.3rem;
-            border: 1px solid var(--border);
-        }
-
-        .article-details p {
-            color: var(--muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 1.2rem;
-            text-align: justify;    /* Aquesta línia justifica tot el text del paràgraf */
-            hyphens: auto;          /* Opcional: ajuda a partir les paraules correctament */
-        }
-
-        .btn-article {
-            display: inline-block;
-            background: var(--accent);
-            color: #ffffff;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: bold;
-            transition: opacity 0.2s;
-        }
-        .btn-article:hover {
-            opacity: 0.9;
-        }
-
-        /* Estils del carrusel d'imatges */
-        .carousel-container {
-            position: relative;
-            width: 100%;
-            max-height: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: transparent;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-
-        .carousel-slide {
-            display: none;
-            width: 100%;
-            text-align: center;
-        }
-
-        .carousel-slide.active {
-            display: block;
-        }
-
-        .carousel-slide img {
-            max-height: 280px;
-            width: auto;
-            max-width: 100%;
-            object-fit: contain;
-            display: inline-block;
-        }
-
-        /* Botons de les fletxes */
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            padding: 0.5rem 0.8rem;
-            cursor: pointer;
-            font-size: 1rem;
-            border-radius: 4px;
-            transition: background 0.2s;
-            z-index: 10;
-        }
-
-        .carousel-btn:hover {
-            background: rgba(0, 0, 0, 0.8);
-        }
-
-        .prev-btn { left: 10px; }
-        .next-btn { right: 10px; }
-    </style>
 </head>
-<body>
-    <!-- Logo de LinkedIn a dalt a l'esquerra -->
-    <div class="linkedin-top">
-        <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="linkedin-btn" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-        </a>
-    </div>
+<body class="subpage-layout">
+    <!-- Sticky Navigation Bar -->
+    <header class="site-header">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="main-eng.html" class="nav-brand">
+                    <span class="nav-brand-badge">ABG</span>
+                    <span>Arnau Boix Granell</span>
+                </a>
+            </div>
 
-    <!-- Botó per canviar a la versió en català -->
-    <div class="lang-selector">
-        <a href="../cat/projectes-professionals-cat.html" class="lang-btn">CAT</a>
-    </div>
+            <ul class="nav-links">
+                <li><a href="main-eng.html" class="nav-link">Home</a></li>
+                <li><a href="projectes-professionals-eng.html" class="nav-link active">Professional Projects</a></li>
+                <li><a href="projectes-academics-eng.html" class="nav-link">Academic Projects</a></li>
+                <li><a href="articles-eng.html" class="nav-link">Articles</a></li>
+                <li><a href="altres-eng.html" class="nav-link">Community</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="nav-btn-icon" title="LinkedIn" aria-label="LinkedIn Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="wip.html" class="secret-btn" title="" aria-hidden="true"></a>
+                <a href="../cat/projectes-professionals-cat.html" class="lang-btn" title="Canviar a Català">CAT</a>
+            </div>
+        </div>
+    </header>
 
     <div class="container">
-        <header>
-            <h1>Professional Projects</h1>
-            <p>Main public professional projects in which I have participated.</p>
+        <header style="text-align: center; margin-bottom: 2.5rem;">
             <a href="main-eng.html" class="btn-back">← Back to home</a>
+            <h1>Professional Projects</h1>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
+                Applied research, foundation model fine-tuning, and physical platform deployments developed within European consortia and industrial R&D programs at Eurecat.
+            </p>
         </header>
 
-        <!-- GRAIL (AI Summit) -->
-        <div class="article-card">
+        <!-- PROJECT 1: COGNITIUM (MWC 2026) -->
+        <article class="article-card" id="cognitium">
             <div class="article-header">
-                <h2>GRAIL: General Robot Architecture for Intelligent Learning</h2>
-                <span class="article-badge">Eurecat [2026 - Present]</span>
+                <h2>COGNITIUM: Autonomous & Integrated Cognition in Multimodal Environments</h2>
+                <span class="article-badge">Eurecat · MWC 2026 [2025 – 2026]</span>
             </div>
-            <div class="article-authors">Development of learning-based robotic manipulation systems</div>
-            
-            <!-- Media -->
-            <div class="article-media-full">
-                <div class="carousel-container" id="articleCarousel1">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/GRAIL_Logo.png" alt="Logo Grail" class="article-img-full">
-                    </div>
+            <div class="article-authors">Robotics Researcher · Physical Embodiment on PAL Robotics TIAGo PRO</div>
 
-                    <!-- Fletxes amb el paràmetre 'articleCarousel1' -->
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel1', -1)">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel1', 1)">&#10095;</button>
+            <!-- Media Carousel with Dot Indicators -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselCognitium">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/Cobnitium_Logo.webp" alt="COGNITIUM Project Logo" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/cognitium_MWC_1.jfif" alt="COGNITIUM Live Demo at Mobile World Congress 2026" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/cogntitium_mwc.gif" alt="COGNITIUM Manipulation Demo GIF" class="article-img-full">
+                        </div>
+
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselCognitium', -1)" aria-label="Previous image">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselCognitium', 1)" aria-label="Next image">&#10095;</button>
+                    </div>
+                    <div class="carousel-dots" id="dots-carouselCognitium">
+                        <span class="dot active" onclick="setSlide('carouselCognitium', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselCognitium', 1)"></span>
+                        <span class="dot" onclick="setSlide('carouselCognitium', 2)"></span>
+                    </div>
                 </div>
             </div>
 
             <div class="article-topics">
-                <strong>Topics:</strong> 
-                <span class="topic-tag">VLM</span>
-                <span class="topic-tag">VLA</span>
-                <span class="topic-tag">Agentic AI</span>
+                <span class="topic-tag topic-tag-hw">PAL Robotics TIAGo PRO</span>
+                <span class="topic-tag topic-tag-sw">Hugging Face LeRobot</span>
+                <span class="topic-tag topic-tag-ai">VLA Fine-Tuning</span>
+                <span class="topic-tag topic-tag-ai">Agentic VLM Reasoning</span>
+                <span class="topic-tag topic-tag-sw">ROS 2</span>
+                <span class="topic-tag topic-tag-metric">Live MWC 2026 Demo</span>
             </div>
 
             <div class="article-details">
-                <p><strong>Contributions:</strong><br> 
-                • Integration of reasoning models based on Vision-Language Models (VLM) to interpret and coordinate natural language instructions.<br>
-                • Integration of Vision-Language-Action (VLA) models into physical robotic platforms for instruction-based autonomous control.<br>
-                • Implementation of teleoperation systems for robotic demonstrations to train AI models.</p>
+                <p><strong>The Challenge:</strong> Deploying autonomous mobile manipulators in unconstrained, crowded human environments requires overcoming perceptual errors, visual occlusions, and unpredictable physical disturbances. Traditional cascading architectures (decoupled SLAM, task planning, and motion planning) are notoriously brittle. COGNITIUM implemented an integrated cognitive architecture combining Vision-Language-Action (VLA) foundation models with an agentic Vision-Language Model (VLM) supervisor to achieve robust, real-time closed-loop manipulation on a full-scale mobile robot.</p>
 
-                <p><strong>Summary:</strong> GRAIL is an initiative focused on advancing architectures for robotic intelligence, combining state-of-the-art learning methods to enable robots to generalize complex manipulation tasks autonomously and collaboratively in real environments.</p>
-                
-                <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Project Website →</a>
+                <p><strong>Arnau's Direct Contributions:</strong><br>
+                • <strong>VLA Benchmarking & Selection:</strong> Conducted a rigorous comparative benchmark of open-source and proprietary VLA architectures, evaluating inference frequency, spatial generalization, and sample efficiency.<br>
+                • <strong>LeRobot Pipeline Integration:</strong> Adapted the Hugging Face LeRobot framework to interface directly with the low-level motor controllers of the physical PAL Robotics TIAGo PRO mobile manipulator.<br>
+                • <strong>Physical Policy Deployment:</strong> Fine-tuned sensorimotor policies on demonstration datasets and achieved autonomous grasp and placement of varied target objects directly from onboard RGB-D camera feeds.<br>
+                • <strong>Agentic VLM Supervision:</strong> Built a high-level VLM supervisory agent acting as an executive reasoner to evaluate execution outcomes, detect grasping slips, and trigger autonomous recovery actions.<br>
+                • <strong>Live MWC 2026 Showcase:</strong> Programmed, calibrated, and conducted live physical manipulation demonstrations at Mobile World Congress Barcelona 2026 under real-world auditorium interference and dynamic lighting.</p>
+
+                <p><strong>Results & Impact:</strong> Validated real-time closed-loop VLA manipulation running natively on the physical TIAGo mobile manipulator with automated visual error recovery, presenting Eurecat's cutting-edge cognitive robotics capabilities to thousands of international industry leaders.</p>
+
+                <div class="article-actions">
+                    <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Watch Project Video →</a>
+                    <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article-outline">Project Website →</a>
+                </div>
             </div>
-        </div>
+        </article>
 
-        <!-- Cognitium (MWC) -->
-        <div class="article-card">
+        <!-- PROJECT 2: PRISM (ERF 2026) -->
+        <article class="article-card" id="prism">
             <div class="article-header">
-                <h2>COGNITIUM: Generalized and Integrated Cognition for Robots in Unpredictable and Multimodal Environments</h2>
-                <span class="article-badge">Eurecat - [2025-2026]</span>
+                <h2>PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions</h2>
+                <span class="article-badge">Lead Author · ERF 2026 [arXiv:2603.05574]</span>
             </div>
-            <div class="article-authors">Development of advanced cognitive and robotic systems</div>
-            
-            <!-- Media -->
+            <div class="article-authors">Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno, Néstor García</div>
+
             <div class="article-media-full">
-                <div class="carousel-container" id="articleCarousel2">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/Cobnitium_Logo.webp" alt="COGNITIUM Eurecat" class="article-img-full">
+                <img src="../imatges/Article3.svg" alt="PRISM Architecture Diagram" class="article-img-full">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Imitation Learning (IL)</span>
+                <span class="topic-tag topic-tag-ai">Reinforcement Learning (RL)</span>
+                <span class="topic-tag topic-tag-ai">Eureka LLM Reward Synthesis</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
+                <span class="topic-tag topic-tag-hw">Human-in-the-Loop</span>
+                <span class="topic-tag topic-tag-metric">96.8% Success Rate</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>The Challenge:</strong> Imitation Learning (IL) policies trained from human demonstrations suffer from poor out-of-distribution generalization: when goal poses, obstacles, or user preferences shift, the policy fails. Conversely, retraining Reinforcement Learning (RL) agents from scratch requires manual reward engineering and immense compute. PRISM creates a unified pipeline where a pre-trained imitation policy is rapidly personalized and refined through natural language task prompts and human feedback rollouts without manual reward design.</p>
+
+                <p><strong>Arnau's Direct Contributions:</strong><br>
+                • <strong>Conception & Architecture:</strong> Formulated PRISM as lead investigator and first author, bridging Imitation Learning priors with prompt-conditioned RL policy refinement.<br>
+                • <strong>Eureka Reward Synthesis Extension:</strong> Extended the state-of-the-art Eureka paradigm using GPT-5 to iteratively synthesize, evaluate, and optimize code-level Python reward functions directly from natural-language task instructions.<br>
+                • <strong>Human-in-the-Loop Feedback:</strong> Implemented real-time corrective interventions allowing human supervisors to guide intermediate rollouts and enforce physical constraints.<br>
+                • <strong>Isaac Lab Simulation Benchmarks:</strong> Programmed GPU-accelerated parallel simulation environments in NVIDIA Isaac Lab, conducting extensive empirical evaluations under severe distribution shifts.</p>
+
+                <p><strong>Empirical Benchmarks & Metrics:</strong><br>
+                • <strong>Zero-Shot Baseline:</strong> Generic unrefined imitation policies achieved only <strong>21.2%</strong> success when deployed on out-of-distribution goal configurations.<br>
+                • <strong>Autonomous Isaac Lab RL:</strong> Training in Isaac Lab elevated task convergence to <strong>98.0%</strong>.<br>
+                • <strong>PRISM Framework:</strong> Combining iterative GPT-5 reward generation with interactive human feedback achieved <strong>96.8%</strong> empirical success while dramatically lowering sample complexity and rollout requirements.</p>
+
+                <div class="article-actions">
+                    <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Read Paper (arXiv) →</a>
+                    <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article-outline">Watch Demonstration Video →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 3: GRAIL (€40M Flagship) -->
+        <article class="article-card" id="grail">
+            <div class="article-header">
+                <h2>GRAIL: Generative Robotics & AI for EU Industrial Leadership</h2>
+                <span class="article-badge">EU Horizon Europe Flagship [2026 – Present]</span>
+            </div>
+            <div class="article-authors">Robotics Researcher · Eurecat (Consortium Coordinator with Siemens, ETH Zurich, DLR, Imperial)</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/GRAIL_Logo.png" alt="GRAIL European Project Logo" class="article-img-full" style="max-height: 220px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-sw">Horizon Europe €40M Flagship</span>
+                <span class="topic-tag topic-tag-ai">VLA Foundation Models</span>
+                <span class="topic-tag topic-tag-ai">Agentic VLM Reasoning</span>
+                <span class="topic-tag topic-tag-hw">Industrial Manipulators</span>
+                <span class="topic-tag topic-tag-hw">Teleoperation Pipelines</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>The Challenge:</strong> European industrial automation requires high-mix, low-volume flexibility that rigid, pre-programmed robotic lines cannot support. Achieving industrial sovereignty requires foundation AI models capable of decomposing complex natural language production commands, reasoning over sensor streams, and executing robust continuous manipulation without manual trajectory engineering.</p>
+
+                <p><strong>Arnau's Direct Contributions:</strong><br>
+                • <strong>Agentic VLM Reasoning Modules:</strong> Designed reasoning pipelines utilizing Vision-Language Models (VLMs) to interpret high-level natural language instructions and break them down into structured symbolic sub-goals and spatial manipulation primitives.<br>
+                • <strong>VLA Physical Embodiment:</strong> Integrated Vision-Language-Action (VLA) foundation neural models onto physical robotic manipulators, mapping RGB-D camera feeds directly to continuous joint commands.<br>
+                • <strong>Teleoperation Data Pipelines:</strong> Developed low-latency teleoperation setups to record high-fidelity human demonstration rollouts (proprioception, visual tokens, contact states) required for generative policy pre-training.<br>
+                • <strong>Safety Verification:</strong> Implemented real-time boundary-checking mechanisms to enforce strict collision-avoidance and physical workspace limits during generative model inference.</p>
+
+                <p><strong>Results & Impact:</strong> Delivering sovereign embodied AI architectures for the €40M Horizon Europe GRAIL initiative, enabling autonomous execution of multi-step industrial assembly instructions without hand-crafted robot code.</p>
+
+                <div class="article-actions">
+                    <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Visit Official Project Website →</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- PROJECT 4: INTELLIMAN -->
+        <article class="article-card" id="intelliman">
+            <div class="article-header">
+                <h2>INTELLIMAN: AI-Powered Manipulation for Service, Manufacturing and Prosthetics</h2>
+                <span class="article-badge">EU Horizon Europe Consortium [2022 – 2026]</span>
+            </div>
+            <div class="article-authors">Robotics Researcher · Eurecat (Consortium led by Univ. of Bologna, partnering with DLR, IIT)</div>
+
+            <!-- Media Carousel with Dot Indicators -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselIntelliman">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/Intelliman_logo.svg" alt="INTELLIMAN Project Logo" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/intelliman.gif" alt="INTELLIMAN Manipulation Simulation GIF" class="article-img-full">
+                        </div>
+
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselIntelliman', -1)" aria-label="Previous image">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselIntelliman', 1)" aria-label="Next image">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/cognitium_MWC_1.jfif" alt="COGNITIUM MWC" class="article-img-full">
+                    <div class="carousel-dots" id="dots-carouselIntelliman">
+                        <span class="dot active" onclick="setSlide('carouselIntelliman', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselIntelliman', 1)"></span>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/cogntitium_mwc.gif" alt="COGNITIUM MWC gif" class="article-img-full">
-                    </div>
-                    
-                    <!-- Fletxes amb el paràmetre 'articleCarousel2' -->
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel2', -1)">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel2', 1)">&#10095;</button>
                 </div>
             </div>
 
             <div class="article-topics">
-                <strong>Topics:</strong> 
-                <span class="topic-tag">VLM</span>
-                <span class="topic-tag">VLA</span>
-                <span class="topic-tag">Agentic AI</span>
-                <span class="topic-tag">TIAGo</span>
-                <span class="topic-tag">LeRobot</span>
+                <span class="topic-tag topic-tag-hw">Franka Emika Panda</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Sim</span>
+                <span class="topic-tag topic-tag-ai">Sim2Real Domain Randomization</span>
+                <span class="topic-tag topic-tag-ai">Deep RL (PPO)</span>
+                <span class="topic-tag topic-tag-ai">Imitation Pre-Training</span>
+                <span class="topic-tag topic-tag-sw">ROS 2</span>
             </div>
 
             <div class="article-details">
-                <p><strong>Contributions:</strong><br> 
-                • Benchmarking Vision-Language-Action (VLA) models to select the most optimal one for the project.<br>
-                • Training and deployment of a VLA on a mobile robotic manipulator (TIAGo).<br>
-                • Coordination and control of robot actions using an AI agent (VLM).<br>
-                • Presentation of the project at the Mobile World Congress Barcelona 2026.</p>
+                <p><strong>The Challenge:</strong> Enabling robotic arms to interact dynamically with complex articulated household appliances (dishwashers, cabinets) and fragile industrial goods requires adapting to continuous friction variations, mass distributions, and non-rigid mechanical latches. Direct physical reinforcement learning is dangerously slow and damages hardware, while policies trained purely in simulation typically fail in the real world due to the Sim2Real dynamic gap.</p>
 
-                <p><strong>Summary:</strong> COGNITIUM is a technological project aimed at developing advanced cognitive capabilities for autonomous systems, facilitating a more natural and intelligent adaptation of robots in industrial and service scenarios.</p>
-                
-                <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Project Video →</a>
-                <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article">Project Website →</a>
-            </div>
-        </div>
+                <p><strong>Arnau's Direct Contributions:</strong><br>
+                • <strong>GPU Parallel Simulation:</strong> Developed high-fidelity dynamic manipulation environments in NVIDIA Isaac Sim and Isaac Lab simulating a 7-DOF Franka Emika Panda arm interacting with articulated appliances.<br>
+                • <strong>Imitation-Accelerated RL:</strong> Overcame exploration bottlenecks in contact-rich latch manipulation (opening dishwasher doors) by pre-training RL policies with Imitation Learning trajectories, dramatically accelerating convergence.<br>
+                • <strong>Domain Randomization:</strong> Engineered extensive randomization of physical parameters (friction coefficients, link inertias, joint damping, spring latch thresholds) to achieve robust Sim2Real policy transfer.<br>
+                • <strong>Real-Time 3D Perception:</strong> Coupled 6D object pose tracking with ROS 2 sensor pipelines, delivering continuous spatial states to the policy under real-world visual occlusions.</p>
 
-        <!-- Intelliman -->
-        <div class="article-card">
-            <div class="article-header">
-                <h2>INTELLIMAN: AI-Powered Manipulation System for Advanced Robotic Service, Manufacturing and Prosthetics</h2>
-                <span class="article-badge">Eurecat - [2022-2026]</span>
-            </div>
-            <div class="article-authors">Development of intelligent manipulation for industrial and domestic processes</div>
-            
-            <!-- Media -->
-            <div class="article-media-full">
-                <div class="carousel-container" id="articleCarousel3">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/Intelliman_logo.svg" alt="Intelliman Eurecat" class="article-img-full">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/intelliman.gif" alt="Intelliman Gif" class="article-img-full">
-                    </div>
+                <p><strong>Results & Impact:</strong> Demonstrated zero-shot transfer of learned manipulation policies from Isaac Lab onto physical Franka Panda manipulators, delivering core milestones on circular economy and domestic manipulation for the EU Horizon Europe INTELLIMAN project.</p>
 
-                    <!-- Fletxes amb el paràmetre 'articleCarousel3' -->
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('articleCarousel3', -1)">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('articleCarousel3', 1)">&#10095;</button>
+                <div class="article-actions">
+                    <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Visit Project Website →</a>
                 </div>
             </div>
-
-            <div class="article-topics">
-                <strong>Topics:</strong> 
-                <span class="topic-tag">RL</span>
-                <span class="topic-tag">IL</span>
-                <span class="topic-tag">Sim2Real</span>
-                <span class="topic-tag">IsaacLab</span>
-                <span class="topic-tag">IsaacSim</span>
-                <span class="topic-tag">ROS2</span>
-            </div>
-
-            <div class="article-details">
-                <p><strong>Contributions:</strong><br> 
-                • Training reinforcement learning (RL) models to perform complex manipulation tasks related to the domestic domain.<br>
-                • Study of Sim2Real techniques to successfully transfer simulation-trained models to real robotic platforms.<br>
-                • Use of imitation learning models to pre-train reinforcement learning models and accelerate convergence.<br>
-                • Adaptation of 3D object tracking models and their integration to work alongside RL models.</p>
-
-                <p><strong>Summary:</strong> INTELLIMAN is a European research project focused on equipping robots with intelligent, agile, and adaptive manipulation capabilities based on artificial intelligence, aiming to solve complex manipulation tasks both in circular economy-oriented industrial environments and domestic scenarios.</p>
-                
-                <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Project Website →</a>
-            </div>
-        </div>
-
-
+        </article>
     </div>
 
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="main-eng.html">Home</a>
+                <a href="projectes-professionals-eng.html">Professional Projects</a>
+                <a href="articles-eng.html">Publications</a>
+                <a href="projectes-academics-eng.html">Academic Projects</a>
+                <a href="altres-eng.html">Community</a>
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank">LinkedIn</a>
+            </div>
+            <p>© 2026 Arnau Boix Granell · All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Touch-Enabled Carousel Script with Dot Navigation -->
     <script>
         const slideIndexes = {};
+
+        function initCarousel(carouselId) {
+            slideIndexes[carouselId] = 0;
+            updateCarousel(carouselId);
+
+            // Touch swipe gesture support
+            const container = document.getElementById(carouselId);
+            if (!container) return;
+            let startX = 0;
+            let endX = 0;
+
+            container.addEventListener('touchstart', (e) => {
+                startX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            container.addEventListener('touchend', (e) => {
+                endX = e.changedTouches[0].screenX;
+                if (startX - endX > 50) {
+                    moveSlide(carouselId, 1);
+                } else if (endX - startX > 50) {
+                    moveSlide(carouselId, -1);
+                }
+            }, { passive: true });
+        }
 
         function moveSlide(carouselId, n) {
             const container = document.getElementById(carouselId);
             if (!container) return;
-
             const slides = container.getElementsByClassName("carousel-slide");
-            
-            if (slideIndexes[carouselId] === undefined) {
-                slideIndexes[carouselId] = 0;
-            }
+            if (!slides.length) return;
 
+            if (slideIndexes[carouselId] === undefined) slideIndexes[carouselId] = 0;
             slideIndexes[carouselId] += n;
 
-            if (slideIndexes[carouselId] >= slides.length) {
-                slideIndexes[carouselId] = 0;
-            }
-            if (slideIndexes[carouselId] < 0) {
-                slideIndexes[carouselId] = slides.length - 1;
-            }
+            if (slideIndexes[carouselId] >= slides.length) slideIndexes[carouselId] = 0;
+            if (slideIndexes[carouselId] < 0) slideIndexes[carouselId] = slides.length - 1;
+
+            updateCarousel(carouselId);
+        }
+
+        function setSlide(carouselId, index) {
+            slideIndexes[carouselId] = index;
+            updateCarousel(carouselId);
+        }
+
+        function updateCarousel(carouselId) {
+            const container = document.getElementById(carouselId);
+            if (!container) return;
+            const slides = container.getElementsByClassName("carousel-slide");
+            const dotsContainer = document.getElementById("dots-" + carouselId);
+            const dots = dotsContainer ? dotsContainer.getElementsByClassName("dot") : [];
+
+            const current = slideIndexes[carouselId] || 0;
 
             for (let i = 0; i < slides.length; i++) {
                 slides[i].classList.remove("active");
             }
-            slides[slideIndexes[carouselId]].classList.add("active");
+            if (slides[current]) slides[current].classList.add("active");
+
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            if (dots[current]) dots[current].classList.add("active");
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            initCarousel("carouselCognitium");
+            initCarousel("carouselIntelliman");
+        });
     </script>
 </body>
 </html>
