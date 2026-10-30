@@ -1,5 +1,8 @@
-# Internal Agent configurations
+# Internal planning, research, and design documentation
 .agents/
+analysis/
+content/
+design/
 
 # Operating System Files
 .DS_Store
