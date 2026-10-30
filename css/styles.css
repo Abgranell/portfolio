@@ -1,71 +1,1011 @@
-/* ==========================================
-   PALETA DE COLORS I ESTILS GLOBALS
-   ========================================== */
-:root { 
-    --bg: #fdfbf7;         /* Fons crema suau */
-    --card: #ffffff;       /* Targeta blanca */
-    --text: #1e293b;       /* Text gris molt fosc */
-    --accent: #a09369;     /* Blau intens per a elements destacats */
-    --muted: #64748b;      /* Gris per a subtítols */
-    --border: #e2e8f0;     /* Color per a vores suaus */
-    --hover-bg: #e2e8f0;   /* Color de fons al passar el ratolí */
-    --linkedin: #0a66c2;   /* Color corporatiu de LinkedIn */
-    --linkedin-hover: #084e96;
-}
+/* ==========================================================================
+   ARNAU BOIX GRANELL - PROFESSIONAL ROBOTICS PORTFOLIO
+   Design System & Global Stylesheet
+   Precision Engineering & Embodied AI
+   ========================================================================== */
 
-body { 
-    font-family: system-ui, -apple-system, sans-serif; 
-    background: var(--bg); 
-    color: var(--text); 
-    margin: 0; 
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS & CSS VARIABLES
+   -------------------------------------------------------------------------- */
+:root {
+    /* Surface & Background Colors */
+    --bg: #f8fafc;                /* Canvas background (Slate 50) */
+    --bg-canvas: #f8fafc;
+    --card: #ffffff;              /* Elevated card surface */
+    --bg-card: #ffffff;
+    --card-subtle: #f1f5f9;       /* Secondary card/callout surface (Slate 100) */
     
-    /* Aquestes línies són les que centren tot el contingut */
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    min-height: 100vh; 
-    text-align: center; 
+    /* Typography & Content Colors */
+    --text: #0f172a;              /* Primary text (Slate 900) - 15.8:1 contrast */
+    --text-primary: #0f172a;
+    --text-secondary: #334155;    /* Secondary technical text (Slate 700) */
+    --muted: #64748b;             /* Subtitles and metadata (Slate 500) */
+    --text-muted: #64748b;
+    
+    /* Borders & Dividers */
+    --border: #e2e8f0;            /* Subtle borders (Slate 200) */
+    --border-subtle: #e2e8f0;
+    --border-hover: #cbd5e1;      /* Hover border state (Slate 300) */
+    --hover-bg: #f1f5f9;          /* Interactive hover background */
+    
+    /* Brand Accent - Robotics Precision Cobalt */
+    --accent: #0284c7;            /* Sky/Cobalt 600 - High legibility accent */
+    --accent-hover: #0369a1;      /* Sky 700 - Deep hover tone */
+    --accent-glow: rgba(2, 132, 199, 0.12);
+    --btn-bg: #ffffff;
+    
+    /* Categorized Semantic Tags */
+    --tag-hw-bg: #f0fdf4;         /* Physical Hardware - Emerald 50 */
+    --tag-hw-text: #15803d;       /* Emerald 700 */
+    --tag-hw-border: #bbf7d0;
+    
+    --tag-sw-bg: #eff6ff;         /* Toolchains & Middleware - Blue 50 */
+    --tag-sw-text: #1d4ed8;       /* Blue 700 */
+    --tag-sw-border: #bfdbfe;
+    
+    --tag-ai-bg: #faf5ff;         /* AI & Learning Paradigms - Purple 50 */
+    --tag-ai-text: #7e22ce;       /* Purple 700 */
+    --tag-ai-border: #e9d5ff;
+    
+    --tag-metric-bg: #fffbeb;     /* Metrics & Distinctions - Amber 50 */
+    --tag-metric-text: #b45309;   /* Amber 700 */
+    --tag-metric-border: #fde68a;
+
+    /* External Brands */
+    --linkedin: #0a66c2;
+    --linkedin-hover: #084e96;
+
+    /* Shadows & Elevations */
+    --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.07), 0 2px 4px -2px rgba(15, 23, 42, 0.05);
+    --shadow-lg: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
-.container { 
-    max-width: 800px; 
-    margin: 0 auto; 
+/* --------------------------------------------------------------------------
+   2. GLOBAL RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+* {
+    box-sizing: border-box;
 }
 
-/* ==========================================
-   BOTONS GLOBALS (Utilitzen variables)
-   ========================================== */
-.btn { 
-    display: inline-block; 
-    background: var(--card); 
-    color: var(--text); 
-    padding: 0.75rem 1.5rem; 
-    border-radius: 8px; 
-    text-decoration: none; 
-    font-weight: bold; 
-    border: 1px solid var(--border); 
-    transition: background 0.2s; 
-}
-.btn:hover { 
-    background: var(--hover-bg); 
+html {
+    scroll-behavior: smooth;
 }
 
-.btn-primary { 
-    background: var(--accent); 
-    color: #ffffff; 
-    border: none; 
-}
-.btn-primary:hover { 
-    opacity: 0.9; 
-    background: #0369a1; 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-.btn-linkedin { 
-    background: var(--linkedin); 
-    color: #ffffff; 
-    border: none; 
+/* Specific class for splash / centered pages (index.html, wip.html) */
+body.centered-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 1.5rem;
 }
-.btn-linkedin:hover { 
-    opacity: 0.9; 
-    background: var(--linkedin-hover); 
+
+/* Subpage standard layout wrapper */
+body.subpage-layout {
+    display: block;
+    text-align: left;
+    position: relative;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHY
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+    color: var(--text);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.45rem;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.15rem;
+    line-height: 1.4;
+    margin-bottom: 0.35rem;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    line-height: 1.65;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* --------------------------------------------------------------------------
+   4. NAVIGATION BAR (STICKY & RESPONSIVE)
+   -------------------------------------------------------------------------- */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    z-index: 1000;
+    padding: 0.75rem 0;
+    transition: all 0.2s ease;
+}
+
+.nav-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-brand {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.nav-brand-badge {
+    background: var(--card-subtle);
+    color: var(--accent);
+    padding: 0.2rem 0.45rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    border: 1px solid var(--border);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.nav-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background: transparent;
+    transition: opacity 0.2s, background 0.2s;
+}
+
+.nav-btn-icon:hover {
+    background: var(--hover-bg);
+}
+
+.nav-btn-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: var(--linkedin);
+}
+
+.secret-btn {
+    width: 12px;
+    height: 28px;
+    background: transparent;
+    display: inline-block;
+    cursor: default;
+}
+
+.lang-btn {
+    background: var(--card);
+    color: var(--text);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.825rem;
+    border: 1px solid var(--border);
+    transition: all 0.15s ease;
+}
+
+.lang-btn:hover {
+    background: var(--hover-bg);
+    border-color: var(--border-hover);
+}
+
+/* --------------------------------------------------------------------------
+   5. BUTTONS & INTERACTIVE ELEMENTS
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background: var(--card);
+    color: var(--text);
+    padding: 0.65rem 1.25rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.925rem;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--hover-bg);
+    border-color: var(--border-hover);
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: #ffffff;
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--card);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: 1px solid var(--border);
+    margin-bottom: 2rem;
+    transition: all 0.15s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-back:hover {
+    background: var(--hover-bg);
+    border-color: var(--border-hover);
+    transform: translateX(-2px);
+}
+
+.btn-article {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--accent);
+    color: #ffffff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-article:hover {
+    background: var(--accent-hover);
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+}
+
+.btn-article-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    background: var(--card);
+    color: var(--accent);
+    padding: 0.48rem 0.95rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    border: 1px solid var(--accent);
+}
+
+.btn-article-outline:hover {
+    background: rgba(2, 132, 199, 0.06);
+    color: var(--accent-hover);
+    border-color: var(--accent-hover);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.75rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. HERO SECTION & PROFILE
+   -------------------------------------------------------------------------- */
+.hero-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.profile-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--accent);
+    margin-bottom: 1.25rem;
+    box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.03);
+}
+
+.hero-header h1 {
+    font-size: 2.35rem;
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.hero-headline {
+    color: var(--accent);
+    font-size: 1.15rem;
+    font-weight: 600;
+    max-width: 680px;
+    margin: 0 auto 0.6rem auto;
+    letter-spacing: -0.01em;
+}
+
+.hero-affiliation {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: var(--card-subtle);
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. CORE IMPACT PILLARS (HOMEPAGE METRICS)
+   -------------------------------------------------------------------------- */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.impact-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 1.25rem 1rem;
+    text-align: center;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.impact-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.impact-metric {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+}
+
+.impact-label {
+    font-size: 0.825rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.2rem;
+}
+
+.impact-sub {
+    font-size: 0.75rem;
+    color: var(--muted);
+    line-height: 1.35;
+}
+
+/* --------------------------------------------------------------------------
+   8. FLAGSHIP SPOTLIGHT (HOMEPAGE)
+   -------------------------------------------------------------------------- */
+.spotlight-section {
+    margin: 3rem 0;
+}
+
+.section-title {
+    font-size: 1.35rem;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.section-title-link {
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.spotlight-card {
+    background: var(--card);
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.spotlight-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+}
+
+.spotlight-media {
+    width: 100%;
+    height: 160px;
+    background: var(--card-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 1px solid var(--border);
+}
+
+.spotlight-media img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.spotlight-card:hover .spotlight-media img {
+    transform: scale(1.05);
+}
+
+.spotlight-body {
+    padding: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.spotlight-tag {
+    align-self: flex-start;
+    font-size: 0.725rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.6rem;
+}
+
+.spotlight-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 0.4rem;
+    line-height: 1.35;
+}
+
+.spotlight-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+.spotlight-link {
+    font-size: 0.825rem;
+    font-weight: 700;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. CASE STUDY & ARTICLE CARDS
+   -------------------------------------------------------------------------- */
+.article-card, .about-card {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-md);
+}
+
+.article-card h2, .about-card h2 {
+    margin-top: 0;
+    margin-bottom: 0.3rem;
+    color: var(--text);
+    font-size: 1.35rem;
+    line-height: 1.3;
+}
+
+.article-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.article-badge {
+    background: var(--card-subtle);
+    color: var(--accent);
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid var(--border);
+}
+
+.article-authors {
+    color: var(--muted);
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   10. MEDIA CONTAINERS, CAROUSELS & VIDEOS
+   -------------------------------------------------------------------------- */
+.article-media-full {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--card-subtle);
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    border: 1px solid var(--border);
+}
+
+.article-img-full {
+    max-height: 320px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+/* 16:9 Zero-Layout-Shift Video Container */
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Touch-Enabled Carousel */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-height: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    overflow: hidden;
+    border-radius: 8px;
+    touch-action: pan-y;
+}
+
+.carousel-slide {
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-slide.active {
+    display: block;
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0.6; }
+    to { opacity: 1; }
+}
+
+.carousel-slide img {
+    max-height: 300px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(15, 23, 42, 0.65);
+    color: #ffffff;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s, transform 0.15s;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: rgba(15, 23, 42, 0.9);
+    transform: translateY(-50%) scale(1.08);
+}
+
+.prev-btn { left: 12px; }
+.next-btn { right: 12px; }
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--border-hover);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dot.active {
+    background: var(--accent);
+    width: 20px;
+    border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   11. CATEGORIZED TOPIC TAGS
+   -------------------------------------------------------------------------- */
+.article-topics {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+}
+
+.topic-tag {
+    display: inline-block;
+    background: var(--card-subtle);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.775rem;
+    font-weight: 600;
+    border: 1px solid var(--border);
+    letter-spacing: 0.01em;
+}
+
+/* Semantic Categories */
+.topic-tag-hw {
+    background: var(--tag-hw-bg);
+    color: var(--tag-hw-text);
+    border-color: var(--tag-hw-border);
+}
+
+.topic-tag-sw {
+    background: var(--tag-sw-bg);
+    color: var(--tag-sw-text);
+    border-color: var(--tag-sw-border);
+}
+
+.topic-tag-ai {
+    background: var(--tag-ai-bg);
+    color: var(--tag-ai-text);
+    border-color: var(--tag-ai-border);
+}
+
+.topic-tag-metric {
+    background: var(--tag-metric-bg);
+    color: var(--tag-metric-text);
+    border-color: var(--tag-metric-border);
+}
+
+/* --------------------------------------------------------------------------
+   12. TECHNICAL DETAILS & NARRATIVE
+   -------------------------------------------------------------------------- */
+.article-details {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+.article-details p {
+    margin-bottom: 1.15rem;
+}
+
+.article-details strong {
+    color: var(--text);
+}
+
+.article-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+}
+
+/* --------------------------------------------------------------------------
+   13. WELCOME & WIP SPLASH CARDS (index.html, wip.html)
+   -------------------------------------------------------------------------- */
+.welcome-card, .wip-card {
+    background: var(--card);
+    padding: 3.5rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+    max-width: 440px;
+    width: 90%;
+    border: 1px solid var(--border);
+}
+
+.welcome-card .profile-img {
+    width: 170px;
+    height: 170px;
+    margin-bottom: 1.25rem;
+}
+
+.welcome-card h1, .wip-card h1 {
+    font-size: 1.85rem;
+    margin-bottom: 0.35rem;
+}
+
+.welcome-card p, .wip-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.btn-lang-select {
+    display: block;
+    background: var(--card);
+    color: var(--text);
+    padding: 0.85rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1rem;
+    border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.btn-lang-select:hover {
+    background: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+}
+
+.wip-img {
+    max-width: 180px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+}
+
+/* --------------------------------------------------------------------------
+   14. SITE FOOTER
+   -------------------------------------------------------------------------- */
+.site-footer {
+    text-align: center;
+    padding: 2.5rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   15. RESPONSIVE BREAKPOINTS & MEDIA QUERIES
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    body.subpage-layout {
+        padding-top: 4.5rem;
+    }
+
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+
+    .nav-links {
+        display: none; /* Collapses to essential back/lang on mobile */
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+
+    .article-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+    }
+
+    .article-card, .about-card {
+        padding: 1.35rem;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
 }
