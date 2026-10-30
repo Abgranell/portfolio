@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projectes Professionals — Arnau Boix Granell</title>
-    <meta name="description" content="Principals projectes professionals de robòtica i IA corporitzada desenvolupats per Arnau Boix Granell a Eurecat, incloent COGNITIUM, PRISM, GRAIL i INTELLIMAN.">
+    <title>Projectes Professionals - Arnau Boix Granell</title>
+    <meta name="description" content="Projectes professionals en robòtica d'Arnau Boix Granell, incloent COGNITIUM al MWC 2026, la iniciativa GRAIL de 40M EUR i manipulació amb Franka Panda a INTELLIMAN.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="subpage-layout">
-    <!-- Barra de navegació fixa -->
+    <!-- Global Sticky Navigation Bar -->
     <header class="site-header">
         <div class="nav-container">
-            <div class="nav-left">
-                <a href="main-cat.html" class="nav-brand">
-                    <span class="nav-brand-badge">ABG</span>
-                    <span>Arnau Boix Granell</span>
-                </a>
-            </div>
+            <a href="main-cat.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
 
             <ul class="nav-links">
                 <li><a href="main-cat.html" class="nav-link">Inici</a></li>
                 <li><a href="projectes-professionals-cat.html" class="nav-link active">Projectes Professionals</a></li>
                 <li><a href="projectes-academics-cat.html" class="nav-link">Projectes Acadèmics</a></li>
-                <li><a href="articles-cat.html" class="nav-link">Articles</a></li>
+                <li><a href="articles-cat.html" class="nav-link">Publicacions</a></li>
                 <li><a href="altres-cat.html" class="nav-link">Comunitat</a></li>
             </ul>
 
@@ -38,18 +33,17 @@
 
     <div class="container">
         <header style="text-align: center; margin-bottom: 2.5rem;">
-            <a href="main-cat.html" class="btn-back">← Tornar a l'inici</a>
             <h1>Projectes Professionals</h1>
             <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
-                Recerca aplicada, adaptació de models fundacionals i desplegament sobre plataformes robòtiques reals desenvolupats en consorcis europeus i programes d'R+D a Eurecat.
+                Recerca aplicada, ajust fi de models fundacionals i desplegaments sobre plataformes robòtiques físiques en consorcis europeus i programes d'R+D industrial a Eurecat.
             </p>
         </header>
 
         <!-- PROJECTE 1: COGNITIUM (MWC 2026) -->
         <article class="article-card" id="cognitium">
             <div class="article-header">
-                <h2>COGNITIUM: Cognició Autònoma i Integrada per a Robots en Entorns Impredictibles i Multimodals</h2>
-                <span class="article-badge">R+D Eurecat · MWC 2026 [2025 – 2026]</span>
+                <h2>COGNITIUM: Cognició Autònoma i Integrada en Entorns Multimodals</h2>
+                <span class="article-badge">Eurecat · MWC 2026 [2025 - 2026]</span>
             </div>
             <div class="article-authors">Investigador en Robòtica · Desplegament Físic al PAL Robotics TIAGo PRO</div>
 
@@ -58,13 +52,13 @@
                 <div style="width: 100%;">
                     <div class="carousel-container" id="carouselCognitium">
                         <div class="carousel-slide active">
-                            <img src="../imatges/Cobnitium_Logo.webp" alt="Logo del Projecte COGNITIUM" class="article-img-full">
+                            <img src="../imatges/Cobnitium_Logo.webp" alt="Logotip del Projecte COGNITIUM" class="article-img-full">
                         </div>
                         <div class="carousel-slide">
-                            <img src="../imatges/cognitium_MWC_1.jfif" alt="Demostració en directe de COGNITIUM al Mobile World Congress 2026" class="article-img-full">
+                            <img src="../imatges/cognitium_MWC_1.jfif" alt="Demostració en Viu al Mobile World Congress 2026" class="article-img-full">
                         </div>
                         <div class="carousel-slide">
-                            <img src="../imatges/cogntitium_mwc.gif" alt="GIF de manipulació COGNITIUM" class="article-img-full">
+                            <img src="../imatges/cogntitium_mwc.gif" alt="GIF de Demostració de Manipulació COGNITIUM" class="article-img-full">
                         </div>
 
                         <button class="carousel-btn prev-btn" onclick="moveSlide('carouselCognitium', -1)" aria-label="Imatge anterior">&#10094;</button>
@@ -81,127 +75,85 @@
             <div class="article-topics">
                 <span class="topic-tag topic-tag-hw">PAL Robotics TIAGo PRO</span>
                 <span class="topic-tag topic-tag-sw">Hugging Face LeRobot</span>
-                <span class="topic-tag topic-tag-ai">Ajustament de Models VLA</span>
+                <span class="topic-tag topic-tag-ai">Ajust Fi de VLA</span>
                 <span class="topic-tag topic-tag-ai">Raonament Agèntic amb VLM</span>
                 <span class="topic-tag topic-tag-sw">ROS 2</span>
-                <span class="topic-tag topic-tag-metric">Demo en Viu MWC 2026</span>
+                <span class="topic-tag topic-tag-metric">Demo en Viu al MWC 2026</span>
             </div>
 
             <div class="article-details">
-                <p><strong>El Repte:</strong> El desplegament de manipuladors mòbils autònoms en espais reals concorreguts requereix superar errors sensorials, autooclusions visuals i pertorbacions físiques imprevistes. Les arquitectures tradicionals en cascada (que separen SLAM, planificació de tasques i control cinemàtic) són summament fràgils. COGNITIUM va plantejar una arquitectura cognitiva unificada combinant models fundacionals de Visió-Llenguatge-Acció (VLA) amb un supervisor agèntic basat en models de Visió i Llenguatge (VLM) per aconseguir una manipulació robusta en bucle tancat sobre un robot físic d'escala real.</p>
+                <p><strong>El Repte:</strong> El desplegament de manipuladors mòbils autònoms en entorns humans no controlats i concorreguts requereix superar errors de percepció, oclusions visuals i pertorbacions físiques imprevistes. Les arquitectures clàssiques en cascada (SLAM, planificació de tasques i planificació de trajectòries desacoblades) resulten massa rígides. COGNITIUM implementa una arquitectura cognitiva integrada combinant models fundacionals Visió-Llenguatge-Acció (VLA) amb un model supervisor VLM agèntic per aconseguir manipulació robusta en bucle tancat en temps real sobre un robot mòbil a escala real.</p>
 
-                <p><strong>Aportacions Directes d'Arnau:</strong><br>
-                • <strong>Avaluació Comparativa de Models VLA:</strong> Disseny i execució d'un banc de proves sistemàtic sobre arquitectures VLA de codi obert i comercials, analitzant freqüència d'inferència, precisió cinemàtica i generalització espacial.<br>
-                • <strong>Integració amb Hugging Face LeRobot:</strong> Adaptació de la biblioteca LeRobot per connectar directament amb els controladors motors del robot físic PAL Robotics TIAGo PRO.<br>
-                • <strong>Desplegament Físic de Polítiques:</strong> Ajustament de polítiques neuronals a partir de dades de demostració, assolint la subjecció i reubicació autònoma d'objectes no vistos prèviament a partir de les imatges de la càmera embarcada.<br>
-                • <strong>Supervisió Agèntica amb VLMs:</strong> Desenvolupament d'un mòdul supervisor basat en VLM per avaluar visualment l'èxit de les accions, detectar lliscaments i activar mecanismes autònoms de recuperació d'errors.<br>
-                • <strong>Demostració en Directe al MWC 2026:</strong> Programació, calibratge i operació de la demostració robòtica autònoma en directe durant el Mobile World Congress de Barcelona davant de condicions lumíniques complexes i canvis en l'entorn.</p>
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Avaluació Comparativa de VLA:</strong> Realització d'una anàlisi sistemàtica de models VLA de codi obert i propietaris, avaluant la freqüència d'inferència, la capacitat de generalització espacial i l'eficiència en dades.<br>
+                • <strong>Integració amb LeRobot:</strong> Adaptació del marc Hugging Face LeRobot per comunicar-se directament amb els controladors de baix nivell del manipulador físic PAL Robotics TIAGo PRO.<br>
+                • <strong>Desplegament sobre Maquinari Real:</strong> Ajust fi de polítiques sensorimotores sobre dades de demostració i consecució d'aprehensió i col·locació autònoma d'objectes directament a partir del flux RGB-D de les càmeres integrades.<br>
+                • <strong>Supervisió Agèntica amb VLM:</strong> Creació d'un agent supervisor basat en VLM que actua com a raonador executiu per verificar l'èxit de l'acció, detectar lliscaments i activar mecanismes de recuperació autònoma.<br>
+                • <strong>Demostració en Directe al MWC 2026:</strong> Programació, calibratge i execució de proves de manipulació en directe al Mobile World Congress Barcelona 2026 sota condicions reals de soroll i il·luminació dinàmica.</p>
 
-                <p><strong>Resultats i Impacte:</strong> Validació experimental del desplegament de models VLA en temps real sobre el manipulador mòbil TIAGo amb recuperació autònoma d'errors visuals, mostrant les capacitats avançades d'Eurecat davant líders del sector tecnològic internacional.</p>
+                <p><strong>Resultats i Impacte:</strong> Validació de manipulació en bucle tancat amb models VLA executats nativament sobre el robot físic TIAGo amb recuperació visual d'errors, presentant la recerca de frontera d'Eurecat davant líders tecnològics internacionals.</p>
 
                 <div class="article-actions">
-                    <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Veure Vídeo del Projecte →</a>
-                    <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article-outline">Web del Projecte →</a>
+                    <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Veure vídeo del projecte -></a>
+                    <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article-outline">Web del projecte -></a>
                 </div>
             </div>
         </article>
 
-        <!-- PROJECTE 2: PRISM (ERF 2026) -->
-        <article class="article-card" id="prism">
-            <div class="article-header">
-                <h2>PRISM: Refinament Personalitzat d'Habilitats d'Imitació per a la Manipulació mitjançant Instruccions Humanes</h2>
-                <span class="article-badge">Primer Autor · ERF 2026 [arXiv:2603.05574]</span>
-            </div>
-            <div class="article-authors">Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno, Néstor García</div>
-
-            <div class="article-media-full">
-                <img src="../imatges/Article3.svg" alt="Diagrama de l'Arquitectura PRISM" class="article-img-full">
-            </div>
-
-            <div class="article-topics">
-                <span class="topic-tag topic-tag-ai">Aprenentatge per Imitació (IL)</span>
-                <span class="topic-tag topic-tag-ai">Aprenentatge per Reforç (RL)</span>
-                <span class="topic-tag topic-tag-ai">Síntesi de Recompenses Eureka</span>
-                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
-                <span class="topic-tag topic-tag-hw">Human-in-the-Loop</span>
-                <span class="topic-tag topic-tag-metric">96,8% Taxa d'Èxit</span>
-            </div>
-
-            <div class="article-details">
-                <p><strong>El Repte:</strong> L'aprenentatge per imitació (IL) permet ensenyar tasques a robots a partir de demostracions humanes, però les polítiques resultants presenten una generalització molt deficient davant canvis en la posició dels objectius o obstacles imprevistos. D'altra banda, reentrenar agents de RL des de zero exigeix dissenyar a mà complexes funcions de recompensa i un elevadíssim volum de càlcul. PRISM crea un flux unificat on una política base d'imitació es refina ràpidament mitjançant ordres en llenguatge natural i correccions humanes interactives sense programar recompenses a mà.</p>
-
-                <p><strong>Aportacions Directes d'Arnau:</strong><br>
-                • <strong>Concepció Teòrica i Arquitectura:</strong> Formulació i lideratge del mètode PRISM com a investigador principal i primer autor, unint aprenentatge per imitació i aprenentatge per reforç condicionat per text.<br>
-                • <strong>Extensió del Paradigma Eureka:</strong> Ampliació del marc d'última generació Eureka emprant GPT-5 per sintetitzar, avaluar i optimitzar funcions de recompensa en Python directament a partir d'instruccions en llenguatge natural.<br>
-                • <strong>Correcció Humana Interactiva:</strong> Implementació d'un bucle de retroalimentació en temps real que permet a l'operador reorientar trajectòries intermèdies i garantir restriccions de seguretat.<br>
-                • <strong>Validació Empírica a Isaac Lab:</strong> Desenvolupament dels entorns de simulació massivament paral·lels a NVIDIA Isaac Lab i execució de bateries completes d'assajos sota forts canvis en la distribució de dades.</p>
-
-                <p><strong>Validació Empírica i Mètriques:</strong><br>
-                • <strong>Línia Base Zero-Shot:</strong> Les polítiques d'imitació genèriques sense refinar només van assolir un <strong>21,2%</strong> d'èxit en configuracions fora de distribució.<br>
-                • <strong>Convergència a Isaac Lab:</strong> L'optimització autònoma per RL a Isaac Lab va situar la convergència en un <strong>98,0%</strong>.<br>
-                • <strong>Rendiment PRISM:</strong> La combinació de generació de recompenses iterativa amb GPT-5 i correccions humanes va assolir un <strong>96,8%</strong> d'èxit en tasques complexes, reduint dràsticament el cost de mostreig i el temps d'aprenentatge.</p>
-
-                <div class="article-actions">
-                    <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Llegir Article (arXiv) →</a>
-                    <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article-outline">Veure Vídeo Demostratiu →</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- PROJECTE 3: GRAIL (40M€ Flagship) -->
+        <!-- PROJECTE 2: GRAIL (40M EUR) -->
         <article class="article-card" id="grail">
             <div class="article-header">
                 <h2>GRAIL: Generative Robotics & AI for EU Industrial Leadership</h2>
-                <span class="article-badge">Flagship Horizon Europe [2026 – Present]</span>
+                <span class="article-badge">Projecte Horizon Europe [2026 - Present]</span>
             </div>
-            <div class="article-authors">Investigador en Robòtica · Eurecat (Coordinador del Consorci amb Siemens, ETH Zuric, DLR, Imperial)</div>
+            <div class="article-authors">Investigador en Robòtica · Eurecat (Coordinador del Consorci amb Siemens, ETH Zurich, DLR, Imperial)</div>
 
             <div class="article-media-full">
-                <img src="../imatges/GRAIL_Logo.png" alt="Logo del Projecte Europeu GRAIL" class="article-img-full" style="max-height: 220px;">
+                <img src="../imatges/GRAIL_Logo.png" alt="Logotip del Projecte Europeu GRAIL" class="article-img-full" style="max-height: 220px;">
             </div>
 
             <div class="article-topics">
-                <span class="topic-tag topic-tag-sw">Horizon Europe 40M€ Flagship</span>
-                <span class="topic-tag topic-tag-ai">Models VLA Fundacionals</span>
+                <span class="topic-tag topic-tag-sw">Horizon Europe 40M EUR</span>
+                <span class="topic-tag topic-tag-ai">Models Fundacionals VLA</span>
                 <span class="topic-tag topic-tag-ai">Raonament Agèntic amb VLM</span>
                 <span class="topic-tag topic-tag-hw">Manipuladors Industrials</span>
-                <span class="topic-tag topic-tag-hw">Pipelines de Teleoperació</span>
+                <span class="topic-tag topic-tag-hw">Captura per Teleoperació</span>
             </div>
 
             <div class="article-details">
-                <p><strong>El Repte:</strong> L'automatització industrial europea requereix una flexibilitat d'alta variabilitat i tirades curtes que les línies robòtiques rígides són incapaces d'assolir. La sobirania industrial depèn de crear models fundacionals d'IA capaços de descompondre instruccions de producció en llenguatge natural, raonar sobre imatges sensorials i executar manipulacions precises sense programació explícita de codi robòtic.</p>
+                <p><strong>El Repte:</strong> L'automatització industrial europea requereix una flexibilitat d'alta variabilitat i baix volum que les línies robòtiques preprogramades rígides no poden oferir. Assolir la sobirania tecnològica requereix models d'IA fundacionals capaços de descompondre ordres de producció en llenguatge natural, raonar sobre sensors multimodals i executar tasques complexes de manipulació sense reprogramació manual de trajectòries.</p>
 
-                <p><strong>Aportacions Directes d'Arnau:</strong><br>
-                • <strong>Mòduls de Raonament Agèntic amb VLMs:</strong> Disseny d'arquitectures cognitives emprant models de Visió i Llenguatge (VLM) per interpretar instruccions complexes i descompondre-les en subobjectius estructurats i primitives d'acció espacial.<br>
-                • <strong>Corporització de Models VLA:</strong> Integració de xarxes neuronals Visió-Llenguatge-Acció (VLA) en manipuladors industrials, connectant imatges RGB-D directament amb consignes de control articular continu.<br>
-                • <strong>Captura de Dades per Teleoperació:</strong> Desenvolupament de sistemes de teleoperació d'alta precisió per registrar demostracions humanes expertes (propiocepció, fluxos de càmera, estats de contacte) per entrenar models generatius.<br>
-                • <strong>Verificació de Seguretat Física:</strong> Implementació de mecanismes de supervisió en temps real per garantir que les polítiques generatives respectin els límits de l'espai de treball i les zones lliures de col·lisions.</p>
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Mòduls de Raonament Agèntic amb VLM:</strong> Disseny de canalitzacions de raonament utilitzant models Visió-Llenguatge (VLM) per interpretar instruccions complexes en llenguatge natural i descompondre-les en subobjectius simbòlics i primitives de manipulació.<br>
+                • <strong>Integració de Models VLA sobre Robots Físics:</strong> Connexió de models fundacionals Visió-Llenguatge-Acció (VLA) a braços industrials, traduint imatges RGB-D directament a consignes contínues d'actuació articular.<br>
+                • <strong>Sistemes de Captura per Teleoperació:</strong> Desenvolupament de plataformes de teleoperació d'alta precisió per enregistrar demostracions humanes de manipulació (propriocepció, càmeres i forces de contacte) necessàries per a l'entrenament de models generatius.<br>
+                • <strong>Verificació de Seguretat:</strong> Implementació de filtres cinemàtics i comprovació de col·lisions en temps real per garantir límits segurs durant la inferència de models d'IA generativa.</p>
 
-                <p><strong>Resultats i Impacte:</strong> Desenvolupament d'arquitectures d'IA corporitzada sobirana en el projecte insígnia de 40M€ de la Unió Europea GRAIL, permetent l'execució autònoma d'ordres complexes de muntatge industrial.</p>
+                <p><strong>Resultats i Impacte:</strong> Desenvolupament de l'arquitectura d'IA corporitzada per a la iniciativa Horizon Europe GRAIL de 40 milions d'euros, permetent l'execució autònoma d'operacions industrials sense codi manual.</p>
 
                 <div class="article-actions">
-                    <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Visitar Web Oficial del Projecte →</a>
+                    <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Web oficial del projecte -></a>
                 </div>
             </div>
         </article>
 
-        <!-- PROJECTE 4: INTELLIMAN -->
+        <!-- PROJECTE 3: INTELLIMAN -->
         <article class="article-card" id="intelliman">
             <div class="article-header">
-                <h2>INTELLIMAN: Sistema de Manipulació Basat en IA per a Serveis Robòtics, Manufactura i Pròtesis</h2>
-                <span class="article-badge">Consorci Horizon Europe [2022 – 2026]</span>
+                <h2>INTELLIMAN: AI-Powered Manipulation for Service, Manufacturing and Prosthetics</h2>
+                <span class="article-badge">Consorci Horizon Europe [2022 - 2026]</span>
             </div>
-            <div class="article-authors">Investigador en Robòtica · Eurecat (Consorci liderat per la Univ. de Bolonya, amb DLR, IIT)</div>
+            <div class="article-authors">Investigador en Robòtica · Eurecat (Consorci liderat per la Universitat de Bolonya, amb DLR i IIT)</div>
 
             <!-- Carrusel Multimèdia amb Indicadors de Punts -->
             <div class="article-media-full">
                 <div style="width: 100%;">
                     <div class="carousel-container" id="carouselIntelliman">
                         <div class="carousel-slide active">
-                            <img src="../imatges/Intelliman_logo.svg" alt="Logo del Projecte INTELLIMAN" class="article-img-full">
+                            <img src="../imatges/Intelliman_logo.svg" alt="Logotip del Projecte INTELLIMAN" class="article-img-full">
                         </div>
                         <div class="carousel-slide">
-                            <img src="../imatges/intelliman.gif" alt="GIF de simulació de manipulació INTELLIMAN" class="article-img-full">
+                            <img src="../imatges/intelliman.gif" alt="GIF de Simulació de Manipulació INTELLIMAN" class="article-img-full">
                         </div>
 
                         <button class="carousel-btn prev-btn" onclick="moveSlide('carouselIntelliman', -1)" aria-label="Imatge anterior">&#10094;</button>
@@ -218,37 +170,37 @@
                 <span class="topic-tag topic-tag-hw">Franka Emika Panda</span>
                 <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
                 <span class="topic-tag topic-tag-sw">NVIDIA Isaac Sim</span>
-                <span class="topic-tag topic-tag-ai">Aleatorització de Domini Sim2Real</span>
-                <span class="topic-tag topic-tag-ai">RL Profund (PPO)</span>
+                <span class="topic-tag topic-tag-ai">Aleatorització Sim2Real</span>
+                <span class="topic-tag topic-tag-ai">Deep RL (PPO)</span>
                 <span class="topic-tag topic-tag-ai">Preentrenament per Imitació</span>
                 <span class="topic-tag topic-tag-sw">ROS 2</span>
             </div>
 
             <div class="article-details">
-                <p><strong>El Repte:</strong> Capacitar braços robòtics per interactuar de manera dinàmica amb electrodomèstics articulats (rentavaixelles, armaris) i elements industrials fràgils exigeix adaptar-se a variacions de fricció, inèrcies i pestells mecànics de molla. L'aprenentatge per reforç pur en robots físics és inacceptablement lent i perillós, mentre que els models entrenats només en simulador solen fallar estrepitosament davant la bretxa dinàmica Sim2Real.</p>
+                <p><strong>El Repte:</strong> Permetre que braços robòtics interactuïn dinàmicament amb electrodomèstics articulats (rentaplats, portes) i peces industrials deformables requereix adaptar-se a canvis continus de fricció, massa i enclavaments mecànics. L'aprenentatge físic directe per reforç és lent i pot danyar el robot, mentre que les polítiques entrenades purament en simulació solen fallar en el món real a causa de la discrepància dinàmica Sim2Real.</p>
 
-                <p><strong>Aportacions Directes d'Arnau:</strong><br>
-                • <strong>Simulació Paral·lela en GPU:</strong> Desenvolupament d'entorns de manipulació dinàmica d'alta fidelitat a NVIDIA Isaac Sim i Isaac Lab simulant un braç Franka Emika Panda de 7 DOF interactuant amb mecanismes articulats.<br>
-                • <strong>RL Accelerat per Imitació:</strong> Resolució de colls d'ampolla en l'obertura de portes amb pestell mecànic mitjançant el preentrenament de polítiques de RL amb demostracions d'imitació expertes, accelerant dràsticament la convergència.<br>
-                • <strong>Aleatorització de Domini Sim2Real:</strong> Disseny de variacions sistemàtiques en coeficients de fricció, inèrcies, amortiment articular i rigidesa del pestell per aconseguir transferències de control robustes.<br>
-                • <strong>Percepció 3D en Temps Real:</strong> Acoblament de models de seguiment de posició i orientació 3D (6D pose tracking) amb nodes ROS 2 per transmetre informació espacial contínua a la xarxa neuronal.</p>
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Simulació Paral·lelitzada en GPU:</strong> Desenvolupament d'entorns de simulació a NVIDIA Isaac Sim i Isaac Lab simulant el manipulador Franka Emika Panda (7 DoF) en interacció amb mecanismes articulats.<br>
+                • <strong>RL Accelerat per Imitació:</strong> Resolució de colls d'ampolla d'exploració en tasques de contacte continu (com l'obertura de portes de rentaplats) mitjançant preentrenament de polítiques de RL amb dades d'aprenentatge per imitació.<br>
+                • <strong>Aleatorització de Domini:</strong> Variació controlada de paràmetres físics (coeficients de fricció, inèrcies, amortiments i retards) per assolir transferència robusta de les polítiques a la realitat.<br>
+                • <strong>Percepció 3D en Temps Real:</strong> Integració de seguiment de posició d'objectes en 6D amb ROS 2 per proporcionar observacions precises davant d'oclusions visuals.</p>
 
-                <p><strong>Resultats i Impacte:</strong> Demostració de transferència zero-shot de polítiques apreses a Isaac Lab cap al manipulador físic Franka Panda, assolint les fites d'economia circular i robòtica domèstica del projecte europeu INTELLIMAN.</p>
+                <p><strong>Resultats i Impacte:</strong> Demostració de transferència zero-shot de polítiques apreses a Isaac Lab sobre el manipulador físic Franka Panda, assolint fites clau d'economia circular i robòtica domèstica del projecte Horizon Europe INTELLIMAN.</p>
 
                 <div class="article-actions">
-                    <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Visitar Web del Projecte →</a>
+                    <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Web oficial del projecte -></a>
                 </div>
             </div>
         </article>
     </div>
 
-    <!-- Peu de pàgina -->
+    <!-- Site Footer -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-links">
                 <a href="main-cat.html">Inici</a>
                 <a href="projectes-professionals-cat.html">Projectes Professionals</a>
-                <a href="articles-cat.html">Articles</a>
+                <a href="articles-cat.html">Publicacions</a>
                 <a href="projectes-academics-cat.html">Projectes Acadèmics</a>
                 <a href="altres-cat.html">Comunitat</a>
                 <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank">LinkedIn</a>
@@ -257,7 +209,7 @@
         </div>
     </footer>
 
-    <!-- Script de Carrusel tàctil amb navegació per punts -->
+    <!-- Touch-Enabled Carousel Script with Dot Navigation -->
     <script>
         const slideIndexes = {};
 
@@ -265,7 +217,6 @@
             slideIndexes[carouselId] = 0;
             updateCarousel(carouselId);
 
-            // Gestió de gestos tàctils (swipe)
             const container = document.getElementById(carouselId);
             if (!container) return;
             let startX = 0;

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Projects — Arnau Boix Granell</title>
-    <meta name="description" content="Academic robotics projects, Master's thesis in Isaac Lab RL, Bachelor's thesis in VR cloth manipulation, AIxHRI doctoral summer school, and Engihack 1st prize.">
+    <title>Academic Projects - Arnau Boix Granell</title>
+    <meta name="description" content="Academic robotics projects, Master's thesis in Isaac Lab RL, Bachelor's thesis in VR cloth manipulation, AIxHRI doctoral school, and Engihack 1st prize.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="subpage-layout">
@@ -12,292 +12,257 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="main-eng.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
-            
-            <nav class="nav-links" aria-label="Main Navigation">
-                <a href="main-eng.html">Home</a>
-                <a href="projectes-professionals-eng.html">Professional Projects</a>
-                <a href="projectes-academics-eng.html" class="active">Academic Projects</a>
-                <a href="articles-eng.html">Publications</a>
-                <a href="altres-eng.html">Community</a>
-            </nav>
 
-            <div class="nav-actions">
-                <a href="wip.html" class="btn-secret" title="Under construction" aria-label="Work in Progress Easter Egg">🐶</a>
-                <a href="../cat/projectes-academics-cat.html" class="lang-btn" aria-label="Canvia al Català">CAT</a>
+            <ul class="nav-links">
+                <li><a href="main-eng.html" class="nav-link">Home</a></li>
+                <li><a href="projectes-professionals-eng.html" class="nav-link">Professional Projects</a></li>
+                <li><a href="projectes-academics-eng.html" class="nav-link active">Academic Projects</a></li>
+                <li><a href="articles-eng.html" class="nav-link">Publications</a></li>
+                <li><a href="altres-eng.html" class="nav-link">Community</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="nav-btn-icon" title="LinkedIn" aria-label="LinkedIn Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="wip.html" class="secret-btn" title="" aria-hidden="true"></a>
+                <a href="../cat/projectes-academics-cat.html" class="lang-btn" title="Canviar a Catala">CAT</a>
             </div>
         </div>
     </header>
 
-    <main class="page-container" style="max-width: 900px;">
-        <!-- Page Header -->
-        <div class="page-header" style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="project-eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">
-                <span class="category-tag">Academic Research & Milestones</span>
-                <span class="category-tag">UPC ETSEIB & CSIC</span>
-            </div>
-            <h1 class="page-title" style="font-size: 2.3rem; margin-bottom: 0.75rem;">Academic Projects</h1>
-            <p class="page-subtitle" style="max-width: 680px; margin: 0 auto 1.5rem auto;">
-                Theses, advanced doctoral research schools, and competitive engineering initiatives spanning GPU-accelerated reinforcement learning, virtual reality teleoperation, and mechatronic design.
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 2.5rem;">
+            <h1>Academic Projects</h1>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
+                Theses, doctoral research schools, and competitive engineering initiatives spanning GPU-accelerated reinforcement learning, virtual reality teleoperation, and mechatronic design.
             </p>
-            <div>
-                <a href="main-eng.html" class="btn btn-secondary">← Back to Overview</a>
-            </div>
-        </div>
+        </header>
 
         <!-- PROJECT 1: Master's Thesis (TFM) -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">September 2023 – January 2025 · Defended January 31, 2025</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Reinforcement Learning for Complex and Dynamic Manipulation Tasks
-                    </h2>
+        <article class="article-card" id="tfm">
+            <div class="article-header">
+                <h2>Reinforcement Learning for Complex and Dynamic Manipulation Tasks</h2>
+                <span class="article-badge">Master's Thesis · Grade: 10/10 with Honors</span>
+            </div>
+            <div class="article-authors">Double Master's Degree in Automatic Control & Robotics and Industrial Engineering (UPC ETSEIB & Eurecat) · Advisors: Dr. Néstor García Hidalgo & Prof. Jan Rosell Gratacòs</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/tfm2.gif" alt="Franka Emika Panda opening dishwasher door in Isaac Lab" class="article-img-full" style="max-height: 320px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Reinforcement Learning (RL)</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Sim</span>
+                <span class="topic-tag topic-tag-hw">Franka Emika Panda</span>
+                <span class="topic-tag topic-tag-ai">Sim2Real Transfer</span>
+                <span class="topic-tag topic-tag-sw">ROS 2</span>
+                <span class="topic-tag topic-tag-metric">10/10 Honors</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>The Challenge:</strong> Teaching non-prehensile dynamic manipulation skills, such as unlatching and pulling open a sprung dishwasher door, is notoriously difficult. Closed kinematic chains, friction transitions, and latch release dynamics cause standard position controllers to jam or fail. While Reinforcement Learning (RL) in simulation provides an adaptive path forward, overcoming the simulation-to-reality (Sim2Real) gap remains the central bottleneck for physical hardware execution.</p>
+
+                <p><strong>Contributions:</strong><br>
+                • <strong>GPU Simulation Framework:</strong> Built a high-performance simulation environment in NVIDIA Isaac Sim and Isaac Lab, leveraging GPU tensor parallelization to train thousands of RL agents concurrently.<br>
+                • <strong>Articulated Mechanism Modeling:</strong> Accurately modeled joint kinematics, spring resistance, and contact discontinuities of a commercial dishwasher mechanism.<br>
+                • <strong>Curriculum Reward Formulation:</strong> Formulated curriculum reward functions enabling a 7-DOF Franka Emika Panda robot to coordinate end-effector compliance and pulling forces without losing grasp.<br>
+                • <strong>Sim2Real Domain Randomization:</strong> Applied domain randomization (mass, friction, actuator delays) to harden learned policies against unmodeled real-world dynamics.<br>
+                • <strong>ROS 2 Hardware Bridge:</strong> Established an asynchronous ROS 2 bridge connecting simulation-trained policies to physical robotic hardware for real-world validation.</p>
+
+                <p><strong>Results & Impact:</strong> Successfully trained a robust RL policy capable of dynamically approaching, latching, and opening a simulated dishwasher door across diverse initial conditions, validating zero-shot transfer of simpler policies on a physical Franka Panda robot arm. Defended January 31, 2025 at UPC ETSEIB with a grade of 10/10 with Honors (Matrícula d'Honor).</p>
+
+                <div class="article-actions">
+                    <a href="https://hdl.handle.net/2117/428855" target="_blank" class="btn-article">Read Master's Thesis (UPCommons) -></a>
+                    <a href="https://upcommons.upc.edu/entities/publication/579551cc-36d6-441e-a54d-ec78524d9299" target="_blank" class="btn-article-outline">Publication Record -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Grade: 10/10 with Honors (Matrícula d'Honor)
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Master's Thesis:</strong> Double Master's Degree in Automatic Control & Robotics Engineering and Industrial Engineering (UPC ETSEIB & Eurecat) · Advisors: Dr. Néstor García Hidalgo & Prof. Jan Rosell Gratacòs
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/tfm2.gif" alt="Franka Emika Panda opening dishwasher door via GPU-accelerated RL in NVIDIA Isaac Lab" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm);">
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Reinforcement Learning (RL)</span>
-                <span class="tech-tag">NVIDIA Isaac Sim</span>
-                <span class="tech-tag">Isaac Lab</span>
-                <span class="tech-tag">ROS 2</span>
-                <span class="tech-tag">Franka Emika Panda</span>
-                <span class="tech-tag">Sim2Real Transfer</span>
-                <span class="tech-tag">Domain Randomization</span>
-                <span class="tech-tag">PyTorch</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>The Engineering Challenge:</strong> Teaching non-prehensile dynamic manipulation skills—such as unlatching and pulling open a sprung dishwasher door—is notoriously challenging. Closed kinematic chains, friction transitions, and latch release dynamics cause standard position controllers to jam or fail. While Reinforcement Learning (RL) in simulation provides an adaptive path forward, overcoming the simulation-to-reality (Sim2Real) gap remains the central bottleneck for physical hardware execution.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <strong>Arnau's Direct Contributions:</strong>
-                </p>
-                <ul style="margin: 0.5rem 0 1rem 1.25rem; padding: 0;">
-                    <li>Engineered a high-performance simulation environment in <strong>NVIDIA Isaac Sim and Isaac Lab</strong>, leveraging GPU tensor parallelization to train thousands of RL agents concurrently.</li>
-                    <li>Accurately modeled joint kinematics, spring resistance, and contact discontinuities of a commercial dishwasher mechanism.</li>
-                    <li>Formulated curriculum reward functions enabling a 7-DOF <strong>Franka Emika Panda</strong> robot to coordinate end-effector compliance and pulling forces without losing grasp.</li>
-                    <li>Applied domain randomization (mass, friction, actuator delays) to harden learned policies against unmodeled real-world dynamics.</li>
-                    <li>Established an asynchronous <strong>ROS 2 bridge</strong> connecting simulation-trained policies to physical robotic hardware for real-world validation.</li>
-                </ul>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://hdl.handle.net/2117/428855" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read Master's Thesis (UPCommons) →</a>
-                <a href="https://upcommons.upc.edu/entities/publication/579551cc-36d6-441e-a54d-ec78524d9299" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Publication Record ↗</a>
             </div>
         </article>
 
         <!-- PROJECT 2: AIxHRI Summer School -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">July 2026 · Nancy, France · Inria / Loria & AI Grand Est</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        AIxHRI Summer School: Artificial Intelligence for Human-Robot Interaction
-                    </h2>
-                </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Advanced Doctoral Training
-                </span>
+        <article class="article-card" id="summer-school">
+            <div class="article-header">
+                <h2>AIxHRI Summer School: Artificial Intelligence for Human-Robot Interaction</h2>
+                <span class="article-badge">Doctoral School · Inria / Loria [Nancy, France]</span>
             </div>
+            <div class="article-authors">Advanced doctoral training in Foundation Models, LLMs/VLMs, Imitation Learning, RLHF, and VLA physical deployment</div>
 
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Doctoral School:</strong> Intensive curriculum on Foundation Models, LLMs, VLMs, Imitation Learning, RLHF, and Vision-Language-Action (VLA) deployment on real physical robotic platforms.
-            </p>
+            <!-- Media Carousel with Dot Indicators -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselSummer">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/SummerSchool.gif" alt="AIxHRI Physical Robotics Demo" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/SummerSchoolFinal.JPG" alt="AIxHRI Doctoral Cohort at Inria Nancy" class="article-img-full">
+                        </div>
 
-            <!-- Touch / Dot Carousel -->
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; position: relative;">
-                <div class="carousel-container" id="carouselSummer">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/SummerSchool.gif" alt="AIxHRI hands-on physical robot manipulation demonstration" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselSummer', -1)" aria-label="Previous image">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselSummer', 1)" aria-label="Next image">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/SummerSchoolFinal.JPG" alt="AIxHRI doctoral cohort and international robotics researchers at Inria Nancy" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                    <div class="carousel-dots" id="dots-carouselSummer">
+                        <span class="dot active" onclick="setSlide('carouselSummer', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselSummer', 1)"></span>
                     </div>
-
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('carouselSummer', -1)" aria-label="Previous Slide">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('carouselSummer', 1)" aria-label="Next Slide">&#10095;</button>
-                </div>
-                <div class="carousel-dots" id="dots-carouselSummer">
-                    <span class="dot active" onclick="setSlide('carouselSummer', 0)"></span>
-                    <span class="dot" onclick="setSlide('carouselSummer', 1)"></span>
                 </div>
             </div>
 
-            <div class="tech-tag-group">
-                <span class="tech-tag">Foundation Models</span>
-                <span class="tech-tag">Vision-Language-Action (VLA)</span>
-                <span class="tech-tag">Imitation Learning</span>
-                <span class="tech-tag">RLHF</span>
-                <span class="tech-tag">Human-Robot Interaction (HRI)</span>
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">ROS 2</span>
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Foundation Models</span>
+                <span class="topic-tag topic-tag-ai">Vision-Language-Action (VLA)</span>
+                <span class="topic-tag topic-tag-ai">Imitation Learning</span>
+                <span class="topic-tag topic-tag-ai">RLHF</span>
+                <span class="topic-tag topic-tag-hw">Physical Robot Deployment</span>
+                <span class="topic-tag topic-tag-sw">PyTorch</span>
+                <span class="topic-tag topic-tag-sw">ROS 2</span>
             </div>
 
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Curriculum & Research Focus:</strong> Advanced doctoral school bringing together European PhD students and leading researchers in artificial intelligence and robotics. The training covered theoretical and hands-on workshops in foundation models (LLMs, VLMs), interactive policy refinement via human evaluative feedback (RLHF), and the physical deployment of Vision-Language-Action (VLA) models onto actual physical robotic manipulators and mobile bases.
-                </p>
+            <div class="article-details">
+                <p><strong>Curriculum & Research Focus:</strong> Advanced doctoral school bringing together European PhD students and leading researchers in artificial intelligence and robotics. The curriculum combined theoretical and hands-on workshops in foundation models (LLMs, VLMs), interactive policy refinement via human evaluative feedback (RLHF), and the physical deployment of Vision-Language-Action (VLA) models onto actual physical robotic manipulators and mobile bases.</p>
+
+                <p><strong>Contributions:</strong><br>
+                • <strong>Hands-on VLA Implementation:</strong> Fine-tuned and deployed vision-language-action policies directly on physical collaborative robot arms.<br>
+                • <strong>Human-in-the-Loop Alignment:</strong> Programmed interactive RLHF policy correction routines adapting trajectories from human guidance.<br>
+                • <strong>Semantic Grounding:</strong> Investigated architectures mapping linguistic instructions to low-level continuous action manifolds.</p>
             </div>
         </article>
 
         <!-- PROJECT 3: Engihack 2024 -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">October 2024 · Col·legi d'Enginyers Industrials de Catalunya · Team InduBotics</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Engihack 2024: EcoShower
-                    </h2>
-                </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: #16a34a; border-color: rgba(22, 163, 74, 0.25); font-weight: 700;">
-                    1st Prize Winner (€3,000 Grand Prize)
-                </span>
+        <article class="article-card" id="engihack">
+            <div class="article-header">
+                <h2>Engihack 2024: EcoShower</h2>
+                <span class="article-badge">1st Prize Winner (3,000 EUR Award) · Col·legi d'Enginyers Industrials</span>
             </div>
+            <div class="article-authors">12-hour engineering hackathon · Team InduBotics · Featured on Catalan national television (TV3, "Tot es mou")</div>
 
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Engineering Hackathon:</strong> 12-hour intensive innovation competition · Broadcast live on Catalan national television network (**TV3**, *"Tot es mou"*)
-            </p>
+            <!-- Media Carousel with Dot Indicators -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselEngihack">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/Engihack1.JPG" alt="EcoShower 1st Prize Award Ceremony" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/Engihack2.JPG" alt="InduBotics Team Presenting EcoShower" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/Engihack3.jpeg" alt="Engihack Engineering Hackathon Work Session" class="article-img-full">
+                        </div>
 
-            <!-- Touch / Dot Carousel -->
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; position: relative;">
-                <div class="carousel-container" id="carouselEngihack">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/Engihack1.JPG" alt="EcoShower 1st prize award ceremony at Engihack 2024" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselEngihack', -1)" aria-label="Previous image">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselEngihack', 1)" aria-label="Next image">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/Engihack2.JPG" alt="InduBotics team presenting the EcoShower engineering solution" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                    <div class="carousel-dots" id="dots-carouselEngihack">
+                        <span class="dot active" onclick="setSlide('carouselEngihack', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselEngihack', 1)"></span>
+                        <span class="dot" onclick="setSlide('carouselEngihack', 2)"></span>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/Engihack3.jpeg" alt="Engihack engineering competition hackathon session" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
-                    </div>
-
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('carouselEngihack', -1)" aria-label="Previous Slide">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('carouselEngihack', 1)" aria-label="Next Slide">&#10095;</button>
-                </div>
-                <div class="carousel-dots" id="dots-carouselEngihack">
-                    <span class="dot active" onclick="setSlide('carouselEngihack', 0)"></span>
-                    <span class="dot" onclick="setSlide('carouselEngihack', 1)"></span>
-                    <span class="dot" onclick="setSlide('carouselEngihack', 2)"></span>
                 </div>
             </div>
 
-            <div class="tech-tag-group">
-                <span class="tech-tag">Mechatronic Design</span>
-                <span class="tech-tag">Automated Bypass Valving</span>
-                <span class="tech-tag">Thermostatic Control</span>
-                <span class="tech-tag">Techno-Economic Modeling</span>
-                <span class="tech-tag">Rapid Prototyping</span>
-                <span class="tech-tag">Technical Pitch Defense</span>
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-hw">Mechatronic Design</span>
+                <span class="topic-tag topic-tag-hw">Automated Bypass Valving</span>
+                <span class="topic-tag topic-tag-sw">Thermostatic Control</span>
+                <span class="topic-tag topic-tag-metric">1st Prize (3,000 EUR)</span>
+                <span class="topic-tag topic-tag-metric">TV3 News Broadcast</span>
             </div>
 
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>The Sustainability Challenge:</strong> Millions of liters of domestic potable water are wasted daily while waiting for residential showers to reach target temperature. Within an intense 12-hour engineering hackathon organized by the Association of Industrial Engineers of Catalonia, our team engineered <em>EcoShower</em>: an automated closed-circuit fluid interception mechanism.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <strong>Arnau's Contributions:</strong> Designed the hydraulic bypass circuit with motorized solenoid valves and thermostatic sensing logic to divert sub-target temperature water into domestic utility reservoirs before releasing heated water to the showerhead. Modeled water and energy savings across standard multi-unit residential buildings, and co-delivered the executive technical defense. Awarded <strong>1st Prize (€3,000)</strong> among all competing teams and interviewed on TV3.
-                </p>
-            </div>
+            <div class="article-details">
+                <p><strong>The Challenge:</strong> Millions of liters of domestic potable water are wasted daily while waiting for residential showers to reach target temperature. In an intense 12-hour engineering competition organized by the Association of Industrial Engineers of Catalonia, our team engineered EcoShower: an automated closed-circuit fluid interception mechanism.</p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://engihack160.eic.cat/engihack2024" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Engihack Official Website →</a>
+                <p><strong>Contributions:</strong><br>
+                • <strong>Hydraulic Circuit Architecture:</strong> Conceptualized the closed-circuit interception bypass with motorized solenoid valves to redirect cold water to auxiliary utility reservoirs.<br>
+                • <strong>Thermostatic Sensing Logic:</strong> Specified sensor selection and electronic logic enabling showerhead release only once target temperature is attained.<br>
+                • <strong>Techno-Economic Modeling:</strong> Quantified water and energy savings across urban multi-unit residential buildings, calculating payback periods.<br>
+                • <strong>Executive Pitch Defense:</strong> Co-delivered the technical pitch and defense before the industrial jury.</p>
+
+                <p><strong>Results & Impact:</strong> Awarded 1st Prize (3,000 EUR grand prize) among all competing teams and interviewed on TV3 ("Tot es mou").</p>
+
+                <div class="article-actions">
+                    <a href="https://engihack160.eic.cat/engihack2024" target="_blank" class="btn-article">Engihack Official Website -></a>
+                </div>
             </div>
         </article>
 
         <!-- PROJECT 4: Bachelor's Thesis (TFG) -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">October 2021 – July 2022 · Defended July 2022 · IRI CSIC-UPC & UPC ETSEIB</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Development of a Learning from Demonstration Environment Using ZED 2i and HTC Vive Pro
-                    </h2>
-                </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Grade: 10/10 with Honors (Matrícula d'Honor)
-                </span>
+        <article class="article-card" id="tfg">
+            <div class="article-header">
+                <h2>Development of a Learning from Demonstration Environment Using ZED 2i and HTC Vive Pro</h2>
+                <span class="article-badge">Bachelor's Thesis · Grade: 10/10 with Honors</span>
             </div>
+            <div class="article-authors">Degree in Industrial Technologies Engineering (UPC ETSEIB & IRI CSIC-UPC) · Advisors: Dr. Sergi Foix, Dr. Júlia Borràs & Prof. Carme Torras</div>
 
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Bachelor's Thesis:</strong> Industrial Technologies Engineering (UPC ETSEIB & Institut de Robòtica i Informàtica Industrial, CSIC-UPC) · Advisors: Dr. Sergi Foix, Dr. Júlia Borràs & Prof. Carme Torras
-            </p>
+            <!-- Media Carousel with Dot Indicators -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselTFG">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/tfg1.PNG" alt="Unity 3D VR Environment with HTC Vive and ZED 2i" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/tfg2.PNG" alt="Deformable Cloth Physics Interaction" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/tfg3.PNG" alt="Garment Manipulation Dataset Collection" class="article-img-full">
+                        </div>
 
-            <!-- Touch / Dot Carousel -->
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; position: relative;">
-                <div class="carousel-container" id="carouselTFG">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/tfg1.PNG" alt="Unity 3D VR environment with HTC Vive and ZED 2i cameras" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselTFG', -1)" aria-label="Previous image">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselTFG', 1)" aria-label="Next image">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/tfg2.PNG" alt="Deformable cloth real-time physical interaction in virtual reality" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                    <div class="carousel-dots" id="dots-carouselTFG">
+                        <span class="dot active" onclick="setSlide('carouselTFG', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselTFG', 1)"></span>
+                        <span class="dot" onclick="setSlide('carouselTFG', 2)"></span>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/tfg3.PNG" alt="Dataset collection with automatic semantic labeling for cloth manipulation" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
-                    </div>
-
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('carouselTFG', -1)" aria-label="Previous Slide">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('carouselTFG', 1)" aria-label="Next Slide">&#10095;</button>
-                </div>
-                <div class="carousel-dots" id="dots-carouselTFG">
-                    <span class="dot active" onclick="setSlide('carouselTFG', 0)"></span>
-                    <span class="dot" onclick="setSlide('carouselTFG', 1)"></span>
-                    <span class="dot" onclick="setSlide('carouselTFG', 2)"></span>
                 </div>
             </div>
 
-            <div class="tech-tag-group">
-                <span class="tech-tag">Virtual Reality (VR)</span>
-                <span class="tech-tag">Learning from Demonstration (LfD)</span>
-                <span class="tech-tag">Cloth Manipulation</span>
-                <span class="tech-tag">HTC Vive Pro</span>
-                <span class="tech-tag">Stereolabs ZED 2i</span>
-                <span class="tech-tag">Leap Motion</span>
-                <span class="tech-tag">Unity 3D</span>
-                <span class="tech-tag">C++</span>
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-hw">HTC Vive Pro VR</span>
+                <span class="topic-tag topic-tag-ai">Learning from Demonstration (LfD)</span>
+                <span class="topic-tag topic-tag-ai">Cloth Manipulation</span>
+                <span class="topic-tag topic-tag-hw">Stereolabs ZED 2i</span>
+                <span class="topic-tag topic-tag-hw">Leap Motion</span>
+                <span class="topic-tag topic-tag-sw">Unity 3D Engine</span>
+                <span class="topic-tag topic-tag-sw">C++</span>
+                <span class="topic-tag topic-tag-metric">Led to ICRA 2023</span>
             </div>
 
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>The Core Innovation:</strong> Designed and implemented an immersive Virtual Reality platform in Unity 3D integrating the HTC Vive Pro, Stereolabs ZED 2i / ZED Mini stereo depth cameras, and Leap Motion hand tracking. The platform realistically simulates deformable textile dynamics in real time, allowing human operators to fold and interact with garments using natural hand-eye feedback while automatically capturing ground-truth 3D mesh states without physical camera occlusions.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <strong>Academic & Scientific Impact:</strong> Awarded a perfect 10/10 with Honors (*Matrícula d'Honor*), this thesis directly led to first-author and co-author publications at <strong>IEEE ICRA 2023</strong> (London) and <strong>CCIA 2022</strong>, establishing a 19-sequence open-access garment manipulation dataset.
-                </p>
-            </div>
+            <div class="article-details">
+                <p><strong>The Challenge:</strong> Capturing high-quality demonstration datasets for deformable object manipulation is obstructed by camera occlusions in physical setups and artificial kinematics in open-loop simulations lacking human visual feedback.</p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://digital.csic.es/handle/10261/304847" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read Bachelor's Thesis (DIGITAL.CSIC) →</a>
-                <a href="https://hdl.handle.net/2117/372083" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">UPCommons Handle ↗</a>
-                <a href="articles-eng.html" class="btn btn-secondary">View Resulting ICRA 2023 Paper →</a>
+                <p><strong>Contributions:</strong><br>
+                • <strong>VR Platform Architecture:</strong> Engineered an interactive Virtual Reality environment in Unity 3D integrating the HTC Vive Pro, Stereolabs ZED 2i / ZED Mini stereo depth cameras, and Leap Motion hand tracking.<br>
+                • <strong>Deformable Physics Modeling:</strong> Implemented real-time textile mechanics enabling natural grasping and folding with handheld controllers.<br>
+                • <strong>Ground-Truth Recording:</strong> Captured complete 3D mesh states without physical occlusion while preserving natural human hand-eye visual feedback.<br>
+                • <strong>Automated Semantic Labeling:</strong> Developed algorithms classifying folding topological states across 19 manipulation sequences.</p>
+
+                <p><strong>Results & Impact:</strong> Awarded a perfect 10/10 with Honors (Matrícula d'Honor) at UPC ETSEIB. Formed the foundation for publications presented at IEEE ICRA 2023 (London) and CCIA 2022.</p>
+
+                <div class="article-actions">
+                    <a href="https://digital.csic.es/handle/10261/304847" target="_blank" class="btn-article">Read Bachelor's Thesis (DIGITAL.CSIC) -></a>
+                    <a href="https://hdl.handle.net/2117/372083" target="_blank" class="btn-article-outline">UPCommons Handle -></a>
+                </div>
             </div>
         </article>
-
-        <!-- Navigation Footer -->
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-            <a href="main-eng.html" class="btn btn-secondary">← Back to Overview</a>
-            <a href="articles-eng.html" class="btn btn-primary" style="margin-left: 0.75rem;">Explore Publications →</a>
-        </div>
-    </main>
+    </div>
 
     <!-- Site Footer -->
     <footer class="site-footer">
-        <p>© 2026 Arnau Boix Granell · Industrial & Robotics Engineer</p>
-        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted);">
-            Ranked 2nd of 298 Engineers at UPC ETSEIB · 35 Honors Distinctions · Dual-Arm Manipulation & Robot Learning
-        </p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="main-eng.html">Home</a>
+                <a href="projectes-professionals-eng.html">Professional Projects</a>
+                <a href="articles-eng.html">Publications</a>
+                <a href="projectes-academics-eng.html">Academic Projects</a>
+                <a href="altres-eng.html">Community</a>
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank">LinkedIn</a>
+            </div>
+            <p>© 2026 Arnau Boix Granell · All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- Touch-Enabled Carousel Script with Dot Navigation -->

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projectes Acadèmics — Arnau Boix Granell</title>
+    <title>Projectes Acadèmics - Arnau Boix Granell</title>
     <meta name="description" content="Projectes acadèmics en robòtica, treball de fi de màster en RL a NVIDIA Isaac Lab, treball de fi de grau en manipulació de roba amb VR, escola doctoral AIxHRI i 1r premi Engihack.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
@@ -12,292 +12,257 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="main-cat.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
-            
-            <nav class="nav-links" aria-label="Navegació Principal">
-                <a href="main-cat.html">Inici</a>
-                <a href="projectes-professionals-cat.html">Projectes Professionals</a>
-                <a href="projectes-academics-cat.html" class="active">Projectes Acadèmics</a>
-                <a href="articles-cat.html">Publicacions</a>
-                <a href="altres-cat.html">Comunitat</a>
-            </nav>
 
-            <div class="nav-actions">
-                <a href="wip.html" class="btn-secret" title="En construcció" aria-label="Work in Progress Easter Egg">🐶</a>
-                <a href="../eng/projectes-academics-eng.html" class="lang-btn" aria-label="Switch to English">ENG</a>
+            <ul class="nav-links">
+                <li><a href="main-cat.html" class="nav-link">Inici</a></li>
+                <li><a href="projectes-professionals-cat.html" class="nav-link">Projectes Professionals</a></li>
+                <li><a href="projectes-academics-cat.html" class="nav-link active">Projectes Acadèmics</a></li>
+                <li><a href="articles-cat.html" class="nav-link">Publicacions</a></li>
+                <li><a href="altres-cat.html" class="nav-link">Comunitat</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="nav-btn-icon" title="LinkedIn" aria-label="Perfil de LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="wip.html" class="secret-btn" title="" aria-hidden="true"></a>
+                <a href="../eng/projectes-academics-eng.html" class="lang-btn" title="Switch to English">ENG</a>
             </div>
         </div>
     </header>
 
-    <main class="page-container" style="max-width: 900px;">
-        <!-- Capçalera de pàgina -->
-        <div class="page-header" style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="project-eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">
-                <span class="category-tag">Recerca Acadèmica & Fites</span>
-                <span class="category-tag">UPC ETSEIB & CSIC</span>
-            </div>
-            <h1 class="page-title" style="font-size: 2.3rem; margin-bottom: 0.75rem;">Projectes Acadèmics</h1>
-            <p class="page-subtitle" style="max-width: 680px; margin: 0 auto 1.5rem auto;">
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 2.5rem;">
+            <h1>Projectes Acadèmics</h1>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
                 Tesis universitàries, formació doctoral avançada i iniciatives d'enginyeria competitiva en aprenentatge per reforç accelerat per GPU, teleoperació en realitat virtual i disseny mecatrònic.
             </p>
-            <div>
-                <a href="main-cat.html" class="btn btn-secondary">← Tornar a l'inici</a>
-            </div>
-        </div>
+        </header>
 
         <!-- PROJECTE 1: Treball de Fi de Màster (TFM) -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">Setembre 2023 – Gener 2025 · Defensat el 31 de gener de 2025</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Aprenentatge per reforç per a tasques de manipulació complexes i dinàmiques
-                    </h2>
+        <article class="article-card" id="tfm">
+            <div class="article-header">
+                <h2>Aprenentatge per reforç per a tasques de manipulació complexes i dinàmiques</h2>
+                <span class="article-badge">Treball de Fi de Màster · Nota: 10/10 amb Matrícula d'Honor</span>
+            </div>
+            <div class="article-authors">Doble Màster en Enginyeria en Automàtica i Robòtica i Enginyeria Industrial (UPC ETSEIB & Eurecat) · Directors: Dr. Néstor García Hidalgo & Prof. Jan Rosell Gratacòs</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/tfm2.gif" alt="Braç Franka Emika Panda obrint rentaplats a Isaac Lab" class="article-img-full" style="max-height: 320px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Aprenentatge per Reforç (RL)</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Sim</span>
+                <span class="topic-tag topic-tag-hw">Franka Emika Panda</span>
+                <span class="topic-tag topic-tag-ai">Transferència Sim2Real</span>
+                <span class="topic-tag topic-tag-sw">ROS 2</span>
+                <span class="topic-tag topic-tag-metric">10/10 Matrícula d'Honor</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>El Repte:</strong> Ensenyar habilitats complexes de manipulació dinàmica no prehensil, com ara desencallar el pestell i obrir la porta abatible d'un rentaplats, és un repte notori en robòtica. Cadenes cinemàtiques tancades, friccions discontínues i la dinàmica d'alliberament del mecanisme fan fallar el control de posició tradicional. L'aprenentatge per reforç (RL) en simulador ofereix una alternativa adaptativa, però superar la bretxa de simulació a realitat (Sim2Real) és el coll d'ampolla clau per a la seva execució física.</p>
+
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Entorn de Simulació en GPU:</strong> Desenvolupament d'un entorn de simulació d'alt rendiment a NVIDIA Isaac Sim i Isaac Lab, aprofitant el processament tensorial en GPU per entrenar milers d'agents de RL en paral·lel.<br>
+                • <strong>Modelatge del Mecanisme Articulat:</strong> Reconstrucció cinemàtica i dinàmica precisa de les resistències de la frontissa i mecanismes d'enclavament de la porta.<br>
+                • <strong>Formulació de Recompenses Progressives:</strong> Disseny de funcions de recompensa per fases d'aprenentatge progressiu (*curriculum learning*), permetent al manipulador Franka Emika Panda (7 DoF) coordinar flexibilitat i tracció contínua sense perdre contacte.<br>
+                • <strong>Aleatorització de Domini Sim2Real:</strong> Aplicació d'aleatorització de domini (masses, friccions, retards d'actuació) per blindar les polítiques davant la incertesa del món físic.<br>
+                • <strong>Pont de Comunicació en ROS 2:</strong> Creació d'un canal de control en ROS 2 per connectar les polítiques entrenades en simulació amb el braç robòtic físic per a la seva validació experimental.</p>
+
+                <p><strong>Resultats i Impacte:</strong> Entrenament exitós d'una política de RL robusta capaç d'obrir la porta d'un rentaplats simulat davant de diferents condicions inicials, validant la transferència zero-shot de moviments bàsics al robot real Franka Panda mitjançant ROS 2. Defensat el 31 de gener de 2025 davant el tribunal de la UPC ETSEIB amb una qualificació de 10/10 amb Matrícula d'Honor.</p>
+
+                <div class="article-actions">
+                    <a href="https://hdl.handle.net/2117/428855" target="_blank" class="btn-article">Llegir Treball de Fi de Màster (UPCommons) -></a>
+                    <a href="https://upcommons.upc.edu/entities/publication/579551cc-36d6-441e-a54d-ec78524d9299" target="_blank" class="btn-article-outline">Registre de Publicació -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Qualificació: 10/10 amb Matrícula d'Honor
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Treball de Fi de Màster:</strong> Doble Màster en Enginyeria en Automàtica i Robòtica i Enginyeria Industrial (UPC ETSEIB & Eurecat) · Directors: Dr. Néstor García Hidalgo & Prof. Jan Rosell Gratacòs
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/tfm2.gif" alt="Braç robòtic Franka Emika Panda obrint la porta d'un rentaplats mitjançant RL a NVIDIA Isaac Lab" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm);">
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Aprenentatge per Reforç (RL)</span>
-                <span class="tech-tag">NVIDIA Isaac Sim</span>
-                <span class="tech-tag">Isaac Lab</span>
-                <span class="tech-tag">ROS 2</span>
-                <span class="tech-tag">Franka Emika Panda</span>
-                <span class="tech-tag">Transferència Sim2Real</span>
-                <span class="tech-tag">Aleatorització de Domini</span>
-                <span class="tech-tag">PyTorch</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>El Repte d'Enginyeria:</strong> Ensenyar habilitats complexes de manipulació dinàmica no prehensil —com ara desencallar el pestell i obrir la porta abatible d'un rentaplats— és un repte notori en robòtica. Cadenes cinemàtiques tancades, friccions discontínues i la dinàmica d'alliberament del mecanisme fan fallar el control de posició tradicional. L'aprenentatge per reforç (RL) en simulador ofereix una alternativa adaptativa, però superar la bretxa de simulació a realitat (Sim2Real) és el coll d'ampolla clau per a la seva execució física.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <strong>Aportacions Directes d'Arnau:</strong>
-                </p>
-                <ul style="margin: 0.5rem 0 1rem 1.25rem; padding: 0;">
-                    <li>Desenvolupament d'un entorn de simulació d'alt rendiment a <strong>NVIDIA Isaac Sim i Isaac Lab</strong>, aprofitant el processament tensorial en GPU per entrenar milers d'agents de RL en paral·lel.</li>
-                    <li>Modelatge físic i cinemàtic precís de les resistències de la frontissa i mecanismes d'enclavament de la porta del rentaplats.</li>
-                    <li>Formulació de funcions de recompensa per fases d'aprenentatge progressiu (*curriculum learning*), permetent al manipulador <strong>Franka Emika Panda</strong> (7 DoF) coordinar flexibilitat i tracció contínua sense perdre contacte.</li>
-                    <li>Aplicació d'aleatorització de domini (masses, friccions, retards d'actuació) per blindar les polítiques davant la incertesa dinàmica del món físic.</li>
-                    <li>Creació d'un canal de comunicació en <strong>ROS 2</strong> per connectar les polítiques entrenades en simulació amb el braç robòtic real per a la seva validació experimental.</li>
-                </ul>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://hdl.handle.net/2117/428855" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Llegir Treball de Fi de Màster (UPCommons) →</a>
-                <a href="https://upcommons.upc.edu/entities/publication/579551cc-36d6-441e-a54d-ec78524d9299" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Registre de Publicació ↗</a>
             </div>
         </article>
 
         <!-- PROJECTE 2: AIxHRI Summer School -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">Juliol 2026 · Nancy, França · Inria / Loria & AI Grand Est</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        AIxHRI Summer School: Intel·ligència Artificial per a la Interacció Persona-Robot
-                    </h2>
-                </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Formació Doctoral Avançada
-                </span>
+        <article class="article-card" id="summer-school">
+            <div class="article-header">
+                <h2>AIxHRI Summer School: Intel·ligència Artificial per a la Interacció Persona-Robot</h2>
+                <span class="article-badge">Escola Doctoral · Inria / Loria [Nancy, França]</span>
             </div>
+            <div class="article-authors">Formació doctoral avançada en Models Fundacionals, LLMs/VLMs, Aprenentatge per Imitació, RLHF i desplegament físic de VLA</div>
 
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Escola Doctoral:</strong> Formació intensiva en models fundacionals, LLMs, VLMs, aprenentatge per imitació, RLHF i desplegament de models Visió-Llenguatge-Acció (VLA) sobre robots físics.
-            </p>
+            <!-- Carrusel Multimèdia amb Indicadors de Punts -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselSummer">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/SummerSchool.gif" alt="Demostració de Robòtica a AIxHRI" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/SummerSchoolFinal.JPG" alt="Investigadors Doctorals a Inria Nancy" class="article-img-full">
+                        </div>
 
-            <!-- Touch / Dot Carousel -->
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; position: relative;">
-                <div class="carousel-container" id="carouselSummer">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/SummerSchool.gif" alt="Demostració de manipulació física de robots a l'escola d'estiu AIxHRI" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselSummer', -1)" aria-label="Imatge anterior">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselSummer', 1)" aria-label="Imatge següent">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/SummerSchoolFinal.JPG" alt="Investigadors doctorals internacionals a Inria Nancy" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                    <div class="carousel-dots" id="dots-carouselSummer">
+                        <span class="dot active" onclick="setSlide('carouselSummer', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselSummer', 1)"></span>
                     </div>
-
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('carouselSummer', -1)" aria-label="Diapositiva Anterior">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('carouselSummer', 1)" aria-label="Diapositiva Següent">&#10095;</button>
-                </div>
-                <div class="carousel-dots" id="dots-carouselSummer">
-                    <span class="dot active" onclick="setSlide('carouselSummer', 0)"></span>
-                    <span class="dot" onclick="setSlide('carouselSummer', 1)"></span>
                 </div>
             </div>
 
-            <div class="tech-tag-group">
-                <span class="tech-tag">Models Fundacionals</span>
-                <span class="tech-tag">Visió-Llenguatge-Acció (VLA)</span>
-                <span class="tech-tag">Aprenentatge per Imitació</span>
-                <span class="tech-tag">RLHF</span>
-                <span class="tech-tag">Interacció Persona-Robot (HRI)</span>
-                <span class="tech-tag">PyTorch</span>
-                <span class="tech-tag">ROS 2</span>
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Models Fundacionals</span>
+                <span class="topic-tag topic-tag-ai">Visió-Llenguatge-Acció (VLA)</span>
+                <span class="topic-tag topic-tag-ai">Aprenentatge per Imitació</span>
+                <span class="topic-tag topic-tag-ai">RLHF</span>
+                <span class="topic-tag topic-tag-hw">Desplegament sobre Robots Reals</span>
+                <span class="topic-tag topic-tag-sw">PyTorch</span>
+                <span class="topic-tag topic-tag-sw">ROS 2</span>
             </div>
 
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Currículum i Recerca:</strong> Escola d'estiu de recerca avançada que aplega estudiants de doctorat europeus i investigadors líders en IA i robòtica. La formació va combinar seminaris teòrics i tallers pràctics sobre models fundacionals (LLM, VLM), refinament interactiu de polítiques mitjançant retroalimentació humana (RLHF) i implementació física de models VLA directament sobre braços robòtics i bases mòbils.
-                </p>
+            <div class="article-details">
+                <p><strong>Currículum i Recerca:</strong> Escola d'estiu de recerca avançada que aplega estudiants de doctorat europeus i investigadors líders en IA i robòtica. La formació va combinar seminaris teòrics i tallers pràctics sobre models fundacionals (LLM, VLM), refinament interactiu de polítiques mitjançant retroalimentació humana (RLHF) i implementació física de models VLA directament sobre braços robòtics i bases mòbils.</p>
+
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Implementació Pràctica de VLA:</strong> Ajust fi i desplegament de polítiques visió-llenguatge-acció directament sobre braços robòtics col·laboratius físics.<br>
+                • <strong>Alineació en Bucle Humà:</strong> Programació de rutines de correcció interactiva mitjançant RLHF per adaptar trajectòries amb intervenció humana.<br>
+                • <strong>Ancoratge Semàntic:</strong> Anàlisi d'estratègies per connectar instruccions lingüístiques abstractes amb espais d'acció contínua d'actuació física.</p>
             </div>
         </article>
 
         <!-- PROJECTE 3: Engihack 2024 -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">Octubre 2024 · Col·legi d'Enginyers Industrials de Catalunya · Equip InduBotics</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Engihack 2024: EcoShower
-                    </h2>
-                </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: #16a34a; border-color: rgba(22, 163, 74, 0.25); font-weight: 700;">
-                    1r Premi (€3.000 de Dotació)
-                </span>
+        <article class="article-card" id="engihack">
+            <div class="article-header">
+                <h2>Engihack 2024: EcoShower</h2>
+                <span class="article-badge">1r Premi (3.000 EUR de Dotació) · Col·legi d'Enginyers Industrials</span>
             </div>
+            <div class="article-authors">Hackató d'enginyeria de 12 hores · Equip InduBotics · Retransmès a TV3 ("Tot es mou")</div>
 
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Hackató d'Enginyeria:</strong> Concurs intensiu de 12 hores · Retransmès en directe pel canal públic català (**TV3**, *"Tot es mou"*)
-            </p>
+            <!-- Carrusel Multimèdia amb Indicadors de Punts -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselEngihack">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/Engihack1.JPG" alt="Lliurament del 1r Premi d'Engihack 2024" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/Engihack2.JPG" alt="Equip InduBotics Presentant EcoShower" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/Engihack3.jpeg" alt="Sessió de Treball durant la Hackató Engihack" class="article-img-full">
+                        </div>
 
-            <!-- Touch / Dot Carousel -->
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; position: relative;">
-                <div class="carousel-container" id="carouselEngihack">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/Engihack1.JPG" alt="Lliurament del 1r premi d'Engihack 2024 pel projecte EcoShower" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselEngihack', -1)" aria-label="Imatge anterior">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselEngihack', 1)" aria-label="Imatge següent">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/Engihack2.JPG" alt="L'equip InduBotics defensant la solució d'enginyeria EcoShower" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                    <div class="carousel-dots" id="dots-carouselEngihack">
+                        <span class="dot active" onclick="setSlide('carouselEngihack', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselEngihack', 1)"></span>
+                        <span class="dot" onclick="setSlide('carouselEngihack', 2)"></span>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/Engihack3.jpeg" alt="Sessió de treball d'enginyeria durant la competició Engihack" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
-                    </div>
-
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('carouselEngihack', -1)" aria-label="Diapositiva Anterior">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('carouselEngihack', 1)" aria-label="Diapositiva Següent">&#10095;</button>
-                </div>
-                <div class="carousel-dots" id="dots-carouselEngihack">
-                    <span class="dot active" onclick="setSlide('carouselEngihack', 0)"></span>
-                    <span class="dot" onclick="setSlide('carouselEngihack', 1)"></span>
-                    <span class="dot" onclick="setSlide('carouselEngihack', 2)"></span>
                 </div>
             </div>
 
-            <div class="tech-tag-group">
-                <span class="tech-tag">Disseny Mecatrònic</span>
-                <span class="tech-tag">Vàlvules de Derivació Automàtiques</span>
-                <span class="tech-tag">Control Termostàtic</span>
-                <span class="tech-tag">Modelatge Tecnoeconòmic</span>
-                <span class="tech-tag">Prototipatge Ràpid</span>
-                <span class="tech-tag">Defensa Tècnica</span>
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-hw">Disseny Mecatrònic</span>
+                <span class="topic-tag topic-tag-hw">Vàlvules de Derivació Automàtiques</span>
+                <span class="topic-tag topic-tag-sw">Control Termostàtic</span>
+                <span class="topic-tag topic-tag-metric">1r Premi (3.000 EUR)</span>
+                <span class="topic-tag topic-tag-metric">Ressò a TV3</span>
             </div>
 
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>El Repte de Sostenibilitat:</strong> Milers de litres d'aigua potable es malbaraten cada dia a les llars mentre s'espera que l'aigua de la dutxa arribi a la temperatura de confort. En un concurs d'enginyeria intensiu de 12 hores organitzat pel Col·legi d'Enginyers Industrials de Catalunya, el nostre equip va concebre <em>EcoShower</em>: un mecanisme tancat automatitzat de recirculació i intercepció d'aigua.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <strong>Aportacions d'Arnau:</strong> Disseny del circuit hidràulic amb electrovàlvules i lògica de control termostàtic per redirigir l'aigua freda cap a dipòsits sanitaris auxiliars abans d'alliberar l'aigua calenta pel difusor. Modelatge tecnoeconòmic de l'estalvi d'aigua i energia en edificis residencials, i defensa tècnica davant del tribunal d'experts. Guardonat amb el <strong>1r Premi (3.000 €)</strong> entre tots els equips i difós a TV3.
-                </p>
-            </div>
+            <div class="article-details">
+                <p><strong>El Repte de Sostenibilitat:</strong> Milers de litres d'aigua potable es malbaraten cada dia a les llars mentre s'espera que l'aigua de la dutxa arribi a la temperatura de confort. En un concurs d'enginyeria intensiu de 12 hores organitzat pel Col·legi d'Enginyers Industrials de Catalunya, el nostre equip va concebre EcoShower: un mecanisme tancat automatitzat de recirculació i intercepció d'aigua.</p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://engihack160.eic.cat/engihack2024" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Lloc Web Oficial d'Engihack →</a>
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Arquitectura del Circuit Hidràulic:</strong> Conceptualització del circuit de derivació amb electrovàlvules motoritzades per redirigir l'aigua freda cap a dipòsits sanitaris auxiliars.<br>
+                • <strong>Lògica de Control Termostàtic:</strong> Selecció de sensors i lògica electrònica per alliberar el pas cap al difusor principal només un cop assolida la temperatura desitjada.<br>
+                • <strong>Modelatge Tecnoeconòmic:</strong> Càlcul de l'estalvi d'aigua i energia en habitatges residencials, establint terminis d'amortització del sistema.<br>
+                • <strong>Defensa Tècnica Final:</strong> Presentació i defensa del projecte davant del tribunal d'experts industrials.</p>
+
+                <p><strong>Resultats i Impacte:</strong> Guardonat amb el 1r Premi (3.000 EUR de dotació) entre tots els equips participants i entrevistat a TV3 ("Tot es mou").</p>
+
+                <div class="article-actions">
+                    <a href="https://engihack160.eic.cat/engihack2024" target="_blank" class="btn-article">Web oficial d'Engihack -></a>
+                </div>
             </div>
         </article>
 
         <!-- PROJECTE 4: Treball de Fi de Grau (TFG) -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">Octubre 2021 – Juliol 2022 · Defensat el juliol de 2022 · IRI CSIC-UPC & UPC ETSEIB</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Desenvolupament d'un entorn d'aprenentatge per demostració mitjançant una ZED 2i i un HTC Vive Pro
-                    </h2>
-                </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Qualificació: 10/10 amb Matrícula d'Honor
-                </span>
+        <article class="article-card" id="tfg">
+            <div class="article-header">
+                <h2>Desenvolupament d'un entorn d'aprenentatge per demostració mitjançant una ZED 2i i un HTC Vive Pro</h2>
+                <span class="article-badge">Treball de Fi de Grau · Nota: 10/10 amb Matrícula d'Honor</span>
             </div>
+            <div class="article-authors">Grau en Enginyeria en Tecnologies Industrials (UPC ETSEIB & IRI CSIC-UPC) · Directors: Dr. Sergi Foix, Dr. Júlia Borràs & Prof. Carme Torras</div>
 
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Treball de Fi de Grau:</strong> Grau en Enginyeria en Tecnologies Industrials (UPC ETSEIB & Institut de Robòtica i Informàtica Industrial, CSIC-UPC) · Directors: Dr. Sergi Foix, Dr. Júlia Borràs & Prof. Carme Torras
-            </p>
+            <!-- Carrusel Multimèdia amb Indicadors de Punts -->
+            <div class="article-media-full">
+                <div style="width: 100%;">
+                    <div class="carousel-container" id="carouselTFG">
+                        <div class="carousel-slide active">
+                            <img src="../imatges/tfg1.PNG" alt="Entorn de Realitat Virtual a Unity 3D" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/tfg2.PNG" alt="Interacció Física amb Roba Deformable" class="article-img-full">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="../imatges/tfg3.PNG" alt="Captura de Conjunt de Dades de Manipulació" class="article-img-full">
+                        </div>
 
-            <!-- Touch / Dot Carousel -->
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; position: relative;">
-                <div class="carousel-container" id="carouselTFG">
-                    <div class="carousel-slide active">
-                        <img src="../imatges/tfg1.PNG" alt="Entorn de realitat virtual a Unity 3D amb HTC Vive i càmeres ZED 2i" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                        <button class="carousel-btn prev-btn" onclick="moveSlide('carouselTFG', -1)" aria-label="Imatge anterior">&#10094;</button>
+                        <button class="carousel-btn next-btn" onclick="moveSlide('carouselTFG', 1)" aria-label="Imatge següent">&#10095;</button>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/tfg2.PNG" alt="Interacció física en temps real amb peces de roba deformables a realitat virtual" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
+                    <div class="carousel-dots" id="dots-carouselTFG">
+                        <span class="dot active" onclick="setSlide('carouselTFG', 0)"></span>
+                        <span class="dot" onclick="setSlide('carouselTFG', 1)"></span>
+                        <span class="dot" onclick="setSlide('carouselTFG', 2)"></span>
                     </div>
-                    <div class="carousel-slide">
-                        <img src="../imatges/tfg3.PNG" alt="Captura de conjunts de dades amb etiquetatge semàntic automàtic per a la manipulació de roba" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm); margin: 0 auto; display: block;">
-                    </div>
-
-                    <button class="carousel-btn prev-btn" onclick="moveSlide('carouselTFG', -1)" aria-label="Diapositiva Anterior">&#10094;</button>
-                    <button class="carousel-btn next-btn" onclick="moveSlide('carouselTFG', 1)" aria-label="Diapositiva Següent">&#10095;</button>
-                </div>
-                <div class="carousel-dots" id="dots-carouselTFG">
-                    <span class="dot active" onclick="setSlide('carouselTFG', 0)"></span>
-                    <span class="dot" onclick="setSlide('carouselTFG', 1)"></span>
-                    <span class="dot" onclick="setSlide('carouselTFG', 2)"></span>
                 </div>
             </div>
 
-            <div class="tech-tag-group">
-                <span class="tech-tag">Realitat Virtual (VR)</span>
-                <span class="tech-tag">Aprenentatge per Demostració</span>
-                <span class="tech-tag">Manipulació de Roba</span>
-                <span class="tech-tag">HTC Vive Pro</span>
-                <span class="tech-tag">Stereolabs ZED 2i</span>
-                <span class="tech-tag">Leap Motion</span>
-                <span class="tech-tag">Unity 3D</span>
-                <span class="tech-tag">C++</span>
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-hw">HTC Vive Pro VR</span>
+                <span class="topic-tag topic-tag-ai">Aprenentatge per Demostració</span>
+                <span class="topic-tag topic-tag-ai">Manipulació de Roba</span>
+                <span class="topic-tag topic-tag-hw">Stereolabs ZED 2i</span>
+                <span class="topic-tag topic-tag-hw">Leap Motion</span>
+                <span class="topic-tag topic-tag-sw">Motor Unity 3D</span>
+                <span class="topic-tag topic-tag-sw">C++</span>
+                <span class="topic-tag topic-tag-metric">Va donar lloc a ICRA 2023</span>
             </div>
 
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>La Innovació Principal:</strong> Disseny i programació d'una plataforma immersiva de Realitat Virtual a Unity 3D que integra el casc HTC Vive Pro, càmeres de profunditat estereoscòpiques Stereolabs ZED 2i / ZED Mini i el sensor òptic de mans Leap Motion. La plataforma simula la dinàmica de teixits deformables en temps real amb alt realisme, permetent als operadors plegar i interactuar amb peces de roba amb retorn visual natural mentre es registra la posició exacta de cada vèrtex de la malla sense sofrir oclusions òptiques.
-                </p>
-                <p style="margin-top: 0.75rem;">
-                    <strong>Impacte Acadèmic i Científic:</strong> Guardonat amb la màxima qualificació de 10/10 amb Matrícula d'Honor, aquest treball va donar lloc a publicacions científiques a la conferència mundial <strong>IEEE ICRA 2023</strong> (Londres) i a <strong>CCIA 2022</strong> (com a primer autor), a més d'alliberar un conjunt de dades obert de 19 seqüències de manipulació.
-                </p>
-            </div>
+            <div class="article-details">
+                <p><strong>El Repte:</strong> La recollida de conjunts de dades de demostracions d'alta qualitat per a la manipulació d'objectes deformables es veu dificultada per les autooclusions visuals en entorns físics i la cinemàtica artificial en simulacions de bucle obert sense retorn visual humà.</p>
 
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://digital.csic.es/handle/10261/304847" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Llegir Treball de Fi de Grau (DIGITAL.CSIC) →</a>
-                <a href="https://hdl.handle.net/2117/372083" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Enllaç UPCommons ↗</a>
-                <a href="articles-cat.html" class="btn btn-secondary">Veure Article ICRA 2023 Resultant →</a>
+                <p><strong>Aportacions:</strong><br>
+                • <strong>Arquitectura de la Plataforma VR:</strong> Disseny i programació d'una plataforma interactiva de Realitat Virtual a Unity 3D integrant el casc HTC Vive Pro, càmeres Stereolabs ZED 2i / ZED Mini i el sensor de mans Leap Motion.<br>
+                • <strong>Modelatge Físic Deformable:</strong> Implementació de física realista de teixits en temps real, permetent manipular peces de roba de manera natural amb controladors manuals.<br>
+                • <strong>Enregistrament d'Estat Real:</strong> Captura de l'estat tridimensional precís de cada vèrtex de la malla sense sofrir oclusions òptiques i preservant la resposta visual humana.<br>
+                • <strong>Etiquetatge Semàntic Automàtic:</strong> Desenvolupament d'algoritmes per classificar els estats topològics clau de plegat en 19 seqüències de manipulació.</p>
+
+                <p><strong>Resultats i Impacte:</strong> Qualificació de 10/10 amb Matrícula d'Honor a la UPC ETSEIB. Va servir de base directa per a publicacions científiques a la conferència mundial IEEE ICRA 2023 (Londres) i a CCIA 2022.</p>
+
+                <div class="article-actions">
+                    <a href="https://digital.csic.es/handle/10261/304847" target="_blank" class="btn-article">Llegir Treball de Fi de Grau (DIGITAL.CSIC) -></a>
+                    <a href="https://hdl.handle.net/2117/372083" target="_blank" class="btn-article-outline">Enllaç UPCommons -></a>
+                </div>
             </div>
         </article>
-
-        <!-- Navegació inferior -->
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-            <a href="main-cat.html" class="btn btn-secondary">← Tornar a l'inici</a>
-            <a href="articles-cat.html" class="btn btn-primary" style="margin-left: 0.75rem;">Explorar Publicacions →</a>
-        </div>
-    </main>
+    </div>
 
     <!-- Site Footer -->
     <footer class="site-footer">
-        <p>© 2026 Arnau Boix Granell · Enginyer Industrial & Robòtica</p>
-        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted);">
-            2n de 298 Enginyers a UPC ETSEIB · 35 Matrícules d'Honor · Manipulació Bimanual & Robot Learning
-        </p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="main-cat.html">Inici</a>
+                <a href="projectes-professionals-cat.html">Projectes Professionals</a>
+                <a href="articles-cat.html">Publicacions</a>
+                <a href="projectes-academics-cat.html">Projectes Acadèmics</a>
+                <a href="altres-cat.html">Comunitat</a>
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank">LinkedIn</a>
+            </div>
+            <p>© 2026 Arnau Boix Granell · Tots els drets reservats.</p>
+        </div>
     </footer>
 
     <!-- Touch-Enabled Carousel Script with Dot Navigation -->

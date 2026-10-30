@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles & Publications — Arnau Boix Granell</title>
-    <meta name="description" content="Peer-reviewed scientific publications, conference proceedings, and robotics research by Arnau Boix Granell across robot learning, imitation learning, and reinforcement learning.">
+    <title>Articles & Publications - Arnau Boix Granell</title>
+    <meta name="description" content="Peer-reviewed scientific publications and robotics research by Arnau Boix Granell across robot learning, imitation policy refinement, and virtual reality teleoperation.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="subpage-layout">
@@ -12,200 +12,147 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="main-eng.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
-            
-            <nav class="nav-links" aria-label="Main Navigation">
-                <a href="main-eng.html">Home</a>
-                <a href="projectes-professionals-eng.html">Professional Projects</a>
-                <a href="projectes-academics-eng.html">Academic Projects</a>
-                <a href="articles-eng.html" class="active">Publications</a>
-                <a href="altres-eng.html">Community</a>
-            </nav>
 
-            <div class="nav-actions">
-                <a href="wip.html" class="btn-secret" title="Under construction" aria-label="Work in Progress Easter Egg">🐶</a>
-                <a href="../cat/articles-cat.html" class="lang-btn" aria-label="Canvia al Català">CAT</a>
+            <ul class="nav-links">
+                <li><a href="main-eng.html" class="nav-link">Home</a></li>
+                <li><a href="projectes-professionals-eng.html" class="nav-link">Professional Projects</a></li>
+                <li><a href="projectes-academics-eng.html" class="nav-link">Academic Projects</a></li>
+                <li><a href="articles-eng.html" class="nav-link active">Publications</a></li>
+                <li><a href="altres-eng.html" class="nav-link">Community</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="nav-btn-icon" title="LinkedIn" aria-label="LinkedIn Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="wip.html" class="secret-btn" title="" aria-hidden="true"></a>
+                <a href="../cat/articles-cat.html" class="lang-btn" title="Canviar a Catala">CAT</a>
             </div>
         </div>
     </header>
 
-    <main class="page-container" style="max-width: 900px;">
-        <!-- Page Header -->
-        <div class="page-header" style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="project-eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">
-                <span class="category-tag">Peer-Reviewed Research</span>
-                <span class="category-tag">Robotics & AI</span>
-            </div>
-            <h1 class="page-title" style="font-size: 2.3rem; margin-bottom: 0.75rem;">Articles & Publications</h1>
-            <p class="page-subtitle" style="max-width: 680px; margin: 0 auto 1.5rem auto;">
-                Peer-reviewed contributions in robot learning, prompt-guided policy refinement, reinforcement learning in simulation, and immersive teleoperation frameworks.
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 2.5rem;">
+            <h1>Articles & Publications</h1>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
+                Peer-reviewed research in robot learning, prompt-guided policy refinement, reinforcement learning in simulation, and immersive teleoperation frameworks.
             </p>
-            <div>
-                <a href="main-eng.html" class="btn btn-secondary">← Back to Overview</a>
-            </div>
-        </div>
+        </header>
 
-        <!-- ARTICLE 1: ERF 2026 / arXiv -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">ERF 2026 · arXiv:2603.05574 · 1st Author</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions
-                    </h2>
+        <!-- ARTICLE 1: PRISM (ERF 2026 / arXiv) -->
+        <article class="article-card" id="prism">
+            <div class="article-header">
+                <h2>PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions</h2>
+                <span class="article-badge">Lead Author · ERF 2026 [arXiv:2603.05574]</span>
+            </div>
+            <div class="article-authors">Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno, Néstor García</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/Article3.svg" alt="PRISM Prompt-Conditioned Policy Architecture" class="article-img-full" style="max-height: 320px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Imitation Learning (IL)</span>
+                <span class="topic-tag topic-tag-ai">Reinforcement Learning (RL)</span>
+                <span class="topic-tag topic-tag-ai">Eureka LLM Reward Synthesis</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
+                <span class="topic-tag topic-tag-hw">Human-in-the-Loop</span>
+                <span class="topic-tag topic-tag-metric">96.8% Success Rate</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Summary:</strong> This paper presents PRISM: a prompt-conditioned imitation policy refinement method for robotic manipulation. This approach integrates imitation learning (IL) and reinforcement learning (RL) into a unified workflow, allowing a generic imitation policy generated from user-guided demonstrations to be refined through reinforcement to generate new, previously unobserved detailed behaviors. The refinement process follows the Eureka paradigm, where reward functions for RL are generated iteratively from an initial natural language task description. The proposed method extends this mechanism to adapt a refined imitation policy to new target configurations and incorporate constraints via human feedback corrections during intermediate executions. This allows policy reuse and improves data efficiency.</p>
+
+                <p><strong>Empirical Benchmarks:</strong><br>
+                • <strong>Baseline Imitation Policy:</strong> Generic unrefined policy achieved <strong>21.2%</strong> success under out-of-distribution shifts.<br>
+                • <strong>Autonomous Isaac Lab RL:</strong> Training in Isaac Lab elevated task convergence to <strong>98.0%</strong>.<br>
+                • <strong>PRISM Framework:</strong> Combining iterative GPT-5 reward generation with interactive human feedback achieved <strong>96.8%</strong> empirical success while dramatically lowering sample complexity.</p>
+
+                <div class="article-actions">
+                    <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Read arXiv Preprint -></a>
+                    <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article-outline">Watch Video Demonstration -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Conference Paper
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Authors:</strong> Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno, and Néstor García
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/Article3.svg" alt="PRISM Prompt-Conditioned Imitation Policy Architecture Diagram" style="max-height: 340px; width: auto; max-width: 100%; object-fit: contain;">
-            </div>
-
-            <!-- Key Results Metrics Strip -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                <div class="metric-card">
-                    <span style="font-size: 1.6rem; font-weight: 800; color: var(--muted);">21.2%</span>
-                    <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">Baseline Imitation Success</p>
-                </div>
-                <div class="metric-card">
-                    <span style="font-size: 1.6rem; font-weight: 800; color: var(--accent);">98.0%</span>
-                    <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">Isaac Lab RL Convergence</p>
-                </div>
-                <div class="metric-card">
-                    <span style="font-size: 1.6rem; font-weight: 800; color: #16a34a;">96.8%</span>
-                    <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">GPT-5 Eureka + Human Feedback</p>
-                </div>
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Imitation Learning</span>
-                <span class="tech-tag">Reinforcement Learning</span>
-                <span class="tech-tag">LLM Prompting</span>
-                <span class="tech-tag">NVIDIA Isaac Sim</span>
-                <span class="tech-tag">Isaac Lab</span>
-                <span class="tech-tag">Eureka Paradigm</span>
-                <span class="tech-tag">Human-in-the-Loop</span>
-                <span class="tech-tag">Python</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Abstract:</strong> This paper presents PRISM: a prompt-conditioned imitation policy refinement method for robotic manipulation. This approach integrates imitation learning (IL) and reinforcement learning (RL) into a unified workflow, allowing a generic imitation policy generated from user-guided demonstrations to be refined through reinforcement to generate new, previously unobserved detailed behaviors. The refinement process builds upon the <a href="https://eureka-research.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600;">Eureka paradigm</a>, where reward functions for RL are generated iteratively from natural language task specifications. The proposed method extends this mechanism to adapt a refined imitation policy to new target configurations and incorporate constraints via human feedback corrections during intermediate executions. Results on a dual-phase pick-and-place task in simulated physics demonstrate that PRISM dramatically improves success rates and computational sample efficiency over open-loop and unassisted baselines.
-                </p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://arxiv.org/abs/2603.05574" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Read arXiv Preprint →</a>
-                <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Watch Video Demonstration ↗</a>
             </div>
         </article>
 
         <!-- ARTICLE 2: ICRA 2023 -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">IEEE ICRA 2023 · London, UK · Core Contributor</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        A Virtual Reality Framework for Rapid Dataset Generation Applied to Garment Manipulation with Automatic Semantic Labeling
-                    </h2>
+        <article class="article-card" id="icra2023">
+            <div class="article-header">
+                <h2>A Virtual Reality Framework for Rapid Dataset Generation Applied to Garment Manipulation with Automatic Semantic Labeling</h2>
+                <span class="article-badge">Co-Author · IEEE ICRA 2023 [London, UK]</span>
+            </div>
+            <div class="article-authors">Júlia Borràs, Arnau Boix-Granell, Sergi Foix, Carme Torras</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/Article2.jpg" alt="VR Framework for Garment Manipulation" class="article-img-full" style="max-height: 320px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-hw">HTC Vive Pro VR</span>
+                <span class="topic-tag topic-tag-ai">Cloth Manipulation</span>
+                <span class="topic-tag topic-tag-sw">Unity 3D Engine</span>
+                <span class="topic-tag topic-tag-ai">Automatic Semantic Labeling</span>
+                <span class="topic-tag topic-tag-sw">C++</span>
+                <span class="topic-tag topic-tag-metric">19 Manipulation Sequences</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Summary:</strong> Teaching complex manipulation skills, such as folding garments, to a dual-arm robot is a very challenging task often addressed through learning from demonstration. The few garment-folding demonstration datasets currently available to the robotics research community have either been gathered from human demonstrations or generated via simulation. The former approach presents major difficulties in perceiving both the garment state and human actions and transferring them to the robot's dynamic control, whereas the latter requires open-loop programming of human motions in the simulator without incorporating the visual feedback that humans naturally use, leading to unrealistic movements.</p>
+
+                <p>In this paper, we present an accurate dataset of human garment-folding demonstrations collected through our novel virtual reality (VR) framework based on Unity 3D and the HTC Vive Pro system. This platform enables realistic simulation of deformable textiles and real-time interaction using handheld controllers. By closing the human-in-the-loop perceptual feedback loop while recording ground-truth 3D mesh states without camera occlusions, the framework yields highly realistic demonstrations. The dataset provides automatic semantic labeling classifying key topological folding configurations across 19 distinct garment manipulation sequences.</p>
+
+                <div class="article-actions">
+                    <a href="https://doi.org/10.1109/ICRA48891.2023.10161122" target="_blank" class="btn-article">IEEE Xplore (DOI) -></a>
+                    <a href="https://digital.csic.es/handle/10261/354962" target="_blank" class="btn-article-outline">DIGITAL.CSIC (Open Access) -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Flagship Conference
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Authors:</strong> Júlia Borràs, Arnau Boix-Granell, Sergi Foix, and Carme Torras
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/Article2.jpg" alt="VR Framework and cloth manipulation testbed for dataset collection" style="max-height: 340px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm);">
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Virtual Reality (VR)</span>
-                <span class="tech-tag">Deformable Object Manipulation</span>
-                <span class="tech-tag">HTC Vive Pro</span>
-                <span class="tech-tag">Unity 3D</span>
-                <span class="tech-tag">Automatic Semantic Labeling</span>
-                <span class="tech-tag">Learning from Demonstration (LfD)</span>
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">MATLAB</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Abstract:</strong> Teaching complex manipulation skills, such as folding garments, to a dual-arm robot is a challenging problem often addressed through learning from demonstration (LfD). Available garment-folding datasets have traditionally been restricted by either the perceptual difficulty of capturing deformable object states from human demonstrations, or the kinematic unreality of open-loop simulation lacking human visual feedback. In this paper, we present an accurate dataset of human garment-folding demonstrations collected through our novel virtual reality framework based on Unity 3D and the HTC Vive Pro system. The immersive platform allows realistic physics simulation of textiles and real-time controller interaction, closing the human-in-the-loop perceptual feedback loop while capturing ground-truth mesh states. The resulting garment manipulation sequences are automatically and semantically labeled with a compact representation that classifies transitions between key folding topological configurations.
-                </p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://doi.org/10.1109/ICRA48891.2023.10161122" target="_blank" rel="noopener noreferrer" class="btn btn-primary">IEEE Xplore (DOI: 10.1109/ICRA48891.2023.10161122) →</a>
-                <a href="https://digital.csic.es/handle/10261/354962" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open Access (DIGITAL.CSIC) ↗</a>
             </div>
         </article>
 
         <!-- ARTICLE 3: CCIA 2022 -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">CCIA 2022 · IOS Press FAIA · 1st Author</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Garment Manipulation Dataset for Robot Learning from Demonstration Using a Virtual Reality Framework
-                    </h2>
+        <article class="article-card" id="ccia2022">
+            <div class="article-header">
+                <h2>Garment Manipulation Dataset for Robot Learning from Demonstration Using a Virtual Reality Framework</h2>
+                <span class="article-badge">Lead Author · CCIA 2022 [IOS Press FAIA]</span>
+            </div>
+            <div class="article-authors">Arnau Boix-Granell, Sergi Foix, Carme Torras</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/Article1.svg" alt="Garment Manipulation Dataset Pipeline" class="article-img-full" style="max-height: 300px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Learning from Demonstration</span>
+                <span class="topic-tag topic-tag-hw">HTC Vive Pro</span>
+                <span class="topic-tag topic-tag-ai">Cloth Manipulation</span>
+                <span class="topic-tag topic-tag-sw">Unity 3D Engine</span>
+                <span class="topic-tag topic-tag-sw">C++</span>
+                <span class="topic-tag topic-tag-metric">IOS Press Vol. 355</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Summary:</strong> Teaching complex bimanual manipulation skills to robots requires rich, multi-modal demonstration datasets. In this paper, we present a compact yet highly accurate dataset of human garment-folding trajectories collected using an immersive virtual reality platform. Implemented in Unity 3D with the HTC Vive Pro tracking system, the environment reproduces realistic textile mechanics and enables natural handheld interaction. By bridging the gap between human perception and robotic action spaces, the framework eliminates occlusion artifacts typical of optical motion capture while ensuring physically feasible grasping trajectories for dual-arm robotic systems. Published in <em>Frontiers in Artificial Intelligence and Applications</em> (IOS Press, Vol. 355).</p>
+
+                <div class="article-actions">
+                    <a href="https://doi.org/10.3233/FAIA220334" target="_blank" class="btn-article">IOS Press DOI -></a>
+                    <a href="https://digital.csic.es/handle/10261/281403" target="_blank" class="btn-article-outline">DIGITAL.CSIC (Open Access) -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Conference Paper
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Authors:</strong> Arnau Boix-Granell, Sergi Foix, and Carme Torras
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/Article1.svg" alt="Garment Dataset pipeline and topological state progression" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain;">
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Robot Learning from Demonstration</span>
-                <span class="tech-tag">Cloth Manipulation</span>
-                <span class="tech-tag">Virtual Reality (VR)</span>
-                <span class="tech-tag">Unity 3D Engine</span>
-                <span class="tech-tag">HTC Vive Pro</span>
-                <span class="tech-tag">C++</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Abstract:</strong> Teaching complex bimanual manipulation skills to robots requires rich, multi-modal demonstration datasets. In this paper, we present a compact yet high-fidelity dataset of human garment-folding trajectories collected using an immersive virtual reality platform. Implemented in Unity 3D with the HTC Vive Pro tracking system, the environment reproduces realistic textile mechanics and enables natural handheld interaction. By bridging the gap between human perception and robotic action spaces, the framework eliminates occlusion artifacts typical of optical motion capture while ensuring physically feasible grasping trajectories for dual-arm robotic systems. Published in <em>Frontiers in Artificial Intelligence and Applications</em> (IOS Press, Vol. 355).
-                </p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://doi.org/10.3233/FAIA220334" target="_blank" rel="noopener noreferrer" class="btn btn-primary">IOS Press DOI (10.3233/FAIA220334) →</a>
-                <a href="https://digital.csic.es/handle/10261/281403" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Open Access (DIGITAL.CSIC) ↗</a>
             </div>
         </article>
+    </div>
 
-        <!-- Navigation Footer -->
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-            <a href="main-eng.html" class="btn btn-secondary">← Back to Overview</a>
-            <a href="projectes-academics-eng.html" class="btn btn-primary" style="margin-left: 0.75rem;">Explore Academic Projects →</a>
-        </div>
-    </main>
-
-    <!-- Footer -->
+    <!-- Site Footer -->
     <footer class="site-footer">
-        <p>© 2026 Arnau Boix Granell · Industrial & Robotics Engineer</p>
-        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted);">
-            Ranked 2nd of 298 Engineers at UPC ETSEIB · 35 Honors Distinctions · Dual-Arm Manipulation & Robot Learning
-        </p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="main-eng.html">Home</a>
+                <a href="projectes-professionals-eng.html">Professional Projects</a>
+                <a href="articles-eng.html">Publications</a>
+                <a href="projectes-academics-eng.html">Academic Projects</a>
+                <a href="altres-eng.html">Community</a>
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank">LinkedIn</a>
+            </div>
+            <p>© 2026 Arnau Boix Granell · All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

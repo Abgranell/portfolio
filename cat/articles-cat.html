@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Articles i Publicacions — Arnau Boix Granell</title>
-    <meta name="description" content="Publicacions científiques revisades per parells, actes de congressos internacionals i recerca en robòtica d'Arnau Boix Granell en aprenentatge robòtic, aprenentatge per imitació i aprenentatge per reforç.">
+    <title>Articles i Publicacions - Arnau Boix Granell</title>
+    <meta name="description" content="Publicacions científiques revisades per parells i recerca en robòtica d'Arnau Boix Granell en aprenentatge robòtic, refinament de polítiques d'imitació i teleoperació en realitat virtual.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="subpage-layout">
@@ -12,200 +12,147 @@
     <header class="site-header">
         <div class="nav-container">
             <a href="main-cat.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
-            
-            <nav class="nav-links" aria-label="Navegació Principal">
-                <a href="main-cat.html">Inici</a>
-                <a href="projectes-professionals-cat.html">Projectes Professionals</a>
-                <a href="projectes-academics-cat.html">Projectes Acadèmics</a>
-                <a href="articles-cat.html" class="active">Publicacions</a>
-                <a href="altres-cat.html">Comunitat</a>
-            </nav>
 
-            <div class="nav-actions">
-                <a href="wip.html" class="btn-secret" title="En construcció" aria-label="Work in Progress Easter Egg">🐶</a>
-                <a href="../eng/articles-eng.html" class="lang-btn" aria-label="Switch to English">ENG</a>
+            <ul class="nav-links">
+                <li><a href="main-cat.html" class="nav-link">Inici</a></li>
+                <li><a href="projectes-professionals-cat.html" class="nav-link">Projectes Professionals</a></li>
+                <li><a href="projectes-academics-cat.html" class="nav-link">Projectes Acadèmics</a></li>
+                <li><a href="articles-cat.html" class="nav-link active">Publicacions</a></li>
+                <li><a href="altres-cat.html" class="nav-link">Comunitat</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank" class="nav-btn-icon" title="LinkedIn" aria-label="Perfil de LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                </a>
+                <a href="wip.html" class="secret-btn" title="" aria-hidden="true"></a>
+                <a href="../eng/articles-eng.html" class="lang-btn" title="Switch to English">ENG</a>
             </div>
         </div>
     </header>
 
-    <main class="page-container" style="max-width: 900px;">
-        <!-- Capçalera de pàgina -->
-        <div class="page-header" style="text-align: center; margin-bottom: 2.5rem;">
-            <div class="project-eyebrow" style="justify-content: center; margin-bottom: 0.5rem;">
-                <span class="category-tag">Recerca Científica</span>
-                <span class="category-tag">Robòtica & IA</span>
-            </div>
-            <h1 class="page-title" style="font-size: 2.3rem; margin-bottom: 0.75rem;">Articles i Publicacions</h1>
-            <p class="page-subtitle" style="max-width: 680px; margin: 0 auto 1.5rem auto;">
-                Contribucions científiques revisades per parells en aprenentatge robòtic, refinament de polítiques guiat per llenguatge natural, aprenentatge per reforç en simulació i plataformes immersives de teleoperació.
+    <div class="container">
+        <header style="text-align: center; margin-bottom: 2.5rem;">
+            <h1>Articles i Publicacions</h1>
+            <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
+                Recerca científica revisada per parells en aprenentatge robòtic, refinament de polítiques per reforç, simulació d'alta fidelitat i plataformes de teleoperació immersiva.
             </p>
-            <div>
-                <a href="main-cat.html" class="btn btn-secondary">← Tornar a l'inici</a>
-            </div>
-        </div>
+        </header>
 
-        <!-- ARTICLE 1: ERF 2026 / arXiv -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">ERF 2026 · arXiv:2603.05574 · 1r Autor</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        PRISM: Refinament personalitzat d'habilitats d'imitació per a la manipulació mitjançant instruccions humanes
-                    </h2>
+        <!-- ARTICLE 1: PRISM (ERF 2026 / arXiv) -->
+        <article class="article-card" id="prism">
+            <div class="article-header">
+                <h2>PRISM: Refinament personalitzat d'habilitats d'imitació per a la manipulació mitjançant instruccions humanes</h2>
+                <span class="article-badge">1r Autor · ERF 2026 [arXiv:2603.05574]</span>
+            </div>
+            <div class="article-authors">Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno, Néstor García</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/Article3.svg" alt="Diagrama de l'arquitectura de refinament PRISM" class="article-img-full" style="max-height: 320px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Imitation Learning (IL)</span>
+                <span class="topic-tag topic-tag-ai">Reinforcement Learning (RL)</span>
+                <span class="topic-tag topic-tag-ai">Síntesi de Recompenses Eureka</span>
+                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
+                <span class="topic-tag topic-tag-hw">Human-in-the-Loop</span>
+                <span class="topic-tag topic-tag-metric">96,8% Taxa d'Èxit</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Aquest article presenta PRISM: un mètode de refinament de polítiques d'imitació condicionat per instruccions per a la manipulació robòtica. Aquest enfocament integra l'aprenentatge per imitació (IL) i l'aprenentatge per reforç (RL) en un flux de treball unificat, de manera que una política d'imitació genèrica generada a partir de demostracions guiades per l'usuari es pugui refinar mitjançant reforç per generar nous comportaments detallats no observats prèviament. El procés de refinament segueix el paradigma Eureka, en què les funcions de recompensa per al RL es generen iterativament a partir d'una descripció de la tasca en llenguatge natural. El mètode proposat amplia aquest mecanisme per adaptar una política d'imitació refinada a noves configuracions d'objectius i incorporar restriccions mitjançant correccions en bucle humà durant les execucions intermèdies, millorant l'eficiència en dades i la robustesa.</p>
+
+                <p><strong>Resultats Experimentals:</strong><br>
+                • <strong>Política Basal per Imitació:</strong> Èxit del <strong>21,2%</strong> davant de canvis de distribució d'objectius.<br>
+                • <strong>Aprenentatge Autònom a Isaac Lab:</strong> Convergència de la tasca fins al <strong>98,0%</strong>.<br>
+                • <strong>Mètode PRISM:</strong> Combinant generació de recompenses amb GPT-5 i correccions humanes interactives s'assoleix un <strong>96,8%</strong> d'èxit reduint dràsticament el cost computacional.</p>
+
+                <div class="article-actions">
+                    <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Llegir preprint a arXiv -></a>
+                    <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article-outline">Veure vídeo demostratiu -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Article de Congrés
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Autors:</strong> Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno i Néstor García
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/Article3.svg" alt="Diagrama de l'arquitectura de refinament PRISM guiat per instruccions" style="max-height: 340px; width: auto; max-width: 100%; object-fit: contain;">
-            </div>
-
-            <!-- Faixa de mètriques clau de rendiment -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
-                <div class="metric-card">
-                    <span style="font-size: 1.6rem; font-weight: 800; color: var(--muted);">21.2%</span>
-                    <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">Èxit Basal per Imitació</p>
-                </div>
-                <div class="metric-card">
-                    <span style="font-size: 1.6rem; font-weight: 800; color: var(--accent);">98.0%</span>
-                    <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">Convergència RL a Isaac Lab</p>
-                </div>
-                <div class="metric-card">
-                    <span style="font-size: 1.6rem; font-weight: 800; color: #16a34a;">96.8%</span>
-                    <p style="font-size: 0.8rem; color: var(--muted); margin: 0.25rem 0 0 0; text-transform: uppercase; letter-spacing: 0.04em;">GPT-5 Eureka + Retorn Humà</p>
-                </div>
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Imitation Learning</span>
-                <span class="tech-tag">Reinforcement Learning</span>
-                <span class="tech-tag">LLM Prompting</span>
-                <span class="tech-tag">NVIDIA Isaac Sim</span>
-                <span class="tech-tag">Isaac Lab</span>
-                <span class="tech-tag">Paradigma Eureka</span>
-                <span class="tech-tag">Human-in-the-Loop</span>
-                <span class="tech-tag">Python</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Resum:</strong> Aquest article presenta PRISM: un mètode de refinament de polítiques d’imitació condicionat per instruccions per a la manipulació robòtica. Aquest enfocament integra l’aprenentatge per imitació (IL) i l’aprenentatge per reforç (RL) en un flux de treball unificat, de manera que una política d’imitació genèrica generada a partir de demostracions guiades per l’usuari es pugui refinar mitjançant reforç per generar nous comportaments detallats no observats prèviament. El procés de refinament segueix el <a href="https://eureka-research.github.io/" target="_blank" rel="noopener noreferrer" style="color: var(--accent); font-weight: 600;">paradigma Eureka</a>, en què les funcions de recompensa per al RL es generen iterativament a partir d’una descripció en llenguatge natural. El mètode proposat amplia aquest mecanisme per adaptar la política a noves configuracions d'objectius i incorporar restriccions mitjançant correccions en bucle humà durant execucions intermèdies, maximitzant l'eficiència mostral i la robustesa de desplegament.
-                </p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://arxiv.org/abs/2603.05574" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Llegir preprint a arXiv →</a>
-                <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Veure vídeo demostratiu ↗</a>
             </div>
         </article>
 
         <!-- ARTICLE 2: ICRA 2023 -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">IEEE ICRA 2023 · Londres, Regne Unit · Contribuent Clau</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        A Virtual Reality Framework for Rapid Dataset Generation Applied to Garment Manipulation with Automatic Semantic Labeling
-                    </h2>
+        <article class="article-card" id="icra2023">
+            <div class="article-header">
+                <h2>A Virtual Reality Framework for Rapid Dataset Generation Applied to Garment Manipulation with Automatic Semantic Labeling</h2>
+                <span class="article-badge">Coautor · IEEE ICRA 2023 [Londres, Regne Unit]</span>
+            </div>
+            <div class="article-authors">Júlia Borràs, Arnau Boix-Granell, Sergi Foix, Carme Torras</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/Article2.jpg" alt="Entorn de Realitat Virtual per a la Manipulació de Teixits" class="article-img-full" style="max-height: 320px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-hw">HTC Vive Pro VR</span>
+                <span class="topic-tag topic-tag-ai">Manipulació de Roba</span>
+                <span class="topic-tag topic-tag-sw">Motor Unity 3D</span>
+                <span class="topic-tag topic-tag-ai">Etiquetatge Semàntic Automàtic</span>
+                <span class="topic-tag topic-tag-sw">C++</span>
+                <span class="topic-tag topic-tag-metric">19 Seqüències</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Ensenyar habilitats complexes de manipulació, com ara plegar peces de roba, a un robot bimanual és una tasca de gran dificultat que sovint s'aborda mitjançant l'aprenentatge per demostració. Els pocs conjunts de dades existents patien de limitacions perceptives en demostracions reals (on les autooclusions impedeixen conèixer l'estat intern del teixit) o de manca de realisme cinemàtic en simulacions en llaç obert sense participació humana.</p>
+
+                <p>En aquest article, presentem un conjunt de dades d'alta precisió de demostracions humanes de plegament de roba recollit mitjançant un entorn de Realitat Virtual basat en Unity 3D i el sistema HTC Vive Pro. La plataforma permet simular mecànica tèxtil realista i interactuar en temps real amb comandaments manuals. En tancar el bucle perceptiu humà i registrar l'estat tridimensional exacte de cada vèrtex de la malla sense sofrir oclusions òptiques, el sistema produeix demostracions altament realistes. El conjunt de dades incorpora etiquetatge semàntic automàtic per identificar les etapes topològiques clau de plegat en 19 seqüències de manipulació.</p>
+
+                <div class="article-actions">
+                    <a href="https://doi.org/10.1109/ICRA48891.2023.10161122" target="_blank" class="btn-article">IEEE Xplore (DOI) -></a>
+                    <a href="https://digital.csic.es/handle/10261/354962" target="_blank" class="btn-article-outline">DIGITAL.CSIC (Accés Obert) -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Congrés Internacional Referent
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Autors:</strong> Júlia Borràs, Arnau Boix-Granell, Sergi Foix i Carme Torras
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/Article2.jpg" alt="Entorn de Realitat Virtual per a la manipulació de peces de roba" style="max-height: 340px; width: auto; max-width: 100%; object-fit: contain; border-radius: var(--radius-sm);">
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Realitat Virtual (VR)</span>
-                <span class="tech-tag">Manipulació de Roba</span>
-                <span class="tech-tag">HTC Vive Pro</span>
-                <span class="tech-tag">Unity 3D</span>
-                <span class="tech-tag">Etiquetatge Semàntic Automàtic</span>
-                <span class="tech-tag">Learning from Demonstration (LfD)</span>
-                <span class="tech-tag">C++</span>
-                <span class="tech-tag">MATLAB</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Resum:</strong> Ensenyar habilitats complexes de manipulació, com ara plegar peces de roba, a un robot bimanual és una tasca de gran dificultat que sovint s’aborda mitjançant l’aprenentatge per demostració (LfD). Els conjunts de dades existents patien de limitacions perceptives en demostracions reals o manca de realisme cinemàtic en simulació en llaç obert. En aquest article, presentem un conjunt de dades d'alta precisió de demostracions humanes recollit mitjançant un entorn de Realitat Virtual basat en Unity 3D i el sistema HTC Vive Pro. La plataforma permet simular mecànica tèxtil realista i interactuar en temps real, aprofitant el retorn visual humà i eliminant els problemes de seguiment d'estat de la roba. Les trajectòries resultants s'etiqueten semànticament de forma automàtica mitjançant descriptors topològics compactes.
-                </p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://doi.org/10.1109/ICRA48891.2023.10161122" target="_blank" rel="noopener noreferrer" class="btn btn-primary">IEEE Xplore (DOI: 10.1109/ICRA48891.2023.10161122) →</a>
-                <a href="https://digital.csic.es/handle/10261/354962" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Accés Obert (DIGITAL.CSIC) ↗</a>
             </div>
         </article>
 
         <!-- ARTICLE 3: CCIA 2022 -->
-        <article class="project-detail-card" style="margin-bottom: 2.5rem;">
-            <div class="project-card-header">
-                <div>
-                    <span class="project-date">CCIA 2022 · IOS Press FAIA · 1r Autor</span>
-                    <h2 style="font-size: 1.45rem; color: var(--text); margin-top: 0.35rem; line-height: 1.35;">
-                        Garment Manipulation Dataset for Robot Learning from Demonstration Using a Virtual Reality Framework
-                    </h2>
+        <article class="article-card" id="ccia2022">
+            <div class="article-header">
+                <h2>Garment Manipulation Dataset for Robot Learning from Demonstration Using a Virtual Reality Framework</h2>
+                <span class="article-badge">1r Autor · CCIA 2022 [IOS Press FAIA]</span>
+            </div>
+            <div class="article-authors">Arnau Boix-Granell, Sergi Foix, Carme Torras</div>
+
+            <div class="article-media-full">
+                <img src="../imatges/Article1.svg" alt="Diagrama del conjunt de dades de manipulació de roba" class="article-img-full" style="max-height: 300px;">
+            </div>
+
+            <div class="article-topics">
+                <span class="topic-tag topic-tag-ai">Learning from Demonstration</span>
+                <span class="topic-tag topic-tag-hw">HTC Vive Pro</span>
+                <span class="topic-tag topic-tag-ai">Manipulació de Roba</span>
+                <span class="topic-tag topic-tag-sw">Motor Unity 3D</span>
+                <span class="topic-tag topic-tag-sw">C++</span>
+                <span class="topic-tag topic-tag-metric">IOS Press Vol. 355</span>
+            </div>
+
+            <div class="article-details">
+                <p><strong>Resum:</strong> Ensenyar habilitats complexes de manipulació bimanual a robots requereix conjunts de dades multimodals d'alta fidelitat. En aquest article, presentem un conjunt de dades precís de demostracions humanes de plegament de roba utilitzant un entorn immersiu de realitat virtual sobre Unity 3D i el sistema HTC Vive Pro. La plataforma reprodueix el comportament dinàmic de teixits deformables i permet interacció directa en temps real amb controladors manuals, tancant la bretxa perceptiva humana-robòtica i proporcionant dades supervisades netes sense oclusions per a l'aprenentatge robòtic. Publicat a <em>Frontiers in Artificial Intelligence and Applications</em> (IOS Press, Vol. 355).</p>
+
+                <div class="article-actions">
+                    <a href="https://doi.org/10.3233/FAIA220334" target="_blank" class="btn-article">IOS Press DOI -></a>
+                    <a href="https://digital.csic.es/handle/10261/281403" target="_blank" class="btn-article-outline">DIGITAL.CSIC (Accés Obert) -></a>
                 </div>
-                <span class="category-tag" style="background: rgba(30, 58, 138, 0.12); color: var(--accent); border-color: rgba(30, 58, 138, 0.25); font-weight: 700;">
-                    Article de Congrés
-                </span>
-            </div>
-
-            <p style="font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 1.25rem;">
-                <strong>Autors:</strong> Arnau Boix-Granell, Sergi Foix i Carme Torras
-            </p>
-
-            <div class="project-media-container" style="margin-bottom: 1.5rem; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 1.5rem; display: flex; justify-content: center; align-items: center;">
-                <img src="../imatges/Article1.svg" alt="Diagrama del conjunt de dades de manipulació de roba i transició d'estats" style="max-height: 320px; width: auto; max-width: 100%; object-fit: contain;">
-            </div>
-
-            <div class="tech-tag-group">
-                <span class="tech-tag">Learning from Demonstration</span>
-                <span class="tech-tag">Manipulació de Roba</span>
-                <span class="tech-tag">Realitat Virtual (VR)</span>
-                <span class="tech-tag">Unity 3D</span>
-                <span class="tech-tag">HTC Vive Pro</span>
-                <span class="tech-tag">C++</span>
-            </div>
-
-            <div style="font-size: 0.95rem; line-height: 1.65; color: var(--muted); text-align: justify; margin-bottom: 1.5rem;">
-                <p>
-                    <strong>Resum:</strong> Ensenyar habilitats complexes de manipulació bimanual a robots requereix conjunts de dades multimodals d'alta fidelitat. En aquest article, presentem un conjunt de dades precís de demostracions humanes de plegament de roba utilitzant un entorn immersiu de realitat virtual sobre Unity 3D i el sistema HTC Vive Pro. La plataforma reprodueix el comportament dinàmic de teixits deformables i permet interacció directa en temps real amb controladors manuals, tancant la bretxa perceptiva humana-robòtica i proporcionant dades supervisades netes sense oclusions per a l'aprenentatge robòtic. Publicat a <em>Frontiers in Artificial Intelligence and Applications</em> (IOS Press, Vol. 355).
-                </p>
-            </div>
-
-            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                <a href="https://doi.org/10.3233/FAIA220334" target="_blank" rel="noopener noreferrer" class="btn btn-primary">IOS Press DOI (10.3233/FAIA220334) →</a>
-                <a href="https://digital.csic.es/handle/10261/281403" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Accés Obert (DIGITAL.CSIC) ↗</a>
             </div>
         </article>
+    </div>
 
-        <!-- Navegació inferior -->
-        <div style="text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border);">
-            <a href="main-cat.html" class="btn btn-secondary">← Tornar a l'inici</a>
-            <a href="projectes-academics-cat.html" class="btn btn-primary" style="margin-left: 0.75rem;">Explorar Projectes Acadèmics →</a>
-        </div>
-    </main>
-
-    <!-- Footer -->
+    <!-- Site Footer -->
     <footer class="site-footer">
-        <p>© 2026 Arnau Boix Granell · Enginyer Industrial & Robòtica</p>
-        <p style="margin-top: 0.35rem; font-size: 0.8rem; color: var(--muted);">
-            2n de 298 Enginyers a UPC ETSEIB · 35 Matrícules d'Honor · Manipulació Bimanual & Robot Learning
-        </p>
+        <div class="container">
+            <div class="footer-links">
+                <a href="main-cat.html">Inici</a>
+                <a href="projectes-professionals-cat.html">Projectes Professionals</a>
+                <a href="articles-cat.html">Publicacions</a>
+                <a href="projectes-academics-cat.html">Projectes Acadèmics</a>
+                <a href="altres-cat.html">Comunitat</a>
+                <a href="https://www.linkedin.com/in/arnau-boix-granell/" target="_blank">LinkedIn</a>
+            </div>
+            <p>© 2026 Arnau Boix Granell · Tots els drets reservats.</p>
+        </div>
     </footer>
 </body>
 </html>

@@ -3,26 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Projects — Arnau Boix Granell</title>
-    <meta name="description" content="Flagship professional robotics and embodied AI projects by Arnau Boix Granell, including COGNITIUM, PRISM, GRAIL, and INTELLIMAN.">
+    <title>Professional Projects - Arnau Boix Granell</title>
+    <meta name="description" content="Professional robotics projects by Arnau Boix Granell, including COGNITIUM at MWC 2026, the 40M EUR GRAIL initiative, and INTELLIMAN Franka Panda manipulation.">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body class="subpage-layout">
-    <!-- Sticky Navigation Bar -->
+    <!-- Global Sticky Navigation Bar -->
     <header class="site-header">
         <div class="nav-container">
-            <div class="nav-left">
-                <a href="main-eng.html" class="nav-brand">
-                    <span class="nav-brand-badge">ABG</span>
-                    <span>Arnau Boix Granell</span>
-                </a>
-            </div>
+            <a href="main-eng.html" class="nav-brand">ABG <span>Arnau Boix Granell</span></a>
 
             <ul class="nav-links">
                 <li><a href="main-eng.html" class="nav-link">Home</a></li>
                 <li><a href="projectes-professionals-eng.html" class="nav-link active">Professional Projects</a></li>
                 <li><a href="projectes-academics-eng.html" class="nav-link">Academic Projects</a></li>
-                <li><a href="articles-eng.html" class="nav-link">Articles</a></li>
+                <li><a href="articles-eng.html" class="nav-link">Publications</a></li>
                 <li><a href="altres-eng.html" class="nav-link">Community</a></li>
             </ul>
 
@@ -31,14 +26,13 @@
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
                 </a>
                 <a href="wip.html" class="secret-btn" title="" aria-hidden="true"></a>
-                <a href="../cat/projectes-professionals-cat.html" class="lang-btn" title="Canviar a Català">CAT</a>
+                <a href="../cat/projectes-professionals-cat.html" class="lang-btn" title="Canviar a Catala">CAT</a>
             </div>
         </div>
     </header>
 
     <div class="container">
         <header style="text-align: center; margin-bottom: 2.5rem;">
-            <a href="main-eng.html" class="btn-back">← Back to home</a>
             <h1>Professional Projects</h1>
             <p style="max-width: 650px; margin: 0 auto; color: var(--muted); font-size: 1.05rem;">
                 Applied research, foundation model fine-tuning, and physical platform deployments developed within European consortia and industrial R&D programs at Eurecat.
@@ -49,7 +43,7 @@
         <article class="article-card" id="cognitium">
             <div class="article-header">
                 <h2>COGNITIUM: Autonomous & Integrated Cognition in Multimodal Environments</h2>
-                <span class="article-badge">Eurecat · MWC 2026 [2025 – 2026]</span>
+                <span class="article-badge">Eurecat · MWC 2026 [2025 - 2026]</span>
             </div>
             <div class="article-authors">Robotics Researcher · Physical Embodiment on PAL Robotics TIAGo PRO</div>
 
@@ -90,69 +84,27 @@
             <div class="article-details">
                 <p><strong>The Challenge:</strong> Deploying autonomous mobile manipulators in unconstrained, crowded human environments requires overcoming perceptual errors, visual occlusions, and unpredictable physical disturbances. Traditional cascading architectures (decoupled SLAM, task planning, and motion planning) are notoriously brittle. COGNITIUM implemented an integrated cognitive architecture combining Vision-Language-Action (VLA) foundation models with an agentic Vision-Language Model (VLM) supervisor to achieve robust, real-time closed-loop manipulation on a full-scale mobile robot.</p>
 
-                <p><strong>Arnau's Direct Contributions:</strong><br>
-                • <strong>VLA Benchmarking & Selection:</strong> Conducted a rigorous comparative benchmark of open-source and proprietary VLA architectures, evaluating inference frequency, spatial generalization, and sample efficiency.<br>
+                <p><strong>Contributions:</strong><br>
+                • <strong>VLA Benchmarking & Selection:</strong> Conducted a comparative benchmark of open-source and proprietary VLA architectures, evaluating inference frequency, spatial generalization, and sample efficiency.<br>
                 • <strong>LeRobot Pipeline Integration:</strong> Adapted the Hugging Face LeRobot framework to interface directly with the low-level motor controllers of the physical PAL Robotics TIAGo PRO mobile manipulator.<br>
                 • <strong>Physical Policy Deployment:</strong> Fine-tuned sensorimotor policies on demonstration datasets and achieved autonomous grasp and placement of varied target objects directly from onboard RGB-D camera feeds.<br>
                 • <strong>Agentic VLM Supervision:</strong> Built a high-level VLM supervisory agent acting as an executive reasoner to evaluate execution outcomes, detect grasping slips, and trigger autonomous recovery actions.<br>
                 • <strong>Live MWC 2026 Showcase:</strong> Programmed, calibrated, and conducted live physical manipulation demonstrations at Mobile World Congress Barcelona 2026 under real-world auditorium interference and dynamic lighting.</p>
 
-                <p><strong>Results & Impact:</strong> Validated real-time closed-loop VLA manipulation running natively on the physical TIAGo mobile manipulator with automated visual error recovery, presenting Eurecat's cutting-edge cognitive robotics capabilities to thousands of international industry leaders.</p>
+                <p><strong>Results & Impact:</strong> Validated real-time closed-loop VLA manipulation running natively on the physical TIAGo mobile manipulator with automated visual error recovery, presenting Eurecat's cutting-edge cognitive robotics capabilities to international industry leaders.</p>
 
                 <div class="article-actions">
-                    <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Watch Project Video →</a>
-                    <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article-outline">Project Website →</a>
+                    <a href="https://www.youtube.com/watch?v=zPSblj-a-5c" target="_blank" class="btn-article">Watch Project Video -></a>
+                    <a href="https://eurecat.org/portfolio-items/cognitium/" target="_blank" class="btn-article-outline">Project Website -></a>
                 </div>
             </div>
         </article>
 
-        <!-- PROJECT 2: PRISM (ERF 2026) -->
-        <article class="article-card" id="prism">
-            <div class="article-header">
-                <h2>PRISM: Personalized Refinement of Imitation Skills for Manipulation via Human Instructions</h2>
-                <span class="article-badge">Lead Author · ERF 2026 [arXiv:2603.05574]</span>
-            </div>
-            <div class="article-authors">Arnau Boix-Granell, Alberto San-Miguel-Tello, Magí Dalmau-Moreno, Néstor García</div>
-
-            <div class="article-media-full">
-                <img src="../imatges/Article3.svg" alt="PRISM Architecture Diagram" class="article-img-full">
-            </div>
-
-            <div class="article-topics">
-                <span class="topic-tag topic-tag-ai">Imitation Learning (IL)</span>
-                <span class="topic-tag topic-tag-ai">Reinforcement Learning (RL)</span>
-                <span class="topic-tag topic-tag-ai">Eureka LLM Reward Synthesis</span>
-                <span class="topic-tag topic-tag-sw">NVIDIA Isaac Lab</span>
-                <span class="topic-tag topic-tag-hw">Human-in-the-Loop</span>
-                <span class="topic-tag topic-tag-metric">96.8% Success Rate</span>
-            </div>
-
-            <div class="article-details">
-                <p><strong>The Challenge:</strong> Imitation Learning (IL) policies trained from human demonstrations suffer from poor out-of-distribution generalization: when goal poses, obstacles, or user preferences shift, the policy fails. Conversely, retraining Reinforcement Learning (RL) agents from scratch requires manual reward engineering and immense compute. PRISM creates a unified pipeline where a pre-trained imitation policy is rapidly personalized and refined through natural language task prompts and human feedback rollouts without manual reward design.</p>
-
-                <p><strong>Arnau's Direct Contributions:</strong><br>
-                • <strong>Conception & Architecture:</strong> Formulated PRISM as lead investigator and first author, bridging Imitation Learning priors with prompt-conditioned RL policy refinement.<br>
-                • <strong>Eureka Reward Synthesis Extension:</strong> Extended the state-of-the-art Eureka paradigm using GPT-5 to iteratively synthesize, evaluate, and optimize code-level Python reward functions directly from natural-language task instructions.<br>
-                • <strong>Human-in-the-Loop Feedback:</strong> Implemented real-time corrective interventions allowing human supervisors to guide intermediate rollouts and enforce physical constraints.<br>
-                • <strong>Isaac Lab Simulation Benchmarks:</strong> Programmed GPU-accelerated parallel simulation environments in NVIDIA Isaac Lab, conducting extensive empirical evaluations under severe distribution shifts.</p>
-
-                <p><strong>Empirical Benchmarks & Metrics:</strong><br>
-                • <strong>Zero-Shot Baseline:</strong> Generic unrefined imitation policies achieved only <strong>21.2%</strong> success when deployed on out-of-distribution goal configurations.<br>
-                • <strong>Autonomous Isaac Lab RL:</strong> Training in Isaac Lab elevated task convergence to <strong>98.0%</strong>.<br>
-                • <strong>PRISM Framework:</strong> Combining iterative GPT-5 reward generation with interactive human feedback achieved <strong>96.8%</strong> empirical success while dramatically lowering sample complexity and rollout requirements.</p>
-
-                <div class="article-actions">
-                    <a href="https://arxiv.org/abs/2603.05574" target="_blank" class="btn-article">Read Paper (arXiv) →</a>
-                    <a href="https://www.youtube.com/watch?v=yUUkD1LsCWY" target="_blank" class="btn-article-outline">Watch Demonstration Video →</a>
-                </div>
-            </div>
-        </article>
-
-        <!-- PROJECT 3: GRAIL (€40M Flagship) -->
+        <!-- PROJECT 2: GRAIL (40M EUR Flagship) -->
         <article class="article-card" id="grail">
             <div class="article-header">
                 <h2>GRAIL: Generative Robotics & AI for EU Industrial Leadership</h2>
-                <span class="article-badge">EU Horizon Europe Flagship [2026 – Present]</span>
+                <span class="article-badge">EU Horizon Europe Flagship [2026 - Present]</span>
             </div>
             <div class="article-authors">Robotics Researcher · Eurecat (Consortium Coordinator with Siemens, ETH Zurich, DLR, Imperial)</div>
 
@@ -161,7 +113,7 @@
             </div>
 
             <div class="article-topics">
-                <span class="topic-tag topic-tag-sw">Horizon Europe €40M Flagship</span>
+                <span class="topic-tag topic-tag-sw">Horizon Europe 40M EUR Flagship</span>
                 <span class="topic-tag topic-tag-ai">VLA Foundation Models</span>
                 <span class="topic-tag topic-tag-ai">Agentic VLM Reasoning</span>
                 <span class="topic-tag topic-tag-hw">Industrial Manipulators</span>
@@ -171,25 +123,25 @@
             <div class="article-details">
                 <p><strong>The Challenge:</strong> European industrial automation requires high-mix, low-volume flexibility that rigid, pre-programmed robotic lines cannot support. Achieving industrial sovereignty requires foundation AI models capable of decomposing complex natural language production commands, reasoning over sensor streams, and executing robust continuous manipulation without manual trajectory engineering.</p>
 
-                <p><strong>Arnau's Direct Contributions:</strong><br>
+                <p><strong>Contributions:</strong><br>
                 • <strong>Agentic VLM Reasoning Modules:</strong> Designed reasoning pipelines utilizing Vision-Language Models (VLMs) to interpret high-level natural language instructions and break them down into structured symbolic sub-goals and spatial manipulation primitives.<br>
                 • <strong>VLA Physical Embodiment:</strong> Integrated Vision-Language-Action (VLA) foundation neural models onto physical robotic manipulators, mapping RGB-D camera feeds directly to continuous joint commands.<br>
                 • <strong>Teleoperation Data Pipelines:</strong> Developed low-latency teleoperation setups to record high-fidelity human demonstration rollouts (proprioception, visual tokens, contact states) required for generative policy pre-training.<br>
                 • <strong>Safety Verification:</strong> Implemented real-time boundary-checking mechanisms to enforce strict collision-avoidance and physical workspace limits during generative model inference.</p>
 
-                <p><strong>Results & Impact:</strong> Delivering sovereign embodied AI architectures for the €40M Horizon Europe GRAIL initiative, enabling autonomous execution of multi-step industrial assembly instructions without hand-crafted robot code.</p>
+                <p><strong>Results & Impact:</strong> Delivering sovereign embodied AI architectures for the 40M EUR Horizon Europe GRAIL initiative, enabling autonomous execution of multi-step industrial assembly instructions without hand-crafted robot code.</p>
 
                 <div class="article-actions">
-                    <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Visit Official Project Website →</a>
+                    <a href="https://grail-robotics.ai/" target="_blank" class="btn-article">Visit Official Project Website -></a>
                 </div>
             </div>
         </article>
 
-        <!-- PROJECT 4: INTELLIMAN -->
+        <!-- PROJECT 3: INTELLIMAN -->
         <article class="article-card" id="intelliman">
             <div class="article-header">
                 <h2>INTELLIMAN: AI-Powered Manipulation for Service, Manufacturing and Prosthetics</h2>
-                <span class="article-badge">EU Horizon Europe Consortium [2022 – 2026]</span>
+                <span class="article-badge">EU Horizon Europe Consortium [2022 - 2026]</span>
             </div>
             <div class="article-authors">Robotics Researcher · Eurecat (Consortium led by Univ. of Bologna, partnering with DLR, IIT)</div>
 
@@ -227,16 +179,16 @@
             <div class="article-details">
                 <p><strong>The Challenge:</strong> Enabling robotic arms to interact dynamically with complex articulated household appliances (dishwashers, cabinets) and fragile industrial goods requires adapting to continuous friction variations, mass distributions, and non-rigid mechanical latches. Direct physical reinforcement learning is dangerously slow and damages hardware, while policies trained purely in simulation typically fail in the real world due to the Sim2Real dynamic gap.</p>
 
-                <p><strong>Arnau's Direct Contributions:</strong><br>
-                • <strong>GPU Parallel Simulation:</strong> Developed high-fidelity dynamic manipulation environments in NVIDIA Isaac Sim and Isaac Lab simulating a 7-DOF Franka Emika Panda arm interacting with articulated appliances.<br>
-                • <strong>Imitation-Accelerated RL:</strong> Overcame exploration bottlenecks in contact-rich latch manipulation (opening dishwasher doors) by pre-training RL policies with Imitation Learning trajectories, dramatically accelerating convergence.<br>
+                <p><strong>Contributions:</strong><br>
+                • <strong>GPU Parallel Simulation:</strong> Developed dynamic manipulation environments in NVIDIA Isaac Sim and Isaac Lab simulating a 7-DOF Franka Emika Panda arm interacting with articulated appliances.<br>
+                • <strong>Imitation-Accelerated RL:</strong> Overcame exploration bottlenecks in contact-rich latch manipulation (opening dishwasher doors) by pre-training RL policies with Imitation Learning trajectories, accelerating convergence.<br>
                 • <strong>Domain Randomization:</strong> Engineered extensive randomization of physical parameters (friction coefficients, link inertias, joint damping, spring latch thresholds) to achieve robust Sim2Real policy transfer.<br>
                 • <strong>Real-Time 3D Perception:</strong> Coupled 6D object pose tracking with ROS 2 sensor pipelines, delivering continuous spatial states to the policy under real-world visual occlusions.</p>
 
                 <p><strong>Results & Impact:</strong> Demonstrated zero-shot transfer of learned manipulation policies from Isaac Lab onto physical Franka Panda manipulators, delivering core milestones on circular economy and domestic manipulation for the EU Horizon Europe INTELLIMAN project.</p>
 
                 <div class="article-actions">
-                    <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Visit Project Website →</a>
+                    <a href="https://intelliman-project.eu/" target="_blank" class="btn-article">Visit Project Website -></a>
                 </div>
             </div>
         </article>
@@ -265,7 +217,6 @@
             slideIndexes[carouselId] = 0;
             updateCarousel(carouselId);
 
-            // Touch swipe gesture support
             const container = document.getElementById(carouselId);
             if (!container) return;
             let startX = 0;
